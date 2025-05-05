@@ -1,1 +1,269 @@
-<h1>Streetsmart - coming soon! </h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>StreetSmart | Let's Reimagine Our Streets</title>
+	<link rel="stylesheet" href="styles.css">
+	<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
+
+	<style>
+
+		/* layout */
+		.layout-row {
+			padding: 0;
+			margin:0; 
+			display:flex;
+		}
+
+		.card {
+			/* for card as a child */ 
+			flex-basis:200px;
+			flex-grow:1;
+			padding:40px;
+			min-width:530px;
+
+			/* for card as a parent */ 
+			display: flex;
+			flex-direction: column;
+			justify-content: center;   /* vertically center */
+		}
+
+		.card h1, 
+		.card h2, 
+		.card p {
+			margin: 0; 
+			margin-bottom:25px;
+		}
+
+		.img-card {
+			text-align: center;
+		}
+
+		.card-full-line-wrapper {
+			max-width:800px;
+			align-self:center;
+		}
+
+		body {
+			padding:0;
+			margin:0;
+		}
+
+		.logo {
+			margin-top: 26px;
+			margin-bottom: 26px;
+		}
+
+		.img-card img {
+			max-width:500px;
+			max-height:500px;
+			align-self: center;
+		}
+
+
+		/* colors */ 
+		.dark-green-bg {
+			background-color:#00291B;
+			color: #F2F6F5; /* alt text color */ 
+		}
+
+		body {
+			background-color: #F2F6F5;
+			color: #00291B; /* default text color */ 
+			font-family: 'Funnel Display', sans-serif;
+			font-optical-sizing: auto;
+			font-weight: 300;
+			font-size:24px;
+			font-style: normal;
+		}
+
+
+		.bold-font {
+			font-weight: 700 !important;
+		}
+
+
+		.pre-header {
+			font-weight: 700;
+			letter-spacing: 38%;
+			text-transform: uppercase;
+			font-size:20px;
+			margin-bottom:0 !important;
+		}
+
+		h1 {
+			font-size:100px;
+			font-weight: 400;
+			line-height: 90%;
+		}
+		h2 {
+			font-size:64px;
+			line-height: 68px;
+			font-weight: 400;
+			letter-spacing: -2%;
+		}
+
+		.bold-sentence {
+			font-size:30px;
+			font-weight: 500;
+		}
+
+		/* other nonsense */ 
+
+		.button {
+			display: inline-block;
+			text-align: center;
+			letter-spacing: inherit;
+			margin: 0;
+			padding: 12px 36px;
+			vertical-align: middle;
+			background: #37BB93;
+			color: #fff;
+			border: 0;
+			border-radius: 12px;
+			width: auto;
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+			font-size:18px;
+			font-weight:600;
+			text-decoration: none;
+		}
+
+		.background-image-city1 {
+			background-image:
+ 				radial-gradient(circle, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.3) 100%),
+				url("christine-qHb4vuseZBk-unsplash.jpg");
+			background-size: cover;
+			background-position: center;
+			color:#F2F6F5;
+			min-height: 580px;
+		}
+
+	</style>
+</head>
+
+<body>
+
+<div class='layout-row' style='height:78px;'>
+	<div class='card'><img src='streetsmart-logo.svg' class='logo' style='height:26px;width:168px;'></div>
+	<div class='card' style='text-align: right;'><div class='cta' style='margin-top:0;padding-top:0;'><a href="https://docs.google.com/forms/d/e/1FAIpQLSfy6V8dg4z4HA0hF7BA4HvFZ3nldrUzpNBT4Ft2F_IwtUniEA/viewform" class="button" style='font-size:14px;'>Join waitlist ></a></div></div>
+</div>
+
+<div class='layout-row' style='background-color: #fff;'>
+	<div class='card'>
+		<h1>Let's <span class='bold-font'>reimagine</span> our <span class='bold-font'>streets</span></h1>
+		<p>StreetSmart empowers everyday people to understand, reimagine, and improve their streets.</p>
+		<div class='cta'><a href="https://docs.google.com/forms/d/e/1FAIpQLSfy6V8dg4z4HA0hF7BA4HvFZ3nldrUzpNBT4Ft2F_IwtUniEA/viewform" class="button">Join waitlist ></a></div>
+	</div>
+
+	<div class='card img-card'>
+		<img src='app-screenshots-top.png'>
+	</div>
+</div>
+
+
+<div class='layout-row dark-green-bg'>
+	<div class='card'>
+		<p class='pre-header'>How It Works</p>
+		<h2>Get to know your neighbourhood</h2>
+		<p>Explore how others experience your streets and uncover simple ways to make your neighbourhood more walkable and inviting. </p>
+		<div class='cta'><a href="https://docs.google.com/forms/d/e/1FAIpQLSfy6V8dg4z4HA0hF7BA4HvFZ3nldrUzpNBT4Ft2F_IwtUniEA/viewform" class="button">Join waitlist ></a></div>
+	</div>
+
+	<div class='card img-card'>
+		<img src='map-img-noheatmap.png'>
+	</div>
+</div>
+
+<div class='layout-row'>
+	<div class='card img-card' style='background-color:#D0EDE4'>
+		<img src='woman holding phone 1.png'>
+	</div>
+
+	<div class='card'>
+		<p class='pre-header'>How It Works</p>
+		<h2>Analyse any street</h2>
+		<p>Take or upload an image of your street to discover what makes it liveable, learn how it could improve, and share your feedback</p>
+		<div class='cta'><a href="https://docs.google.com/forms/d/e/1FAIpQLSfy6V8dg4z4HA0hF7BA4HvFZ3nldrUzpNBT4Ft2F_IwtUniEA/viewform" class="button">Join waitlist ></a></div>
+	</div>
+</div>
+
+<div class='layout-row'>
+
+	<div class='card'>
+		<p class='pre-header'>How It Works</p>
+		<h2>Add to the map, help your community</h2>
+		<p>Your street photo and StreetSmart insights appear on the public map to help others learn.</p>
+		<div class='cta'><a href="https://docs.google.com/forms/d/e/1FAIpQLSfy6V8dg4z4HA0hF7BA4HvFZ3nldrUzpNBT4Ft2F_IwtUniEA/viewform" class="button">Join waitlist ></a></div>
+	</div>
+	<div class='card img-card' style='background-color:#9DC7BA'>
+		<img src='home.png'>
+	</div>
+</div>
+
+<div class='layout-row background-image-city1' style=''>
+	<div class='card' style='text-align:center;'>
+		<div class='card-full-line-wrapper'>
+			<p class='pre-header'>Vision & Mission</p>
+			<h2><span class='bold-font'>Street</span>Smart is for the Everyday Urbanist</h2>
+			<p>For the parent pushing a stroller.<br>
+				The teen riding a bike.<br>
+				The elder navigating a crossing.<br>
+				The commuter who dreams of green shade and cleaner air.<br>
+				The driver, stuck in traffic.</p>
+			<p style='font-weight:600;'>Live StreetSmart</p>
+		</div>
+	</div>
+</div>
+
+<div class='layout-row dark-green-bg' style='min-height:500px;text-align:center;'>
+	<div class='card'>
+		<div class='card-full-line-wrapper'>
+			<p class='pre-header'>Vision & Mission</p>
+			<h2>Our Vision</h2>
+			<p>StreetSmart envisions a world where streets are no longer spaces that endanger, but vibrant places where people and nature thrive together. </p>
+		</div>
+	</div>
+</div>
+
+<div class='layout-row' style='min-height:400px;'>
+	<div class='card'>
+		<div class='card-full-line-wrapper'>
+			<p class='pre-header'>Vision & Mission</p>
+			<h2>Why <span class='bold-font'>Street</span>Smart?</h2>
+			<p class='bold-sentence'>StreetSmart exists to challenge a century of urban planning that prioritised speed and flow over people and the planet. </p>
+			<p>This movement-first approach has led to deadly heat, flooding, pollution, road fatalities, isolation, and a loss of freedom - particularly for children. Our streets have become climate-risk zones and health hazards.</p>
+			<p class='bold-sentence'>StreetSmart flips the script by shifting mindsets. </p>
+			<p>We empower communities to see streets not just as routes for movement, but as places where children can walk safely, nature can flourish, and communities can thrive in the face of climate change.</p>
+
+			<p>Through street-level data, community voices, and storytelling, we spark curiosity and drive meaningful change.</p>
+
+			<p>StreetSmart is more than a platform. It is a movement for a culture that values people over cars, nature over asphalt, and belonging over congestion.</p>
+		</div>
+	</div>
+</div>
+
+
+<div class='layout-row dark-green-bg' style='min-height:500px;text-align:center;'>
+	<div class='card'>
+		<div class='card-full-line-wrapper'>
+			<h1><span class='bold-font'>Street</span>Smart</h1>
+			<p>StreetSmart is free-to-use and fully in-browser, no download necessary! </p>
+			<div class='cta'><a href="https://docs.google.com/forms/d/e/1FAIpQLSfy6V8dg4z4HA0hF7BA4HvFZ3nldrUzpNBT4Ft2F_IwtUniEA/viewform" class="button">Join waitlist ></a></div>
+		</div>
+	</div>
+</div>
+
+</body>
+
+
+</html>
