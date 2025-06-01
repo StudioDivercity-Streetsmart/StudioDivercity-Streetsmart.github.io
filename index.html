@@ -1,270 +1,392 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
-	<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">--> <!--mobile is too broken --> 
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">--> <!--mobile is too broken -->
 	<title>StreetSmart | Let's Reimagine Our Streets</title>
-	<meta name='description' content='StreetSmart empowers everyday people to understand, reimagine, and improve their streets'>
-	<link rel="stylesheet" href="styles.css">
-	<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+	<meta name='description'
+		content='StreetSmart empowers everyday people to understand, reimagine, and improve their streets'>
+	<link rel="stylesheet" href="css/stylesheet.css">
+	<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&family=Nunito:wght@400;700&display=swap"
+		rel="stylesheet">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
 
-	<style>
-
-		/* layout */
-		.layout-row {
-			padding: 0;
-			margin:0; 
-			display:flex;
-		}
-
-		.card {
-			/* for card as a child */ 
-			flex-basis:200px;
-			flex-grow:1;
-			padding:40px;
-			min-width:410px;
-
-			/* for card as a parent */ 
-			display: flex;
-			flex-direction: column;
-			justify-content: center;   /* vertically center */
-		}
-
-		.card h1, 
-		.card h2, 
-		.card p {
-			margin: 0; 
-			margin-bottom:25px;
-		}
-
-		.img-card {
-			text-align: center;
-		}
-
-		.card-full-line-wrapper {
-			max-width:800px;
-			align-self:center;
-		}
-
-		body {
-			padding:0;
-			margin:0;
-			min-width:980px;
-		}
-
-		.logo {
-			margin-top: 26px;
-			margin-bottom: 26px;
-		}
-
-		.img-card img {
-			max-width:500px;
-			max-height:500px;
-			align-self: center;
-		}
-
-
-		/* colors */ 
-		.dark-green-bg {
-			background-color:#00291B;
-			color: #F2F6F5; /* alt text color */ 
-		}
-
-		body {
-			background-color: #F2F6F5;
-			color: #00291B; /* default text color */ 
-			font-family: 'Funnel Display', sans-serif;
-			font-optical-sizing: auto;
-			font-weight: 300;
-			font-size:24px;
-			font-style: normal;
-		}
-
-
-		.bold-font {
-			font-weight: 700 !important;
-		}
-
-
-		.pre-header {
-			font-weight: 700;
-			letter-spacing: 38%;
-			text-transform: uppercase;
-			font-size:20px;
-			margin-bottom:0 !important;
-		}
-
-		h1 {
-			font-size:100px;
-			font-weight: 400;
-			line-height: 90%;
-		}
-		h2 {
-			font-size:64px;
-			line-height: 68px;
-			font-weight: 400;
-			letter-spacing: -2%;
-		}
-
-		.bold-sentence {
-			font-size:30px;
-			font-weight: 500;
-		}
-
-		/* other nonsense */ 
-
-		.button {
-			display: inline-block;
-			text-align: center;
-			letter-spacing: inherit;
-			margin: 0;
-			padding: 12px 36px;
-			vertical-align: middle;
-			background: #37BB93;
-			color: #fff;
-			border: 0;
-			border-radius: 12px;
-			width: auto;
-			-webkit-touch-callout: none;
-			-webkit-user-select: none;
-			-khtml-user-select: none;
-			-moz-user-select: none;
-			-ms-user-select: none;
-			user-select: none;
-			font-size:18px;
-			font-weight:600;
-			text-decoration: none;
-		}
-
-		.background-image-city1 {
-			background-image:
- 				radial-gradient(circle, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.3) 100%),
-				url("christine-qHb4vuseZBk-unsplash.jpg");
-			background-size: cover;
-			background-position: center;
-			color:#F2F6F5;
-			min-height: 580px;
-		}
-
-	</style>
 </head>
 
 <body>
 
-<div class='layout-row' style='height:78px;'>
-	<div class='card'><img src='streetsmart-logo.svg' class='logo' style='height:26px;width:168px;'></div>
-	<div class='card' style='text-align: right;'><div class='cta' style='margin-top:0;padding-top:0;'><a href="https://docs.google.com/forms/d/e/1FAIpQLSfy6V8dg4z4HA0hF7BA4HvFZ3nldrUzpNBT4Ft2F_IwtUniEA/viewform" class="button" style='font-size:14px;'>Join waitlist ></a></div></div>
-</div>
-
-<div class='layout-row' style='background-color: #fff;'>
-	<div class='card'>
-		<h1>Let's <span class='bold-font'>reimagine</span> our <span class='bold-font'>streets</span></h1>
-		<p>StreetSmart empowers everyday people to understand, reimagine, and improve their streets.</p>
-		<div class='cta'><a href="https://docs.google.com/forms/d/e/1FAIpQLSfy6V8dg4z4HA0hF7BA4HvFZ3nldrUzpNBT4Ft2F_IwtUniEA/viewform" class="button">Join waitlist ></a></div>
-	</div>
-
-	<div class='card img-card'>
-		<img src='app-screenshots-top.png'>
-	</div>
-</div>
-
-
-<div class='layout-row dark-green-bg'>
-	<div class='card'>
-		<p class='pre-header'>How It Works</p>
-		<h2>Get to know your neighbourhood</h2>
-		<p>Explore how others experience your streets and uncover simple ways to make your neighbourhood more walkable and inviting. </p>
-		<div class='cta'><a href="https://docs.google.com/forms/d/e/1FAIpQLSfy6V8dg4z4HA0hF7BA4HvFZ3nldrUzpNBT4Ft2F_IwtUniEA/viewform" class="button">Join waitlist ></a></div>
-	</div>
-
-	<div class='card img-card'>
-		<img src='map-img-noheatmap.png'>
-	</div>
-</div>
-
-<div class='layout-row'>
-	<div class='card img-card' style='background-color:#D0EDE4'>
-		<img src='woman holding phone 1.png'>
-	</div>
-
-	<div class='card'>
-		<p class='pre-header'>How It Works</p>
-		<h2>Analyse any street</h2>
-		<p>Take or upload an image of your street to discover what makes it liveable, learn how it could improve, and share your feedback</p>
-		<div class='cta'><a href="https://docs.google.com/forms/d/e/1FAIpQLSfy6V8dg4z4HA0hF7BA4HvFZ3nldrUzpNBT4Ft2F_IwtUniEA/viewform" class="button">Join waitlist ></a></div>
-	</div>
-</div>
-
-<div class='layout-row'>
-
-	<div class='card'>
-		<p class='pre-header'>How It Works</p>
-		<h2>Add to the map, help your community</h2>
-		<p>Your street photo and StreetSmart insights appear on the public map to help others learn.</p>
-		<div class='cta'><a href="https://docs.google.com/forms/d/e/1FAIpQLSfy6V8dg4z4HA0hF7BA4HvFZ3nldrUzpNBT4Ft2F_IwtUniEA/viewform" class="button">Join waitlist ></a></div>
-	</div>
-	<div class='card img-card' style='background-color:#9DC7BA'>
-		<img src='Home.png'>
-	</div>
-</div>
-
-<div class='layout-row background-image-city1' style=''>
-	<div class='card' style='text-align:center;'>
-		<div class='card-full-line-wrapper'>
-			<p class='pre-header'>Vision & Mission</p>
-			<h2><span class='bold-font'>Street</span>Smart is for the Everyday Urbanist</h2>
-			<p>For the parent pushing a stroller.<br>
-The teen riding a bike.<br>
-The elder navigating a crossing.<br>
-The commuter seeking green shade and cleaner air.<br>
-Even the driver stuck in traffic.</p>
-			<p style='font-weight:600;'>Live StreetSmart</p>
+	<div class='layout-row' style='height:78px;'>
+		<div class='card'><img src='assets/img/streetsmart-logo.svg' class='logo' style='height:26px;width:168px;'>
+		</div>
+		<div class='card' style='text-align: right;'>
+			<div class='cta' style='margin-top:0;padding-top:0;'><a
+					href="https://docs.google.com/forms/d/e/1FAIpQLSfy6V8dg4z4HA0hF7BA4HvFZ3nldrUzpNBT4Ft2F_IwtUniEA/viewform"
+					class="button" style='font-size:14px;'>Try StreetSmart ➔</a></div>
 		</div>
 	</div>
-</div>
 
-<div class='layout-row dark-green-bg' style='min-height:500px;text-align:center;'>
-	<div class='card'>
-		<div class='card-full-line-wrapper'>
-			<p class='pre-header'>Vision & Mission</p>
-			<h2>Our Vision</h2>
-			<p>StreetSmart envisions a world where streets are no longer spaces that endanger, but vibrant places where people and nature thrive together. </p>
+	<div class='layout-row demo-row row1'>
+
+		<div class='card'>
+			<h1>Does <span class='bold-font'>your street</span> work for you?</h1>
+			<p>Discover how your street shapes your daily freedom, safety, and sense of well-being.</p>
+			<div class='cta'><a
+					href="https://docs.google.com/forms/d/e/1FAIpQLSfy6V8dg4z4HA0hF7BA4HvFZ3nldrUzpNBT4Ft2F_IwtUniEA/viewform"
+					class="button">Try StreetSmart ➔</a></div>
+		</div>
+
+		<div class='card img-card'>
+			<img src='assets/img/titlephones.png'>
+		</div>
+		<!-- <img class="background-image" id="background-image-1" src="assets/img/Background Squigglies.png"> -->
+
+	</div>
+
+
+	<div class='layout-row dark-green-bg demo-row row2'>
+		<div class='card'>
+			<p class='pre-header'>How It Works</p>
+			<h2>Get to know your neighbourhood</h2>
+			<p>See how others experience your streets. Understand what works — and what doesn’t. <br> Discover simple
+				changes that could improve comfort, safety, and everyday life.</p>
+			<div class='cta'><a
+					href="https://docs.google.com/forms/d/e/1FAIpQLSfy6V8dg4z4HA0hF7BA4HvFZ3nldrUzpNBT4Ft2F_IwtUniEA/viewform"
+					class="button">Try it now ➔</a></div>
+		</div>
+
+		<div class='card img-card'>
+			<img src='assets/img/imageDiv2.png'>
 		</div>
 	</div>
-</div>
 
-<div class='layout-row' style='min-height:400px;'>
-	<div class='card'>
-		<div class='card-full-line-wrapper'>
-			<p class='pre-header'>Vision & Mission</p>
-			<h2>Why <span class='bold-font'>Street</span>Smart?</h2>
-			<p class='bold-sentence'>StreetSmart exists to challenge a century of urban planning that prioritised speed and flow over people and the planet. </p>
-			<p>This movement-first approach has led to deadly heat, flooding, pollution, road fatalities, isolation, and a loss of freedom - particularly for children. Our streets have become climate-risk zones and health hazards.</p>
-			<p class='bold-sentence'>StreetSmart flips the script by shifting mindsets. </p>
-			<p>We empower communities to see streets not just as routes for movement, but as places where children can walk safely, nature can flourish, and communities can thrive in the face of climate change.</p>
+	<div class='layout-row demo-row row3'>
+		<div class='card img-card'>
+			<img src='assets/img/imageDiv3.png' style="z-index: 5;">
+		</div>
 
-			<p>Through street-level data, community voices, and storytelling, we spark curiosity and drive meaningful change.</p>
-
-			<p>StreetSmart is more than a platform. It is a movement for a culture that values people over cars, nature over asphalt, and belonging over congestion.</p>
+		<div class='card how-it-works-text'>
+			<p class='pre-header'>How It Works</p>
+			<h2>Get insights about any street</h2>
+			<p>Upload a photo and StreetSmart gives you instant feedback. Want safer crossings? More shade? <br>
+				We’ll show you what’s missing — and let you add your voice to strengthen the case for change.</p>
+			<div class='cta'><a
+					href="https://docs.google.com/forms/d/e/1FAIpQLSfy6V8dg4z4HA0hF7BA4HvFZ3nldrUzpNBT4Ft2F_IwtUniEA/viewform"
+					class="button">Try it now ➔</a></div>
 		</div>
 	</div>
-</div>
 
+	<div class='layout-row demo-row row4'>
 
-<div class='layout-row dark-green-bg' style='min-height:500px;text-align:center;'>
-	<div class='card'>
-		<div class='card-full-line-wrapper'>
-			<h1><span class='bold-font'>Street</span>Smart</h1>
-			<p>StreetSmart is free-to-use and fully in-browser, no download necessary! </p>
-			<div class='cta'><a href="https://docs.google.com/forms/d/e/1FAIpQLSfy6V8dg4z4HA0hF7BA4HvFZ3nldrUzpNBT4Ft2F_IwtUniEA/viewform" class="button">Join waitlist ></a></div>
+		<div class='card how-it-works-text'>
+			<p class='pre-header'>How It Works</p>
+			<h2>Add your street, join the movement</h2>
+			<p>StreetSmart turns everyday observations into public demand. <br>Share a photo and your feedback to reveal
+				strengths, spot gaps, and call for change.</p>
+			<div class='cta'><a
+					href="https://docs.google.com/forms/d/e/1FAIpQLSfy6V8dg4z4HA0hF7BA4HvFZ3nldrUzpNBT4Ft2F_IwtUniEA/viewform"
+					class="button">Try it now ➔</a></div>
+		</div>
+		<div class='card img-card'>
+			<img src='assets/img/imageDiv4.png' style="z-index: 5;">
 		</div>
 	</div>
-</div>
 
+	<div class='layout-row vision1'>
+
+		<p class='pre-header'>Vision & Mission</p>
+		<div class="card-row">
+			<div class="card">
+				<h2>Our Vision</h2>
+				<p>A world where streets are no longer dangerous spaces — but vibrant places where people and nature
+					thrive
+					together.</p>
+			</div>
+			<div class="card">
+				<h2>Our Mission</h2>
+				<p>StreetSmart empowers everyday people to see, understand and improve their streets. We turn street
+					photos
+					into insights, and insights into action.</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="layout-row vision2">
+		<img src="assets/img/Row6Background.png">
+
+		<div class="pop-out">
+			<p class="pre-header">VISION & MISSION</p>
+			<h3>
+				<bold>Street</bold>Smart is for the Everyday Urbanist
+			</h3>
+			<p>For the parent pushing a pram. The teenager cycling to school. The older adult crossing the street.The
+				commuter seeking shade and clean air. <br>Even the driver stuck in traffic. <br>
+				<bold>Live StreetSmart.</bold>
+			</p>
+		</div>
+
+	</div>
+
+	<div class='layout-row vision3'>
+		<div class='card'>
+			<div class='card-full-line-wrapper'>
+				<p class='pre-header'>Vision & Mission</p>
+				<h2>Why <span class='bold-font'>Street</span>Smart?</h2>
+				<p class='bold-sentence'>StreetSmart exists to challenge a century of urban planning that prioritised
+					speed and flow over people and the planet. </p>
+				<p>This movement-first approach has led to deadly heat, flooding, pollution, road fatalities, isolation,
+					and a loss of freedom - particularly for children. Our streets have become climate-risk zones and
+					health hazards.</p>
+				<p class='bold-sentence'>StreetSmart flips the script by shifting mindsets. </p>
+				<p>We empower communities to see streets not just as routes for movement, but as places where children
+					can walk safely, nature can flourish, and communities can thrive in the face of climate change.</p>
+
+				<p>Through street-level data, community voices, and storytelling, we spark curiosity and drive
+					meaningful change.</p>
+
+				<p>StreetSmart is more than a platform. It is a movement for a culture that values people over cars,
+					nature over asphalt, and belonging over congestion.</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="myth-busters" style="padding-top: 60px; padding-bottom: 60px;">
+		<h2>Myth-busters</h2>
+		<p>StreetSmart debunks common myths about urban transit, mobility and cities.</p>
+
+		<div class="js-carousel-wrapper">
+
+			<div class="js-carousel-container">
+				<div class="js-carousel-track">
+					<!-- Card 1 -->
+					<div class="js-card">
+						<img src="assets/img/myth1.png" alt="Myth 1">
+						<h3>MYTH #1</h3>
+						<p class="myth-quote">“We are not Amsterdam. Our city doesn’t have a walking/ cycling culture.”
+						</p>
+						<h3>TRUTH</h3>
+						<p class="truth-quote">People always respond to the environments we create. Infrastructure
+							shapes behaviour.<br>When infrastructure prioritises people, behaviours shift.
+						</p>
+						<a href="#" class="js-card-button">More ➔</a>
+					</div>
+
+					<!-- Card 2 -->
+					<div class="js-card">
+						<img src="assets/img/myth2.png" alt="Myth 2">
+						<h3>MYTH #2</h3>
+						<p class="myth-quote">"Adding more road lanes will ease congestion and improve traffic flow."
+
+						</p>
+						<h3>TRUTH</h3>
+						<p class="truth-quote">Building more road space doesn’t solve congestion – it actually creates
+							more. This is known as induced demand: adding more lanes attracts more drivers, quickly
+							filling up the new capacity.</p>
+						<a href="#" class="js-card-button">More ➔</a>
+					</div>
+
+					<!-- Card 3 -->
+					<div class="js-card">
+						<img src="assets/img/myth3.png" alt="Myth 3">
+						<h3>MYTH #3</h3>
+						<p class="myth-quote">"Pedestrian bridges are designed for pedestrians."</p>
+						<h3>TRUTH</h3>
+						<p class="truth-quote">Pedestrian bridges are often designed with cars in mind, prioritising
+							vehicle flow over pedestrian convenience. They force people to take detours or climb stairs,
+							making them inefficient and inaccessible.</p>
+						<a href="#" class="js-card-button">More ➔</a>
+					</div>
+
+					<!-- Card 4 -->
+					<div class="js-card">
+						<img src="assets/img/myth4.png" alt="Myth 4">
+						<h3>MYTH #4</h3>
+						<p class="myth-quote">"Bigger cars are safer."</p>
+						<h3>TRUTH</h3>
+						<p class="truth-quote">Big cars make the streets more dangerous for everyone outside the
+							vehicle.
+							Larger vehicles, like SUVs and trucks, increase the risk of fatal collisions with
+							pedestrians and cyclists. They take much longer to stop and, due to their height, drivers
+							can’t see pedestrians.
+						</p>
+						<a href="#" class="js-card-button">More ➔</a>
+					</div>
+					<!-- Cloned cards will be added here by JS -->
+				</div>
+			</div>
+
+			<button id="moreMythsBtn" class="more-myths-button">More Myths ➔</button>
+		</div>
+	</div>
+
+	<div class="people">
+		<h2>Meet the people behind StreetSmart</h2>
+
+		<div class="reena">
+			<img src="assets/img/headshots/Reena Mahajan.jpg">
+			<div class="reena-text">
+				<h4>Reena Mahajan</h4>
+				<p><span>Founder & Urban Innovation Lead</span></p>
+				<p>Reena Mahajan is an architect, urban planner, and the founder of Studio DiverCity. She brings
+					nearly
+					two decades of international experience designing people-centred, nature-positive cities —
+					blending
+					water-sensitive design, sustainable mobility, and gender-responsive planning into bold, holistic
+					solutions.</p>
+				<p>StreetSmart was born from lived experience. While raising a child in Montevideo, Reena saw how
+					car-dominated streets restrict freedom, safety, and everyday life — especially for children. In
+					response, she led the #MontevideoPacificada campaign, using visual advocacy, public dialogue,
+					and
+					design to push for change. The result: safer crossings, new bike lanes, and a cultural shift
+					around
+					mobility.</p>
+				<p>Now based in Paris, she’s building StreetSmart to scale that impact — combining data, design, and
+					public engagement to help cities put people and the planet first.</p>
+			</div>
+		</div>
+
+		<hr class="divider" />
+
+		<div class="team">
+			<h3>Launch Team</h3>
+			<p>StreetSmart’s launch team came together through the Climatebase Fellowship and beyond — a
+				multidisciplinary group united by the belief that streets should support freedom, health, and
+				climate
+				resilience.</p>
+
+			<p>With experience spanning urban planning, technology, design, and advocacy, the team collaborates
+				across
+				disciplines to build a tool that empowers people, informs decision-makers, and reimagines what
+				streets
+				can be.</p>
+
+			<h4>Core Contributors</h4>
+			<div class="grid-container core">
+				<div class="grid-item">
+					<img src="assets/img/headshots/Anu Jayasinghe.jpg">
+					<h5>Anu Jayasinghe</h5>
+					<p>Design Lead</p>
+				</div>
+				<div class="grid-item">
+					<img src="assets/img/headshots/Jaiveer SIngh.jpeg">
+					<h5>Jaiveer Singh</h5>
+					<p>Urban Systems Strategist</p>
+				</div>
+				<div class="grid-item">
+					<img src="assets/img/headshots/Kyle Reed-Yassin.jpeg">
+					<h5>Kyle Reed-Yassin</h5>
+					<p>Brand Identity Designer</p>
+				</div>
+				<div class="grid-item">
+					<img src="assets/img/headshots/Lesley Merz.JPG">
+					<h5>Lesley Merz</h5>
+					<p>Product Lead</p>
+				</div>
+				<div class="grid-item">
+					<img src="assets/img/headshots/Mavrianos Velentzas.jpg">
+					<h5>Mavrianos Velentzas</h5>
+					<p>Urban Researcher</p>
+				</div>
+				<div class="grid-item">
+					<img src="assets/img/headshots/Pallavi Salecha.jpg">
+					<h5>Pallavi Salecha</h5>
+					<p>Urban Researcher</p>
+				</div>
+				<div class="grid-item">
+					<img src="assets/img/headshots/Steven Cramer.jpg">
+					<h5>Steven Cramer</h5>
+					<p>Tech & Operations Lead</p>
+				</div>
+			</div>
+
+			<h4>Contributors & supporters</h4>
+
+			<div class="grid-container supporters">
+				<div class="grid-item">
+					<h6>Alind Jain</h6>
+					<p>GIS Analyst</p>
+				</div>
+				<div class="grid-item">
+					<h6>Chetan Aggarwal</h6>
+					<p>Urban Designer</p>
+				</div>
+				<div class="grid-item">
+					<h6>Daniel Vincent</h6>
+					<p>Data Architect</p>
+				</div>
+				<div class="grid-item">
+					<h6>Gala Camacho</h6>
+					<p>Advisor</p>
+				</div>
+				<div class="grid-item">
+					<h6>Mako Sorensen</h6>
+					<p>Fullstack AI Engineer</p>
+				</div>
+				<div class="grid-item">
+					<h6>Steven Giallourakis</h6>
+					<p>Software Developer</p>
+				</div>
+				<div class="grid-item">
+					<h6>Tan Chan</h6>
+					<p>Community Researcher</p>
+				</div>
+				<div class="grid-item">
+					<h6>Nilam Bhojwani</h6>
+					<p>AI/ML Developer</p>
+				</div>
+			</div>
+
+			<h4>Early contributors</h4>
+
+			<div class="grid-container early">
+				<p>Anders Ward &nbsp;&nbsp;&nbsp;&nbsp; Danbi Kim &nbsp;&nbsp;&nbsp;&nbsp; Divya Bisht
+					&nbsp;&nbsp;&nbsp;&nbsp; Elzaphan
+					Murage &nbsp;&nbsp;&nbsp;&nbsp;
+					Icare Duplessey &nbsp;&nbsp;&nbsp;&nbsp;Jayabalambika R <br> Sirid Kellermann
+					&nbsp;&nbsp;&nbsp;&nbsp; Scott
+					Baker</p>
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="layout-row try-streetsmart">
+		<h2>Try StreetSmart Now</h2>
+		<p>StreetSmart is free-to-use and fully in-browser, <br>no download necessary!</p>
+		<div class='cta'><a
+				href="https://docs.google.com/forms/d/e/1FAIpQLSfy6V8dg4z4HA0hF7BA4HvFZ3nldrUzpNBT4Ft2F_IwtUniEA/viewform"
+				class="button">Try it now ➔</a></div>
+	</div>
+
+
+
+
+	<footer>
+		<div class="layout-row">
+			<div class="footer-image"><img class="footer-logo" src="assets/img/StreetSmart Footer Logo.png"></div>
+			<div class="footer-links">
+				<ul>
+					<li><a>How It Works</a></li>
+					<li><a>Mission</a></li>
+					<li><a>Myth Busters</a></li>
+					<li><a>Team</a></li>
+					<li><a>Contact Us</a></li>
+					<li><img src="assets/img/mdi_linkedin.png"></li>
+				</ul>
+			</div>
+		</div>
+		<p>
+			<bold>Disclaimer:</bold> StreetSmart is currently under development. Please contact us if you experience
+			any
+			issues or anything you need to report.
+		</p>
+	</footer>
+
+	<script src="js/script.js"></script>
 </body>
 
 
