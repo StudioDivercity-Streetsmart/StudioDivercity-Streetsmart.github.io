@@ -5,9 +5,10 @@
 }
 @media screen and (min-width: 450px) and (max-width: 949px) {
   .layout-row {
-    padding: 0 50px;
+    padding: 50px 20px;
     margin: 0;
     display: flex;
+    flex-direction: column;
   }
 
   .header {
@@ -29,10 +30,6 @@
 
   .card {
     flex-basis: auto;
-    flex-grow: 1;
-    width: 50%;
-
-    /* for card as a parent */
     display: flex;
     flex-direction: column;
     justify-content: center; /* vertically center */
@@ -44,7 +41,6 @@
     position: absolute;
     z-index: 0;
     width: 100% !important;
-    height: 60vh;
     object-fit: contain;
 
     /* height: 100%; */
@@ -53,27 +49,21 @@
   #background-image-1 {
     right: 0;
   }
-
-  .demo-row {
-    height: 60vh;
-  }
-
-  .row3 {
-    padding: 0;
-  }
-  .row4 {
-    padding: 0;
-  }
-
-  .how-it-works-text {
-    padding: 50px;
-  }
-
   .row1 {
-    background-image: url("../assets/img/Background\ Squigglies.png");
+    background-image: url("../assets/img/Background\ SquiggliesSmall.png");
     background-repeat: no-repeat;
-    background-position: right center;
-    background-size: auto 100%;
+    background-position: top center;
+    background-size: 100% auto;
+  }
+
+  .row1 .img-card {
+    order: 1;
+    width: 100%;
+    height: auto;
+  }
+
+  .row1 .card:not(.img-card) {
+    order: 2;
   }
 
   .row2 {
@@ -81,12 +71,47 @@
     color: white;
   }
 
-  .row2 .img-card img {
-    height: 60%;
+  .row2 .img-card {
+    width: 100%;
+    order: 1;
+  }
+
+  .row2 .card.card:not(.img-card) {
+    order: 2;
+  }
+
+  .row2 .button {
+    background-color: #d0ede4;
+    color: #027753;
   }
 
   .row2 p {
     color: #fafcfc;
+  }
+
+  .row3 {
+    padding: 0;
+  }
+
+  .row4 {
+    padding: 0;
+  }
+
+  .row4 .img-card {
+    order: 1;
+  }
+
+  .row4 .card:not(.img-card) {
+    order: 2;
+  }
+
+  .row4 .button {
+    background-color: #ffcebc;
+    color: #4e3434;
+  }
+
+  .how-it-works-text {
+    padding: 50px;
   }
 
   .vision2 {
@@ -114,53 +139,69 @@
 
   .vision1 {
     background-color: #00291b;
-    background-image: url("../assets/img/Squiggles4.png");
+    background-image: url("../assets/img/squiggles4small.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
     color: #ffdfd3;
-    display: flex;
-    flex-direction: column;
-    gap: 2em;
     text-align: center;
     padding: 15%;
     width: 100%;
+  }
+
+  .vision1 .card-row {
+    width: 100%;
+    text-align: left;
+  }
+
+  .vision1 h2 {
+    text-align: center;
+    margin-top: 10px;
   }
 
   .vision2 {
     position: relative;
   }
 
+  .vision2 img {
+    height: 90vh;
+    object-fit: none;
+    margin-top: -20px;
+  }
+
   .vision2 .pop-out {
-    position: absolute;
-    left: 5%;
-    bottom: -8%;
-    width: 33%;
-    max-width: 700px;
+    width: 90%;
+    margin: -30% auto 40% auto;
     background-color: #d0ede4;
     color: #00452d;
     border-radius: 16px;
     padding: 20px;
+    line-height: 1.5;
   }
 
   .pop-out p {
-    font-size: 16px;
+    font-size: 18px;
+  }
+
+  .pop-out strong {
+    font-weight: 600;
   }
 
   .pop-out h3 {
     font-size: 20px;
-  }
-
-  .card-row {
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    width: 100%;
-    align-items: baseline;
+    font-weight: 200;
   }
 
   .vision3 {
     padding: 15%;
+  }
+
+  .vision3 p {
+    font-size: 18px;
+  }
+
+  .vision3 .bold-sentence {
+    font-size: 20px;
   }
 
   .myth-busters {
@@ -180,34 +221,9 @@
 
   /* Carousel */
 
-  .js-carousel-wrapper {
-    width: 100%;
-    margin: 50px auto;
-    text-align: center;
-  }
-
-  .js-carousel-wrapper h2 {
-    margin-bottom: 25px;
-    color: #2c3e50;
-    font-size: 2em;
-  }
-
-  .js-carousel-container {
-    width: 100%;
-    overflow: hidden;
-  }
-
-  .js-carousel-track {
-    display: flex;
-    transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
-
   .js-card {
-    flex: 0 0 calc(100% / 2.8);
-    min-width: calc(100% / 2.8);
     box-sizing: border-box;
     padding: 20px;
-    margin-right: 15px; /* Space between cards */
     background-color: #ffffff;
     border-radius: 30px;
     text-align: left;
@@ -215,10 +231,6 @@
     flex-direction: column;
     height: 85vh;
     color: #00291d;
-  }
-
-  .js-card:last-child {
-    margin-right: 0; /* No margin for the last card in the track */
   }
 
   .js-card img {
@@ -270,29 +282,7 @@
   }
 
   .more-myths-button {
-    margin-top: 30px;
-    width: 200px;
-    padding: 12px 30px;
-    font-size: 18px;
-    color: #4e3434;
-    background-color: #ffcebc;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.1s ease;
-  }
-
-  .more-myths-button:hover {
-    background-color: #d1a99b;
-  }
-  .more-myths-button:active {
-    transform: translateY(1px);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-
-  .js-prepended-clone.initially-hidden {
-    opacity: 0;
-    pointer-events: none;
+    display: none;
   }
 
   /* People */
@@ -402,8 +392,7 @@
   .card h1,
   .card h2,
   .card p {
-    margin: 0;
-    margin-bottom: 25px;
+    margin: 20px 0px;
   }
 
   .img-card {
@@ -502,11 +491,12 @@
   }
 
   .pre-header {
-    font-weight: 700;
-    letter-spacing: 38%;
+    font-weight: 200;
+    letter-spacing: 7px;
     text-transform: uppercase;
     font-size: 20px;
     margin-bottom: 0 !important;
+    opacity: 0.7;
   }
 
   h1 {
@@ -619,6 +609,10 @@
   }
   .row4 {
     padding: 0;
+  }
+  .row4 .button {
+    background-color: #ffcebc;
+    color: #4e3434;
   }
 
   .how-it-works-text {
@@ -1160,6 +1154,11 @@
   }
   .row4 {
     padding: 0;
+  }
+
+  .row4 .button {
+    background-color: #ffcebc;
+    color: #4e3434;
   }
 
   .how-it-works-text {
