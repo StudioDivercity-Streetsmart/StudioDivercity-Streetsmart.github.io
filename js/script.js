@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const originalCards = Array.from(track.children);
   const numOriginalCards = originalCards.length;
 
-  const CAROUSEL_MIN_WIDTH = 750; // Carousel switches off for mobile
+  const CAROUSEL_MIN_WIDTH = 1080; // Carousel switches off for mobile
   let isCarouselActive = false;
   let mql;
 
