@@ -65,6 +65,10 @@
   color: white;
 }
 
+.row2 .img-card img {
+  height: 80%;
+}
+
 .row2 p {
   color: #fafcfc;
 }
@@ -446,24 +450,15 @@ footer p {
   align-self: center;
 }
 
-body {
-  padding: 0;
-  margin: 0;
-  width: 100%;
-}
-
 .logo {
   margin-top: 26px;
   margin-bottom: 26px;
 }
 
-/* .img-card img {
-  max-width: 500px;
-  max-height: 500px;
-  align-self: center;
-} */
-
 body {
+  width: 100%;
+  padding: 0;
+  margin: 0;
   background-color: #f2f6f5;
   color: #00291b; /* default text color */
   font-family: "Funnel Display", sans-serif;
