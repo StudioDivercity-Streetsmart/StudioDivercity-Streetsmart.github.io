@@ -23,15 +23,19 @@
 		<div class="logo-container">
 			<img src='assets/img/HeaderLogo.png' class='logo'>
 		</div>
-		<div class="nav-links">
-			<a>How it Works</a>
-			<a>Mission</a>
-			<a>Myth Busters</a>
-			<a>Team</a>
-			<div class='cta' style='margin-top:0;padding-top:0;'><a
-					href="https://docs.google.com/forms/d/e/1FAIpQLSfy6V8dg4z4HA0hF7BA4HvFZ3nldrUzpNBT4Ft2F_IwtUniEA/viewform"
-					class="button" style='font-size:14px;'>Try StreetSmart ➔</a></div>
-		</div>
+
+		<div class="hamburger" onclick="toggleMenu(this)">☰</div>
+
+		<nav id="navMenu" class="nav-links">
+			<a href="#how-it-works">How it Works</a>
+			<a href="#mission">Mission</a>
+			<a href="#myth-busters">Myth Busters</a>
+			<a href="#team">Team</a>
+			<div class='cta'>
+				<a href="https://docs.google.com/forms/d/e/1FAIpQLSfy6V8dg4z4HA0hF7BA4HvFZ3nldrUzpNBT4Ft2F_IwtUniEA/viewform"
+					class="button">Try StreetSmart ➔</a>
+			</div>
+		</nav>
 	</div>
 
 	<div class='layout-row demo-row row1'>
@@ -50,7 +54,7 @@
 	</div>
 
 
-	<div class='layout-row dark-green-bg demo-row row2'>
+	<div class='layout-row dark-green-bg demo-row row2' id="how-it-works">
 		<div class='card'>
 			<p class='pre-header'>How It Works</p>
 			<h2>Get to know your neighbourhood</h2>
@@ -98,7 +102,7 @@
 		</div>
 	</div>
 
-	<div class='layout-row vision1'>
+	<div class='layout-row vision1' id="mission">
 
 		<p class='pre-header'>Vision & Mission</p>
 		<div class="card-row">
@@ -156,7 +160,7 @@
 		</div>
 	</div>
 
-	<div class="myth-busters" style="padding-top: 60px; padding-bottom: 60px;">
+	<div class="myth-busters" id="myth-busters" style="padding-top: 60px; padding-bottom: 60px;">
 		<h2>Myth-busters</h2>
 		<p class="myth-busters-explanation">StreetSmart debunks common myths about urban transit, mobility and cities.
 		</p>
@@ -226,7 +230,7 @@
 		</div>
 	</div>
 
-	<div class="people">
+	<div class="people" id="team">
 		<h2>Meet the people behind StreetSmart</h2>
 
 		<div class="reena">
@@ -374,10 +378,10 @@
 			<div class="footer-image"><img class="footer-logo" src="assets/img/StreetSmart Footer Logo.png"></div>
 			<div class="footer-links">
 				<ul>
-					<li><a>How It Works</a></li>
-					<li><a>Mission</a></li>
-					<li><a>Myth Busters</a></li>
-					<li><a>Team</a></li>
+					<li><a href="#how-it-works">How It Works</a></li>
+					<li><a href="#mission">Mission</a></li>
+					<li><a href="#myth-busters">Myth Busters</a></li>
+					<li><a href="#team">Team</a></li>
 					<li><a>Contact Us</a></li>
 					<li class="linkedin"><img src="assets/img/mdi_linkedin.png"></li>
 				</ul>

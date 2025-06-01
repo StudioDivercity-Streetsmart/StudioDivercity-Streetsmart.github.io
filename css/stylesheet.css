@@ -3,6 +3,17 @@
   /* width: 100%; */
   box-sizing: border-box;
 }
+
+a {
+  text-decoration: none;
+  color: #00291b;
+  cursor: pointer;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 @media screen and (min-width: 450px) and (max-width: 749px) {
   .layout-row {
     padding: 50px 20px;
@@ -10,22 +21,64 @@
     display: flex;
     flex-direction: column;
   }
-
   .header {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
   }
 
   .header .logo {
     height: 48px;
-    width: auto;
-    position: absolute;
-    left: 50px;
+    margin-left: 40px;
   }
 
-  .header .cta {
-    position: absolute;
-    right: 50px;
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    background: white;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+  }
+
+  .nav-links.show {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .nav-links a {
+    margin: 30px auto;
+  }
+
+  .hamburger {
+    font-size: 46px;
+    margin-right: 40px;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 11;
+  }
+
+  .hamburger.active {
+    color: transparent;
+  }
+
+  .hamburger.active::before {
+    content: "✕";
+    color: black;
+    position: fixed;
+    font-size: 46px;
+    user-select: none;
   }
 
   .card {
@@ -609,15 +662,53 @@
   }
 
   .nav-links {
-    display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 20px;
-    font-size: 16px;
-    margin-right: 40px;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    background: white;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 10;
   }
 
-  .header .button {
-    color: #016143;
+  .nav-links.show {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .nav-links a {
+    margin: 30px auto;
+  }
+
+  .hamburger {
+    font-size: 46px;
+    margin-right: 40px;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 11;
+  }
+
+  .hamburger.active {
+    color: transparent;
+  }
+
+  .hamburger.active::before {
+    content: "✕";
+    color: black;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 46px;
+    user-select: none;
   }
 
   .card {
@@ -1210,9 +1301,15 @@
   .nav-links {
     display: flex;
     align-items: center;
-    gap: 45px;
+    gap: 30px;
     font-size: 16px;
     margin-right: 60px;
+  }
+
+  .hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
   }
 
   .card {
@@ -1781,6 +1878,12 @@
     gap: 45px;
     font-size: 16px;
     margin-right: 60px;
+  }
+
+  .hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
   }
 
   .card {

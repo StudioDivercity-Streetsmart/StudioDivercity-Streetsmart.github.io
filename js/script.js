@@ -349,3 +349,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   console.log("Carousel should be good");
 });
+function toggleMenu(button) {
+  const nav = document.getElementById("navMenu");
+  nav.classList.toggle("show");
+  button.classList.toggle("active");
+}
+
+document.querySelectorAll("#navMenu a").forEach((link) => {
+  link.addEventListener("click", () => {
+    document.getElementById("navMenu").classList.remove("show");
+    document.querySelector(".hamburger").classList.remove("active");
+  });
+});
