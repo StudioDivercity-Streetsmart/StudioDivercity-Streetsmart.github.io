@@ -14,7 +14,7 @@ html {
   scroll-behavior: smooth;
 }
 
-@media screen and (min-width: 450px) and (max-width: 1079px) {
+@media screen and (min-width: 450px) and (max-width: 949px) {
   .layout-row {
     padding: 50px 20px;
     margin: 0;
@@ -618,7 +618,7 @@ html {
     margin: 0;
     padding: 12px 36px;
     vertical-align: middle;
-    background: #37bb93;
+    background-color: #d0ede4;
     color: #016143;
     border: 0;
     border-radius: 12px;
@@ -642,8 +642,645 @@ html {
     min-height: 580px;
   }
 }
+@media screen and (min-width: 750px) and (max-width: 949px) {
+  .layout-row {
+    padding: 0 50px;
+    margin: 0;
+    display: flex;
+  }
 
-@media screen and (min-width: 1080px) and (max-width: 1349px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .header .logo {
+    height: 48px;
+    margin-left: 40px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    background: white;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+  }
+
+  .nav-links.show {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .nav-links a {
+    margin: 30px auto;
+  }
+
+  .hamburger {
+    font-size: 46px;
+    margin-right: 40px;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 11;
+  }
+
+  .hamburger.active {
+    color: transparent;
+  }
+
+  .hamburger.active::before {
+    content: "✕";
+    color: black;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 46px;
+    user-select: none;
+  }
+
+  .card {
+    flex-basis: auto;
+    flex-grow: 1;
+    width: 50%;
+
+    /* for card as a parent */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* vertically center */
+
+    z-index: 5;
+  }
+
+  .background-image {
+    position: absolute;
+    z-index: 0;
+    width: 100% !important;
+    height: 60vh;
+    object-fit: contain;
+
+    /* height: 100%; */
+  }
+
+  .layout-row p {
+    font-size: 18px;
+  }
+
+  #background-image-1 {
+    right: 0;
+  }
+
+  .demo-row {
+    height: 60vh;
+  }
+
+  .row4 {
+    padding: 0;
+  }
+  .row4 .button {
+    background-color: #ffcebc;
+    color: #4e3434;
+  }
+
+  .how-it-works-text {
+    padding: 50px;
+  }
+
+  .row1 {
+    background-image: url("../assets/img/Background\ Squigglies.png");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: auto 100%;
+  }
+
+  .row2 {
+    background-color: #00291b;
+    color: white;
+  }
+
+  .row2 .img-card img {
+    height: 60%;
+  }
+
+  .row2 p {
+    color: #fafcfc;
+  }
+
+  .vision2 {
+    padding: 0;
+  }
+
+  .vision2 img {
+    width: 100%;
+  }
+  .row3 {
+    padding: 0;
+  }
+
+  .row3 .img-card {
+    background-image: url("../assets/img/squigglegreen2.png");
+    background-color: #eaf8f4;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 100% 100%;
+    justify-content: end;
+  }
+
+  .row3 .img-card img {
+    height: 90% !important;
+    object-fit: cover;
+  }
+
+  .row4 .img-card {
+    background-image: url("../assets/img/Squiggles\ 3.png");
+    background-color: #ffe6dd;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 100% 100%;
+  }
+
+  .row4 .img-card img {
+    height: 60vh;
+  }
+
+  .img-card {
+    text-align: center;
+    position: relative;
+    padding: 0px;
+  }
+
+  .img-card img {
+    object-fit: contain;
+  }
+
+  .vision1 {
+    background-color: #00291b;
+    background-image: url("../assets/img/Squiggles4.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    color: #ffdfd3;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    text-align: center;
+    padding: 15%;
+    width: 100%;
+  }
+
+  .vision2 {
+    position: relative;
+  }
+
+  .vision2 .pop-out {
+    position: absolute;
+    left: 5%;
+    bottom: -8%;
+    width: 45%;
+    max-width: 700px;
+    background-color: #d0ede4;
+    color: #00452d;
+    border-radius: 16px;
+    padding: 20px;
+  }
+
+  .pop-out p {
+    font-size: 16px;
+  }
+
+  .pop-out h3 {
+    font-size: 20px;
+  }
+
+  .card-row {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    width: 100%;
+    align-items: baseline;
+  }
+
+  .vision3 {
+    padding: 15%;
+  }
+
+  .myth-busters {
+    padding: 60px auto !important;
+    text-align: center;
+    background-color: #ffdfd3;
+    color: #00291b;
+  }
+
+  .myth-busters h2 {
+    margin-bottom: 10px;
+  }
+
+  .myth-busters-explanation {
+    width: 80%;
+    margin: auto;
+  }
+
+  .js-carousel-track {
+    display: flex;
+  }
+
+  /* Carousel */
+
+  .js-carousel-wrapper {
+    width: 100%;
+    margin: 50px auto;
+    text-align: center;
+  }
+
+  .js-carousel-wrapper h2 {
+    margin-bottom: 25px;
+    color: #2c3e50;
+    font-size: 2em;
+  }
+
+  .js-carousel-container {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .js-carousel-track {
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .js-card {
+    flex: 0 0 calc(100% / 2.8);
+    min-width: calc(100% / 2.8);
+    box-sizing: border-box;
+    padding: 20px;
+    margin-right: 15px; /* Space between cards */
+    background-color: #ffffff;
+    border-radius: 30px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    height: 85vh;
+    color: #00291d;
+  }
+
+  .js-card:last-child {
+    margin-right: 0; /* No margin for the last card in the track */
+  }
+
+  .js-card img {
+    width: 100%;
+    height: 180px; /* Adjust as needed */
+    object-fit: cover;
+    border-radius: 17px;
+    margin-bottom: 15px;
+  }
+
+  .js-card h3 {
+    margin-top: 10px;
+    margin-bottom: 2px;
+    font-size: 18px;
+    letter-spacing: 5px;
+    color: #34495e;
+  }
+
+  .js-card p {
+    font-size: 16px;
+    color: #34495e;
+    flex-grow: 1; /* Pushes button to bottom */
+    margin-bottom: 20px;
+    margin-top: 2px;
+    line-height: 1.5;
+  }
+
+  .myth-quote {
+    font-size: 20px !important;
+  }
+
+  .js-card-button {
+    display: inline-block;
+    width: 130px;
+    padding: 10px 18px;
+    background-color: #d0ede4;
+    color: #016143;
+    text-decoration: none;
+    border-radius: 30px;
+    text-align: center;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    margin-top: auto; /* Stick to bottom */
+    align-self: flex-start; /* Align button to the left */
+  }
+
+  .js-card-button:hover {
+    background-color: #16a085;
+  }
+
+  .more-myths-button {
+    margin-top: 30px;
+    width: 200px;
+    padding: 12px 30px;
+    font-size: 18px;
+    color: #4e3434;
+    background-color: #ffcebc;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+  }
+
+  .more-myths-button:hover {
+    background-color: #d1a99b;
+  }
+  .more-myths-button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  /* People */
+
+  .people {
+    background-color: #003a29;
+    color: white;
+    padding: 10% 5%;
+  }
+
+  .people img {
+    height: 185px;
+    width: 185px;
+    border-radius: 50%;
+    flex: 1;
+  }
+
+  .reena {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .reena-text {
+    flex: 6;
+  }
+
+  .reena-text p {
+    font-size: 20px;
+  }
+
+  .divider {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 1rem auto;
+    width: 100%;
+  }
+
+  .team h3 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 200;
+  }
+
+  .team h4 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 200;
+  }
+
+  .team p {
+    font-size: 20px;
+  }
+
+  .core h5 {
+    text-align: center;
+    font-size: 18px;
+    margin: 5px;
+  }
+
+  .supporters h6 {
+    text-align: center;
+    font-size: 16px;
+    margin: 5px;
+  }
+
+  .supporters p {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 50;
+  }
+
+  .core p {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 100;
+    margin: 0px;
+  }
+
+  .early .grid-item {
+    flex: 1 0 calc(16.66% - 1rem); /* 4 per row, minus gap */
+    max-width: calc(16.66% - 1rem);
+    text-align: center;
+  }
+
+  .early p {
+    font-size: 18px;
+    text-align: center;
+    padding: 3px;
+    line-height: 1.8;
+  }
+
+  .grid-container img {
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+  }
+
+  .grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .grid-item {
+    flex: 1 0 calc(25% - 1rem); /* 4 per row, minus gap */
+    max-width: calc(25% - 1rem);
+    min-width: 200px;
+    padding: 1rem;
+    text-align: center;
+  }
+  .card h1,
+  .card h2,
+  .card p {
+    margin: 0;
+    margin-bottom: 25px;
+  }
+
+  .try-streetsmart {
+    /* height: 40vh; */
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    padding: 80px;
+  }
+
+  .try-streetsmart h2 {
+    font-weight: 500;
+    font-size: 48px;
+  }
+
+  .try-streetsmart p {
+    width: 50%;
+    font-size: 24px;
+    margin: auto;
+    margin-bottom: 60px;
+  }
+
+  footer {
+    flex-direction: row;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-image: url("../assets/img/squiggles5.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  footer .layout-row {
+    margin: 10px auto;
+  }
+
+  .footer-image {
+    flex: 6;
+  }
+
+  .footer-links {
+    flex: 2;
+  }
+  .footer-logo {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .footer-links img {
+    height: 36px;
+    width: 36px;
+  }
+
+  .footer-links ul {
+    list-style: none;
+  }
+
+  .footer-links li {
+    margin: 10px 0px;
+    color: #00291b;
+    font-size: 16px;
+  }
+
+  footer p {
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    font-size: 14px;
+  }
+  .card-full-line-wrapper {
+    max-width: 800px;
+    align-self: center;
+  }
+
+  .logo {
+    margin-top: 26px;
+    margin-bottom: 26px;
+  }
+
+  body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #f2f6f5;
+    color: #00291b; /* default text color */
+    font-family: "Funnel Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-size: 24px;
+    font-style: normal;
+  }
+
+  .bold-font {
+    font-weight: 700 !important;
+  }
+
+  .pre-header {
+    font-weight: 700;
+    letter-spacing: 38%;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 0 !important;
+  }
+
+  h1 {
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 80%;
+  }
+  h2 {
+    font-size: 36px;
+    line-height: 40px;
+    font-weight: 400;
+    letter-spacing: -2%;
+  }
+
+  .bold-sentence {
+    font-size: 30px;
+    font-weight: 500;
+  }
+
+  /* other nonsense */
+
+  .button {
+    display: inline-block;
+    text-align: center;
+    letter-spacing: inherit;
+    margin: 0;
+    padding: 12px 36px;
+    vertical-align: middle;
+    background-color: #d0ede4;
+    color: #016143;
+    border: 0;
+    border-radius: 50px;
+    width: auto;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .background-image-city1 {
+    background-image: radial-gradient(circle, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.3) 100%), url("christine-qHb4vuseZBk-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #f2f6f5;
+    min-height: 580px;
+  }
+}
+@media screen and (min-width: 950px) and (max-width: 1349px) {
   .layout-row {
     padding: 0 50px;
     margin: 0;
@@ -1192,7 +1829,7 @@ html {
     margin: 0;
     padding: 12px 36px;
     vertical-align: middle;
-    background: #37bb93;
+    background-color: #d0ede4;
     color: #016143;
     border: 0;
     border-radius: 50px;
@@ -1760,7 +2397,7 @@ html {
     margin: 0;
     padding: 12px 36px;
     vertical-align: middle;
-    background: #37bb93;
+    background-color: #d0ede4;
     color: #016143;
     border: 0;
     border-radius: 50px;
