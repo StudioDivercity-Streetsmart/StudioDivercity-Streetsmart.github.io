@@ -107,7 +107,7 @@ strong {
   }
 
   .row1 {
-    background-image: url("../assets/img/Background\ SquiggliesSmall.png");
+    background-image: url("../assets/img/Background\ SquiggliesSmall.avif");
     background-repeat: no-repeat;
     background-position: top center;
     background-size: 100% auto;
@@ -177,7 +177,7 @@ strong {
   }
 
   .row3 .img-card {
-    background-image: url("../assets/img/squigglegreen2.png");
+    background-image: url("../assets/img/squigglegreen2.avif");
     background-color: #eaf8f4;
     background-repeat: no-repeat;
     background-position: right center;
@@ -185,7 +185,7 @@ strong {
   }
 
   .row4 .img-card {
-    background-image: url("../assets/img/Squiggles\ 3.png");
+    background-image: url("../assets/img/Squiggles\ 3.avif");
     background-color: #ffe6dd;
     background-repeat: no-repeat;
     background-position: right center;
@@ -194,7 +194,7 @@ strong {
 
   .vision1 {
     background-color: #00291b;
-    background-image: url("../assets/img/squiggles4small.png");
+    background-image: url("../assets/img/squiggles4small.avif");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
@@ -500,7 +500,7 @@ strong {
   footer {
     padding-top: 3.125rem;
     padding-bottom: 1.25rem;
-    background-image: url("../assets/img/squiggles5.png");
+    background-image: url("../assets/img/squiggles5.avif");
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -642,7 +642,6 @@ strong {
   }
 
   .background-image-city1 {
-    background-image: radial-gradient(circle, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.3) 100%), url("christine-qHb4vuseZBk-unsplash.jpg");
     background-size: cover;
     background-position: center;
     color: #f2f6f5;
@@ -763,7 +762,7 @@ strong {
   }
 
   .row1 {
-    background-image: url("../assets/img/Background\ Squigglies.png");
+    background-image: url("../assets/img/Background\ Squigglies.avif");
     background-repeat: no-repeat;
     background-position: right center;
     background-size: auto 100%;
@@ -795,7 +794,7 @@ strong {
   }
 
   .row3 .img-card {
-    background-image: url("../assets/img/squigglegreen2.png");
+    background-image: url("../assets/img/squigglegreen2.avif");
     background-color: #eaf8f4;
     background-repeat: no-repeat;
     background-position: right center;
@@ -809,7 +808,7 @@ strong {
   }
 
   .row4 .img-card {
-    background-image: url("../assets/img/Squiggles\ 3.png");
+    background-image: url("../assets/img/Squiggles\ 3.avif");
     background-color: #ffe6dd;
     background-repeat: no-repeat;
     background-position: right center;
@@ -832,7 +831,7 @@ strong {
 
   .vision1 {
     background-color: #00291b;
-    background-image: url("../assets/img/Squiggles4.png");
+    background-image: url("../assets/img/Squiggles4.avif");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
@@ -1155,7 +1154,7 @@ strong {
     flex-direction: row;
     padding-top: 3.125rem;
     padding-bottom: 1.25rem;
-    background-image: url("../assets/img/squiggles5.png");
+    background-image: url("../assets/img/squiggles5.avif");
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -1275,7 +1274,6 @@ strong {
   }
 
   .background-image-city1 {
-    background-image: radial-gradient(circle, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.3) 100%), url("christine-qHb4vuseZBk-unsplash.jpg");
     background-size: cover;
     background-position: center;
     color: #f2f6f5;
@@ -1357,7 +1355,7 @@ strong {
   }
 
   .row1 {
-    background-image: url("../assets/img/Background\ Squigglies.png");
+    background-image: url("../assets/img/Background\ Squigglies.avif");
     background-repeat: no-repeat;
     background-position: right center;
     background-size: auto 100%;
@@ -1385,7 +1383,7 @@ strong {
     width: 100%;
   }
   .row3 .img-card {
-    background-image: url("../assets/img/squigglegreen2.png");
+    background-image: url("../assets/img/squigglegreen2.avif");
     background-color: #eaf8f4;
     background-repeat: no-repeat;
     background-position: right center;
@@ -1393,7 +1391,7 @@ strong {
   }
 
   .row4 .img-card {
-    background-image: url("../assets/img/Squiggles\ 3.png");
+    background-image: url("../assets/img/Squiggles\ 3.avif");
     background-color: #ffe6dd;
     background-repeat: no-repeat;
     background-position: right center;
@@ -1402,7 +1400,7 @@ strong {
 
   .vision1 {
     background-color: #00291b;
-    background-image: url("../assets/img/Squiggles4.png");
+    background-image: url("../assets/img/Squiggles4.avif");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
@@ -1725,7 +1723,7 @@ strong {
     flex-direction: row;
     padding-top: 3.125rem;
     padding-bottom: 1.25rem;
-    background-image: url("../assets/img/squiggles5.png");
+    background-image: url("../assets/img/squiggles5.avif");
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -1845,7 +1843,6 @@ strong {
   }
 
   .background-image-city1 {
-    background-image: radial-gradient(circle, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.3) 100%), url("christine-qHb4vuseZBk-unsplash.jpg");
     background-size: cover;
     background-position: center;
     color: #f2f6f5;
@@ -1929,7 +1926,7 @@ strong {
   }
 
   .row1 {
-    background-image: url("../assets/img/Background\ Squigglies.png");
+    background-image: url("../assets/img/Background\ Squigglies.avif");
     background-repeat: no-repeat;
     background-position: right center;
     background-size: auto 100%;
@@ -1957,7 +1954,7 @@ strong {
     width: 100%;
   }
   .row3 .img-card {
-    background-image: url("../assets/img/squigglegreen2.png");
+    background-image: url("../assets/img/squigglegreen2.avif");
     background-color: #eaf8f4;
     background-repeat: no-repeat;
     background-position: right center;
@@ -1965,7 +1962,7 @@ strong {
   }
 
   .row4 .img-card {
-    background-image: url("../assets/img/Squiggles\ 3.png");
+    background-image: url("../assets/img/Squiggles\ 3.avif");
     background-color: #ffe6dd;
     background-repeat: no-repeat;
     background-position: right center;
@@ -1974,7 +1971,7 @@ strong {
 
   .vision1 {
     background-color: #00291b;
-    background-image: url("../assets/img/Squiggles4.png");
+    background-image: url("../assets/img/Squiggles4.avif");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
@@ -2293,7 +2290,7 @@ strong {
     flex-direction: row;
     padding-top: 3.125rem;
     padding-bottom: 1.25rem;
-    background-image: url("../assets/img/squiggles5.png");
+    background-image: url("../assets/img/squiggles5.avif");
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -2415,7 +2412,6 @@ strong {
   }
 
   .background-image-city1 {
-    background-image: radial-gradient(circle, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.3) 100%), url("christine-qHb4vuseZBk-unsplash.jpg");
     background-size: cover;
     background-position: center;
     color: #f2f6f5;
