@@ -13,6 +13,10 @@ html {
   scroll-behavior: smooth;
 }
 
+strong {
+  font-weight: 600;
+}
+
 @media screen and (max-width: 46.89999em) {
   .layout-row {
     padding: 3.125rem 1.25rem;
@@ -230,12 +234,17 @@ html {
     line-height: 1.5;
   }
 
+  .pop-out .pre-header {
+    margin-top: 0;
+  }
+
   .pop-out p {
     font-size: 1.125rem;
+    margin-bottom: 0;
   }
 
   .pop-out strong {
-    font-weight: 600;
+    font-weight: 800;
   }
 
   .pop-out h3 {
@@ -848,11 +857,21 @@ html {
     padding: 1.25rem;
   }
 
+  .pop-out .pre-header {
+    margin-top: 0;
+  }
+
   .pop-out p {
     font-size: 1rem;
+    margin-bottom: 0;
   }
   .pop-out h3 {
     font-size: 1.25rem;
+    font-weight: 200;
+  }
+
+  .pop-out strong {
+    font-weight: 800;
   }
 
   .card-row {
@@ -1212,6 +1231,7 @@ html {
     text-transform: uppercase;
     font-size: 1.25rem;
     margin-bottom: 0 !important;
+    opacity: 0.7;
   }
 
   h1 {
@@ -1407,12 +1427,23 @@ html {
     padding: 1.25rem;
   }
 
+  .pop-out .pre-header {
+    font-size: 1.25rem;
+    margin-top: 0;
+  }
+
   .pop-out p {
-    font-size: 1rem;
+    margin-bottom: 0;
+    font-size: 1.25rem;
   }
 
   .pop-out h3 {
-    font-size: 1.25rem;
+    font-size: 2rem;
+    font-weight: 200;
+  }
+
+  .pop-out strong {
+    font-weight: 800;
   }
 
   .card-row {
@@ -1590,6 +1621,7 @@ html {
     text-align: center;
     font-size: 2rem;
     font-weight: 200;
+    margin: 3.5rem;
   }
 
   .core h5 {
@@ -1769,6 +1801,7 @@ html {
     text-transform: uppercase;
     font-size: 1.25rem;
     margin-bottom: 0 !important;
+    opacity: 0.7;
   }
 
   h1 {
@@ -1959,11 +1992,27 @@ html {
     left: 5%;
     bottom: -8%;
     width: 33%;
-    max-width: 43.75rem;
+    max-width: 45rem;
     background-color: #d0ede4;
     color: #00452d;
     border-radius: 1rem;
-    padding: 1.25rem;
+    padding: 2rem;
+  }
+
+  .pop-out .pre-header {
+    margin-top: 0;
+  }
+  .pop-out p {
+    margin-bottom: 0;
+  }
+
+  .pop-out h3 {
+    font-size: 2rem;
+    font-weight: 200;
+  }
+
+  .pop-out strong {
+    font-weight: 800;
   }
 
   .card-row {
@@ -2140,6 +2189,7 @@ html {
     text-align: center;
     font-size: 2rem;
     font-weight: 200;
+    margin: 3.5rem;
   }
 
   .core h5 {
@@ -2318,10 +2368,11 @@ html {
     text-transform: uppercase;
     font-size: 1.25rem;
     margin-bottom: 0 !important;
+    opacity: 0.7;
   }
 
   h1 {
-    font-size: 6.25rem;
+    font-size: 6.5rem;
     font-weight: 400;
     line-height: 0.9;
   }
