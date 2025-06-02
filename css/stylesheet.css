@@ -17,6 +17,19 @@ strong {
   font-weight: 600;
 }
 
+.myth-img-wrapper {
+  position: relative;
+}
+
+.myth-img-wrapper p {
+  position: absolute;
+  padding-right: 5px;
+  bottom: 1px;
+  right: 1px;
+  font-size: 7px !important;
+  background-color: #ffffff7e;
+}
+
 @media screen and (max-width: 46.89999em) {
   .layout-row {
     padding: 3.125rem 1.25rem;
