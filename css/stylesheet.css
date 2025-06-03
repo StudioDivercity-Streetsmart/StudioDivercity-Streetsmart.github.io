@@ -575,6 +575,11 @@ strong {
     margin-bottom: 5rem;
   }
 
+  footer li p {
+    font-size: 0.8em !important;
+    margin: 0;
+  }
+
   footer p {
     width: 90%;
     text-align: center;
@@ -1228,6 +1233,11 @@ strong {
     font-size: 1rem;
   }
 
+  footer li p {
+    font-size: 0.8em !important;
+    margin: 0;
+  }
+
   footer p {
     width: 50%;
     text-align: center;
@@ -1814,6 +1824,11 @@ strong {
     font-size: 1.125rem;
   }
 
+  footer li p {
+    font-size: 0.8em;
+    margin: 0;
+  }
+
   footer p {
     width: 50%;
     text-align: center;
@@ -2395,6 +2410,11 @@ strong {
   .footer-links li {
     margin: 1rem 0;
     color: #00291b;
+  }
+
+  footer li p {
+    font-size: 0.8em;
+    margin: 0;
   }
 
   footer p {
