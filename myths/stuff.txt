@@ -1,0 +1,142 @@
+
+@media screen and (min-width: 46.9em) {
+  .layout-row {
+    padding: 0 3.125rem;
+    margin: 0;
+    display: flex;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .header .logo {
+    height: 3rem;
+    margin-left: 2.5rem;
+    object-fit: contain;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    background: white;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+  }
+
+  .nav-links.show {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .nav-links a {
+    margin: 1.875rem auto;
+  }
+
+  .hamburger {
+    font-size: 2.875rem;
+    margin-right: 2.5rem;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 11;
+  }
+
+  .hamburger.active {
+    color: transparent;
+  }
+
+  .hamburger.active::before {
+    content: "✕";
+    color: black;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 2.875rem;
+    user-select: none;
+    line-height: 1;
+  }
+
+  /* FOOTER */
+
+  .try-streetsmart {
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    padding: 5rem;
+  }
+
+  .try-streetsmart h2 {
+    font-weight: 500;
+    font-size: 3rem;
+  }
+
+  .try-streetsmart p {
+    width: 50%;
+    font-size: 1.5rem;
+    margin: auto;
+    margin-bottom: 3.75rem;
+  }
+
+  footer {
+    flex-direction: row;
+    padding-top: 3.125rem;
+    padding-bottom: 1.25rem;
+    background-image: url("../assets/img/squiggles5.avif");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  footer .layout-row {
+    margin: 0.625rem auto;
+  }
+
+  .footer-image {
+    flex: 6;
+  }
+
+  .footer-links {
+    flex: 2;
+  }
+  .footer-logo {
+    height: 5rem;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .footer-links img {
+    height: 2.25rem;
+    width: 2.25rem;
+  }
+
+  .footer-links ul {
+    list-style: none;
+  }
+
+  .footer-links li {
+    margin: 0.625rem 0;
+    color: #00291b;
+    font-size: 1rem;
+  }
+
+  footer p {
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    font-size: 0.875rem;
+  }
+}
