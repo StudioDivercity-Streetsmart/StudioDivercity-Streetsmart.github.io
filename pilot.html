@@ -19,6 +19,10 @@
 
 	<style>
 		/* Pilot-page specific styles */
+		body {
+			background-color: #ffefe9;
+		}
+
 		.pilot-hero-buttons {
 			display: flex;
 			gap: 1rem;
@@ -259,11 +263,20 @@
 		.early-pilot .placeholder-media {
 			max-width: 50rem;
 			margin: 2rem auto;
-			padding: 4rem 2rem;
+			padding: 0;
 			background-color: #eaf8f4;
 			border-radius: 1rem;
 			color: #016143;
 			font-style: italic;
+			overflow: hidden;
+		}
+
+		.early-pilot .placeholder-media img {
+			width: 100%;
+			height: auto;
+			display: block;
+			border-radius: 1rem;
+			object-fit: cover;
 		}
 
 		/* Implementation */
@@ -386,12 +399,10 @@
 		<div class="hamburger" onclick="toggleMenu(this)">&#9776;</div>
 
 		<nav id="navMenu" class="nav-links">
-			<a href="#at-a-glance">At a Glance</a>
-			<a href="#pilot-approach">Pilot Approach</a>
-			<a href="#what-it-enables">What It Enables</a>
-			<a href="#team">Team</a>
+			<a href="index.html">Home</a>
+			<a href="pilot.html">Pilots</a>
 			<div class='cta'>
-				<a href="mailto:beta@livestreetsmart.com" class="button">Get in Touch &#10132;</a>
+				<a href="https://try.livestreetsmart.com/" class="button">Try StreetSmart ➔</a>
 			</div>
 		</nav>
 	</div>
@@ -400,10 +411,11 @@
 	<div class='layout-row demo-row row1'>
 		<div class='card'>
 			<p class='pre-header'>StreetSmart Pilot</p>
-			<h1>Street experience to <span class='bold-font'>insight</span></h1>
-			<p>Civic-tech that captures how streets perform in everyday use.</p>
+			<h1>Run a pilot in your city</h1>
+			<p>Understand how streets perform in everyday use, and turn that into better decisions.</p>
 			<div class='pilot-hero-buttons'>
-				<a href="mailto:beta@livestreetsmart.com" class="button">Get in Touch &#10132;</a>
+                <a href="https://try.livestreetsmart.com/" class="button-outline">Try StreetSmart &#10132;</a>
+                <a href="mailto:beta@livestreetsmart.com" class="button">Get in Touch &#10132;</a>
 				<a href="StreetSmart_Pilot_202604a.pdf" target="_blank" class="button-outline">Get the One-Pager</a>
 			</div>
 		</div>
@@ -511,10 +523,12 @@
 	<div class='early-pilot'>
 		<p class='pre-header'>Early Pilot Experience</p>
 		<h2>Tested on the ground in Delhi</h2>
-		<p>StreetSmart has already been tested through an initial pilot in Delhi, helping refine the methodology and interface ahead of broader collaborations.</p>
+		<p>StreetSmart has already been tested through an initial pilot in Delhi, demonstrating how it works in real conditions and refining the approach and interface ahead of broader collaborations.</p>
+		<p>The pilot combined on-site observation, participant input and analysis to identify priority issues and areas for improvement.</p>
+
 		<div class='placeholder-media'>
 			<!-- Placeholder for future photo or video from the Delhi pilot -->
-			Photo or video from the Delhi pilot coming soon
+			<img src="assets/img/Delhi_Pilot_1.jpeg">
 		</div>
 	</div>
 
@@ -553,10 +567,9 @@
 					</a>
 				</h3>
 				<p class='founder-title'>Founder & Urban Innovation Lead</p>
-				<p>Architect, urban planner, and founder of
-					<a href="https://www.studiodivercity.com" target="_blank"
-						style="text-decoration: underline; color: #d0ede4;">Studio DiverCity</a>.
-					Nearly two decades of international experience in people-centred, nature-positive urban design &mdash; blending water-sensitive design, sustainable mobility, and gender-responsive planning.
+				<p>Urban planner and architect with over 20 years of international experience across Europe, Latin America, Africa and
+				South Asia. She leads urban development and regeneration projects while working at the intersection of design, policy
+				and public engagement to reframe how cities define priorities.
 				</p>
 			</div>
 		</div>
@@ -572,12 +585,12 @@
 
 	<!-- BOTTOM CTA -->
 	<div class='pilot-cta'>
-		<img src="assets/img/StreetSmartFooterLogo.avif" style="width: 12rem; margin-bottom: 1.5rem;">
 		<h2>Interested in running a pilot in your city?</h2>
 		<p>Get in touch to explore how StreetSmart can support street-level insight and climate adaptation in your context.</p>
 		<div class='pilot-hero-buttons'>
 			<a href="mailto:beta@livestreetsmart.com" class="button">Get in Touch &#10132;</a>
 			<a href="StreetSmart_Pilot_202604a.pdf" target="_blank" class="button-outline">Get the One-Pager</a>
+			<a href="https://try.livestreetsmart.com/" class="button-outline">Try StreetSmart &#10132;</a>
 		</div>
 	</div>
 
@@ -598,10 +611,6 @@
 				</ul>
 			</div>
 		</div>
-		<p>
-			StreetSmart is currently under development. Please <a href="mailto:beta@livestreetsmart.com">contact us</a> if you
-			experience any issues or anything you need to report.
-		</p>
 	</footer>
 
 	<script src="js/script.js"></script>
