@@ -26,16 +26,30 @@
             <img src='../assets/img/HeaderLogo.avif' class='logo'>
         </div>
 
-        <div class="hamburger" onclick="toggleMenu(this)">☰</div>
+        <div class="header-controls">
+            <div class="language-toggle header-language-toggle" aria-label="Language selector">
+                <select data-locale-select aria-label="Language selector">
+                    <option value="en">🇬🇧 EN</option>
+                    <option value="fr">🇫🇷 FR</option>
+                </select>
+            </div>
+            <div class="hamburger" onclick="toggleMenu(this)">☰</div>
+        </div>
 
         <nav id="navMenu" class="nav-links">
-            <a href="../index.html#how-it-works">How it Works</a>
-            <a href="../index.html#mission">Mission</a>
-            <a href="../index.html#myth-busters">Myth-Busters</a>
-            <a href="../index.html#team">Team</a>
+            <a href="../index.html#how-it-works" data-i18n="nav_how_it_works_lower">How it Works</a>
+            <a href="../index.html#mission" data-i18n="nav_mission">Mission</a>
+            <a href="../index.html#myth-busters" data-i18n="nav_myth_busters">Myth-Busters</a>
+            <a href="../index.html#team" data-i18n="nav_team">Team</a>
             <div class='cta'>
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSfy6V8dg4z4HA0hF7BA4HvFZ3nldrUzpNBT4Ft2F_IwtUniEA/viewform"
-                    class="button">Try StreetSmart ➔</a>
+                    class="button" data-i18n="try_streetsmart">Try StreetSmart ➔</a>
+            </div>
+            <div class="language-toggle nav-language-toggle" aria-label="Language selector">
+                <select data-locale-select aria-label="Language selector">
+                    <option value="en">🇬🇧 EN</option>
+                    <option value="fr">🇫🇷 FR</option>
+                </select>
             </div>
         </nav>
     </div>
@@ -43,21 +57,21 @@
     <div class="image-header">
         <img src="../assets/img/myth2.avif">
         <div class="pop-out">
-            <p class="pre-header">MYTH 2</p>
-            <h2>"Adding more road lanes will ease congestion and improve traffic flow."
+            <p class="pre-header" data-i18n="myth_2_label">MYTH 2</p>
+            <h2 data-i18n="myth_2_quote">"Adding more road lanes will ease congestion and improve traffic flow."
             </h2>
         </div>
     </div>
 
     <div class="content">
-        <h3>Truth</h3>
-        <p>Building more road space doesn’t solve congestion – it actually creates more.
+        <h3 data-i18n="truth">Truth</h3>
+        <p data-i18n="myth_2_truth">Building more road space doesn’t solve congestion – it actually creates more.
             This is known as induced demand: adding more lanes attracts more drivers, quickly filling up the new
             capacity.
         </p>
         <!-- <p class="quote"></p> -->
-        <h3>Proof</h3>
-        <p>A 2011 study by economists Matthew Turner and Gilles Duranton (The Fundamental Law of Road Congestion) found
+        <h3 data-i18n="proof">Proof</h3>
+        <p data-i18n="myth_2_proof">A 2011 study by economists Matthew Turner and Gilles Duranton (The Fundamental Law of Road Congestion) found
             that vehicle kilometres travelled increase proportionally to road expansion – meaning new lanes fill up
             almost immediately.
         </p>
@@ -65,13 +79,13 @@
         <p class="quote">Example: Houston’s Katy Freeway – expanded to 23 lanes – became even more congested than
             before, with commute times increasing by up to 30% within a few years after the expansion<sup>2</sup>.</p>
 
-        <h3>StreetSmart</h3>
+        <h3 data-i18n="streetsmart">StreetSmart</h3>
 
-        <p>Instead of chasing a losing battle by widening roads, StreetSmart empowers cities to reclaim space for people
+        <p data-i18n="myth_2_streetsmart">Instead of chasing a losing battle by widening roads, StreetSmart empowers cities to reclaim space for people
             by identifying where a rethink is needed and showing what’s possible beyond endless road expansion.</p>
 
         <div class="sources">
-            <h4>Sources</h4>
+            <h4 data-i18n="sources">Sources</h4>
             <p><sup>1</sup>Cover image:
                 https://www.lanacion.com.py/estilodevida/2024/12/13/cumple-50-anos-la-ciclovia-de-bogota-una-revolucion-que-inspiro-al-mundo/
             </p>
@@ -81,11 +95,11 @@
 
     <div class="layout-row try-streetsmart">
         <img src="../assets/img/StreetSmartFooterLogo.avif">
-        <h2>Try StreetSmart Now</h2>
-        <p>StreetSmart is free-to-use and fully in-browser, no download necessary!</p>
+        <h2 data-i18n="try_now_title">Try StreetSmart Now</h2>
+        <p data-i18n="try_now_body">StreetSmart is free-to-use and fully in-browser, no download necessary!</p>
         <div class='cta'><a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSfy6V8dg4z4HA0hF7BA4HvFZ3nldrUzpNBT4Ft2F_IwtUniEA/viewform"
-                class="button">Try it now ➔</a></div>
+                class="button" data-i18n="try_it_now">Try it now ➔</a></div>
     </div>
 
     <footer>
@@ -93,23 +107,26 @@
             <div class="footer-image"><img class="footer-logo" src="../assets/img/StreetSmartFooterLogo.avif"></div>
             <div class="footer-links">
                 <ul>
-                    <li><a href="../index.html#how-it-works">How It Works</a></li>
-                    <li><a href="../index.html#mission">Mission</a></li>
-                    <li><a href="../index.html#myth-busters">Myth-Busters</a></li>
-                    <li><a href="../index.html#team">Team</a></li>
-                    <li><a>Contact Us</a></li>
+                    <li><a href="../index.html#how-it-works" data-i18n="how_it_works_label">How It Works</a></li>
+                    <li><a href="../index.html#mission" data-i18n="nav_mission">Mission</a></li>
+                    <li><a href="../index.html#myth-busters" data-i18n="nav_myth_busters">Myth-Busters</a></li>
+                    <li><a href="../index.html#team" data-i18n="nav_team">Team</a></li>
+                    <li><a data-i18n="nav_contact_us">Contact Us</a></li>
                     <li class="linkedin"><a href="https://www.linkedin.com/company/livestreetsmart/"
                             target="_blank"><img src="../assets/img/mdi_linkedin.png"></a></li>
                 </ul>
             </div>
         </div>
         <p>
-            <strong>Disclaimer:</strong> StreetSmart is currently under development. Please <a>contact us</a> if you
+            <strong>Disclaimer:</strong> StreetSmart is currently under development. Please <a data-i18n="contact_us_lower">contact us</a> if you
             experience
             any
             issues or anything you need to report.
         </p>
     </footer>
+
+    <script type="module" src="../js/script.js"></script>
+
 </body>
 
 </html>

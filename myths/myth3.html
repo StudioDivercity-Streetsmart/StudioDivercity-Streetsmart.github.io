@@ -26,16 +26,30 @@
             <img src='../assets/img/HeaderLogo.avif' class='logo'>
         </div>
 
-        <div class="hamburger" onclick="toggleMenu(this)">☰</div>
+        <div class="header-controls">
+            <div class="language-toggle header-language-toggle" aria-label="Language selector">
+                <select data-locale-select aria-label="Language selector">
+                    <option value="en">🇬🇧 EN</option>
+                    <option value="fr">🇫🇷 FR</option>
+                </select>
+            </div>
+            <div class="hamburger" onclick="toggleMenu(this)">☰</div>
+        </div>
 
         <nav id="navMenu" class="nav-links">
-            <a href="../index.html#how-it-works">How it Works</a>
-            <a href="../index.html#mission">Mission</a>
-            <a href="../index.html#myth-busters">Myth-Busters</a>
-            <a href="../index.html#team">Team</a>
+            <a href="../index.html#how-it-works" data-i18n="nav_how_it_works_lower">How it Works</a>
+            <a href="../index.html#mission" data-i18n="nav_mission">Mission</a>
+            <a href="../index.html#myth-busters" data-i18n="nav_myth_busters">Myth-Busters</a>
+            <a href="../index.html#team" data-i18n="nav_team">Team</a>
             <div class='cta'>
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSfy6V8dg4z4HA0hF7BA4HvFZ3nldrUzpNBT4Ft2F_IwtUniEA/viewform"
-                    class="button">Try StreetSmart ➔</a>
+                    class="button" data-i18n="try_streetsmart">Try StreetSmart ➔</a>
+            </div>
+            <div class="language-toggle nav-language-toggle" aria-label="Language selector">
+                <select data-locale-select aria-label="Language selector">
+                    <option value="en">🇬🇧 EN</option>
+                    <option value="fr">🇫🇷 FR</option>
+                </select>
             </div>
         </nav>
     </div>
@@ -43,35 +57,35 @@
     <div class="image-header">
         <img src="../assets/img/myth3.avif">
         <div class="pop-out">
-            <p class="pre-header">MYTH 3</p>
-            <h2>"Pedestrian bridges are designed for pedestrians."
+            <p class="pre-header" data-i18n="myth_3_label">MYTH 3</p>
+            <h2 data-i18n="myth_3_quote">"Pedestrian bridges are designed for pedestrians."
             </h2>
         </div>
     </div>
 
     <div class="content">
-        <h3>Truth</h3>
-        <p>Pedestrian bridges are often designed with cars in mind, prioritising vehicle flow over pedestrian
+        <h3 data-i18n="truth">Truth</h3>
+        <p data-i18n="myth_3_truth">Pedestrian bridges are often designed with cars in mind, prioritising vehicle flow over pedestrian
             convenience.
             They force people to take detours or climb stairs, making them inefficient and inaccessible, especially for
             children, caregivers, the elderly, and those with disabilities.
             At-grade crossings are the true pedestrian-friendly solution.
         </p>
         <!-- <p class="quote"></p> -->
-        <h3>Proof</h3>
+        <h3 data-i18n="proof">Proof</h3>
         <p>Cities like Paris and Bogotá have shifted towards at-grade crossings to improve accessibility and streamline
             pedestrian movement.
             Studies show that pedestrian bridges often result in lower usage due to the inconvenience they
             create<sup>2, 3</sup>.
         </p>
 
-        <h3>StreetSmart</h3>
+        <h3 data-i18n="streetsmart">StreetSmart</h3>
 
-        <p>StreetSmart advocates for at-grade crossings, guiding cities towards safer, more accessible solutions for all
+        <p data-i18n="myth_3_streetsmart">StreetSmart advocates for at-grade crossings, guiding cities towards safer, more accessible solutions for all
             users.</p>
 
         <div class="sources">
-            <h4>Sources</h4>
+            <h4 data-i18n="sources">Sources</h4>
             <p><sup>1</sup>Cover
                 image:https://www.centroidpm.com/pedestrian-bridges-make-cities-less-walkable-urban-projectization/
             </p>
@@ -82,11 +96,11 @@
 
     <div class="layout-row try-streetsmart">
         <img src="../assets/img/StreetSmartFooterLogo.avif">
-        <h2>Try StreetSmart Now</h2>
-        <p>StreetSmart is free-to-use and fully in-browser, no download necessary!</p>
+        <h2 data-i18n="try_now_title">Try StreetSmart Now</h2>
+        <p data-i18n="try_now_body">StreetSmart is free-to-use and fully in-browser, no download necessary!</p>
         <div class='cta'><a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSfy6V8dg4z4HA0hF7BA4HvFZ3nldrUzpNBT4Ft2F_IwtUniEA/viewform"
-                class="button">Try it now ➔</a></div>
+                class="button" data-i18n="try_it_now">Try it now ➔</a></div>
     </div>
 
 
@@ -95,23 +109,26 @@
             <div class="footer-image"><img class="footer-logo" src="../assets/img/StreetSmartFooterLogo.avif"></div>
             <div class="footer-links">
                 <ul>
-                    <li><a href="../index.html#how-it-works">How It Works</a></li>
-                    <li><a href="../index.html#mission">Mission</a></li>
-                    <li><a href="../index.html#myth-busters">Myth-Busters</a></li>
-                    <li><a href="../index.html#team">Team</a></li>
-                    <li><a>Contact Us</a></li>
+                    <li><a href="../index.html#how-it-works" data-i18n="how_it_works_label">How It Works</a></li>
+                    <li><a href="../index.html#mission" data-i18n="nav_mission">Mission</a></li>
+                    <li><a href="../index.html#myth-busters" data-i18n="nav_myth_busters">Myth-Busters</a></li>
+                    <li><a href="../index.html#team" data-i18n="nav_team">Team</a></li>
+                    <li><a data-i18n="nav_contact_us">Contact Us</a></li>
                     <li class="linkedin"><a href="https://www.linkedin.com/company/livestreetsmart/"
                             target="_blank"><img src="../assets/img/mdi_linkedin.png"></a></li>
                 </ul>
             </div>
         </div>
         <p>
-            <strong>Disclaimer:</strong> StreetSmart is currently under development. Please <a>contact us</a> if you
+            <strong>Disclaimer:</strong> StreetSmart is currently under development. Please <a data-i18n="contact_us_lower">contact us</a> if you
             experience
             any
             issues or anything you need to report.
         </p>
     </footer>
+
+    <script type="module" src="../js/script.js"></script>
+
 </body>
 
 </html>
