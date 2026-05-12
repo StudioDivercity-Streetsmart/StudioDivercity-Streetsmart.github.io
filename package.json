@@ -1,0 +1,25 @@
+{
+  "name": "studiodivercity-streetsmart.github.io",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "paraglide-js compile --project ./project.inlang --outdir ./src/paraglide && node scripts/generate-source-text-keys.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StudioDivercity-Streetsmart/StudioDivercity-Streetsmart.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StudioDivercity-Streetsmart/StudioDivercity-Streetsmart.github.io/issues"
+  },
+  "homepage": "https://github.com/StudioDivercity-Streetsmart/StudioDivercity-Streetsmart.github.io#readme",
+  "description": "",
+  "devDependencies": {
+    "@inlang/paraglide-js": "^2.18.0"
+  }
+}

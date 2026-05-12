@@ -1,4 +1,5 @@
-import { m, sourceTextKeys } from '../src/paraglide/messages.js'
+import { m } from '../src/paraglide/messages.js'
+import { sourceTextKeys } from './source-text-keys.js'
 import { getLocale, setLocale } from '../src/paraglide/runtime.js'
 
 const validLocales = new Set(['en', 'fr'])
@@ -119,7 +120,7 @@ export function renderTranslations() {
 
 function initLocale() {
 	const storedLocale = localStorage.getItem('locale')
-	setLocale(validLocales.has(storedLocale) ? storedLocale : 'en')
+	setLocale(validLocales.has(storedLocale) ? storedLocale : 'en', { reload: false })
 }
 
 function initLanguageToggle() {
@@ -127,7 +128,7 @@ function initLanguageToggle() {
 		select.addEventListener('change', () => {
 			const locale = select.value
 			if (!validLocales.has(locale)) return
-			setLocale(locale)
+			setLocale(locale, { reload: false })
 			localStorage.setItem('locale', locale)
 			renderTranslations()
 		})
