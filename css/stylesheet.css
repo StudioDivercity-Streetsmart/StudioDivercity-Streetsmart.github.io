@@ -111,12 +111,18 @@ strong {
     background-repeat: no-repeat;
     background-position: top center;
     background-size: 100% auto;
+    padding-top: 0.75rem;
+    padding-bottom: 1.5rem;
   }
 
   .row1 .img-card {
     order: 1;
     width: 100%;
     height: auto;
+  }
+
+  .row1 .img-card img {
+    max-height: 35vh;
   }
 
   .row1 .card:not(.img-card) {
@@ -172,7 +178,7 @@ strong {
   }
 
   .how-it-works-text {
-    padding: 3.125rem;
+    padding: 2rem 1.25rem;
   }
 
   .vision2 {
@@ -212,7 +218,7 @@ strong {
     background-size: 100% 100%;
     color: #ffdfd3;
     text-align: center;
-    padding: 15%;
+    padding: 3rem 1.5rem;
     width: 100%;
   }
 
@@ -230,7 +236,8 @@ strong {
 
   .vision2 img {
     height: 90vh;
-    object-fit: none;
+    object-fit: cover;
+    object-position: center;
     margin-top: -1.25rem;
     width: 100%;
   }
@@ -265,7 +272,7 @@ strong {
   }
 
   .vision3 {
-    padding: 15%;
+    padding: 3rem 1.5rem;
   }
 
   .vision3 p {
@@ -506,8 +513,9 @@ strong {
   }
 
   .img-card img {
-    height: 60vh;
-    width: auto;
+    width: 100%;
+    height: auto;
+    max-height: 60vh;
     object-fit: contain;
   }
 
@@ -640,20 +648,20 @@ strong {
   }
 
   h1 {
-    font-size: 5rem;
+    font-size: 2.75rem;
     font-weight: 400;
-    line-height: 0.9;
+    line-height: 1.1;
   }
 
   h2 {
-    font-size: 3rem;
-    line-height: 3.25rem;
+    font-size: 2rem;
+    line-height: 2.25rem;
     font-weight: 400;
     letter-spacing: -0.02em;
   }
 
   .bold-sentence {
-    font-size: 1.875rem;
+    font-size: 1.5rem;
     font-weight: 500;
   }
 
@@ -678,6 +686,15 @@ strong {
     font-size: 1.125rem;
     font-weight: 600;
     text-decoration: none;
+  }
+
+  .cta .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 48px;
+    box-sizing: border-box;
   }
 
   .background-image-city1 {
@@ -1425,7 +1442,11 @@ strong {
   }
 
   .demo-row {
-    height: 60vh;
+    height: 100vh;
+  }
+
+  .row1.demo-row {
+    height: calc(100vh - 78px);
   }
 
   .row3 {
@@ -2038,7 +2059,11 @@ strong {
   }
 
   .demo-row {
-    height: 80vh;
+    height: 100vh;
+  }
+
+  .row1.demo-row {
+    height: calc(100vh - 78px);
   }
 
   .row3 {
