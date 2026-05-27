@@ -114,13 +114,13 @@ strong {
   }
 
   .row1 .img-card {
-    order: 1;
+    order: 2;
     width: 100%;
     height: auto;
   }
 
   .row1 .card:not(.img-card) {
-    order: 2;
+    order: 1;
   }
 
   .row2 {
