@@ -3,544 +3,591 @@
 
 <head>
 	<meta charset="UTF-8">
-	<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">--> <!--mobile is too broken -->
-	<title>StreetSmart | Let's Reimagine Our Streets</title>
-	<meta name='description'
-		content='StreetSmart empowers everyday people to understand, reimagine, and improve their streets'>
-	<link rel="stylesheet" href="css/stylesheet.css">
-	<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&family=Nunito:wght@400;700&display=swap"
-		rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>StreetSmart | Does your street love you back?</title>
+	<meta name="description"
+		content="StreetSmart helps everyday people see, understand and improve the streets they live on. Snap a photo, get insights, spark change.">
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Funnel+Display:wght@300..800&family=Inter:wght@400;500;600&display=swap"
+		rel="stylesheet">
+
+	<link rel="stylesheet" href="css/home.css">
 	<link rel="icon" href="assets/img/favicon.png" type="image/png">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
 
-	<div class='header' style='height:78px;'>
-		<div class="logo-container">
-			<img src='assets/img/HeaderLogo.avif' class='logo'>
-		</div>
+	<!-- icon sprite -->
+	<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+		<symbol id="i-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+			stroke-linecap="round" stroke-linejoin="round">
+			<path d="M5 12h14" />
+			<path d="m12 5 7 7-7 7" />
+		</symbol>
+		<symbol id="i-arrow-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+			stroke-linecap="round" stroke-linejoin="round">
+			<path d="m12 19-7-7 7-7" />
+			<path d="M19 12H5" />
+		</symbol>
+		<symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+			stroke-linecap="round" stroke-linejoin="round">
+			<path
+				d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+		</symbol>
+		<symbol id="i-star" viewBox="0 0 24 24" fill="currentColor">
+			<path
+				d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
+		</symbol>
+		<symbol id="i-linkedin" viewBox="0 0 16 16" fill="currentColor">
+			<path
+				d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.213c.837 0 1.358-.554 1.358-1.248-.015-.71-.521-1.248-1.341-1.248-.82 0-1.358.538-1.358 1.248 0 .694.521 1.248 1.327 1.248h.014zm4.908 8.213V9.359c0-.215.016-.43.08-.586.175-.43.573-.875 1.242-.875.875 0 1.223.66 1.223 1.63v3.866h2.401V9.3c0-2.221-1.18-3.253-2.754-3.253-1.274 0-1.845.7-2.165 1.193h.03v-1.025H6.542c.03.66 0 7.225 0 7.225h2.401z" />
+		</symbol>
+	</svg>
 
-		<div class="hamburger" onclick="toggleMenu(this)">☰</div>
+	<!-- ===================== HEADER ===================== -->
+	<header class="site-header">
+		<nav class="nav container">
+			<a href="index.html" class="brand" aria-label="StreetSmart home">
+				<img src="assets/img/HeaderLogo.avif" alt="StreetSmart" class="logo">
+			</a>
 
-		<nav id="navMenu" class="nav-links">
-			<a href="index.html">Home</a>
-			<a href="pilot.html">Pilots</a>
-			<div class='cta'>
-				<a href="https://try.livestreetsmart.com/" class="button">Try StreetSmart ➔</a>
+			<div class="nav-links">
+				<a href="#story">How it works</a>
+				<a href="pilot.html">Pilots</a>
+				<a href="#vision">Why we exist</a>
+				<a href="#myths">Myth-busters</a>
+				<a href="#team">Meet the team</a>
+			</div>
+
+			<div class="nav-actions">
+				<span class="lang-toggle" role="group" aria-label="Language (coming soon)" title="Language switching coming soon">
+					<span class="lang-active">EN</span>
+					<span class="lang-inactive">FR</span>
+				</span>
+				<a href="https://try.livestreetsmart.com/" class="btn btn-primary btn-try-top">
+					Try it free <svg aria-hidden="true"><use href="#i-arrow-right" /></svg>
+				</a>
+				<button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"
+					aria-controls="mobileNav">☰</button>
 			</div>
 		</nav>
-	</div>
 
-	<div class='layout-row demo-row row1'>
-
-		<div class='card'>
-			<h1>Does <span class='bold-font'>your street</span> work for you?</h1>
-			<p>Discover how your street shapes your daily freedom, safety, and sense of well-being.</p>
-			<div class='cta'><a href="https://try.livestreetsmart.com/" class="button">Try StreetSmart ➔</a></div>
+		<div class="mobile-nav" id="mobileNav">
+			<a href="#story">How it works</a>
+			<a href="pilot.html">Pilots</a>
+			<a href="#vision">Why we exist</a>
+			<a href="#myths">Myth-busters</a>
+			<a href="#team">Meet the team</a>
+			<a href="https://try.livestreetsmart.com/" class="btn btn-primary btn-md">
+				Try it free <svg aria-hidden="true"><use href="#i-arrow-right" /></svg>
+			</a>
 		</div>
+	</header>
 
-		<div class='card img-card'>
-			<img src='assets/img/titlephones.avif'>
-		</div>
-	</div>
-
-
-	<div class='layout-row dark-green-bg demo-row row2' id="how-it-works">
-		<div class='card'>
-			<p class='pre-header'>How It Works</p>
-			<h2>Get to know your neighbourhood</h2>
-			<p>See how others experience your streets. Understand what works — and what doesn’t. <br> Discover simple
-				changes that could improve comfort, safety, and everyday life.</p>
-			<div class='cta'><a href="https://try.livestreetsmart.com/" class="button">Try StreetSmart ➔</a></div>
-		</div>
-
-		<div class='card img-card'>
-			<img src='assets/img/imageDiv2.avif'>
-		</div>
-	</div>
-
-	<div class='layout-row demo-row row3'>
-		<div class='card img-card'>
-			<img src='assets/img/imageDiv3.avif' style="z-index: 5;">
-		</div>
-
-		<div class='card how-it-works-text'>
-			<p class='pre-header'>How It Works</p>
-			<h2>Get insights about any street</h2>
-			<p>Upload a photo and StreetSmart gives you instant feedback. Want safer crossings? More shade? <br>
-				We’ll show you what’s missing — and let you add your voice to strengthen the case for change.</p>
-			<div class='cta'><a href="https://try.livestreetsmart.com/" class="button">Try it now ➔</a></div>
-		</div>
-	</div>
-
-	<div class='layout-row demo-row row4'>
-
-		<div class='card how-it-works-text'>
-			<p class='pre-header'>How It Works</p>
-			<h2>Tell us how you feel</h2>
-			<p>Every street tells a story — not just through its design, but through how it makes you feel. Do you feel
-				safe here? Comfortable? Able to move easily? Your answers reveal what can’t be seen on a map — the lived
-				experience of everyday streets.</p>
-			<div class='cta'><a href="https://try.livestreetsmart.com/" class="button">Try it now ➔</a></div>
-		</div>
-		<div class='card img-card'>
-			<img src='assets/img/imageDiv4.avif' style="z-index: 5;">
-		</div>
-	</div>
-
-	<div class='layout-row demo-row row5'>
-		<div class='card img-card'>
-			<img src='assets/img/imageDiv5.avif' style="z-index: 5;">
-		</div>
-
-		<div class='card how-it-works-text'>
-			<p class='pre-header'>How It Works</p>
-			<h2>Add your street, join the movement</h2>
-			<p>StreetSmart turns everyday observations into public demand. Share a photo and your feedback to reveal
-				strengths, spot gaps, and call for change.</p>
-			<div class='cta'><a href="https://try.livestreetsmart.com/" class="button">Try it now ➔</a></div>
-		</div>
-	</div>
-
-	<div class='layout-row vision1' id="mission">
-
-		<p class='pre-header'>Vision & Mission</p>
-		<div class="card-row">
-			<div class="card">
-				<h2>Our Vision</h2>
-				<p>A world where streets are no longer dangerous spaces — but vibrant places where people and nature
-					thrive
-					together.</p>
-			</div>
-			<div class="card">
-				<h2>Our Mission</h2>
-				<p>StreetSmart empowers everyday people to see, understand and improve their streets. We turn street
-					photos
-					into insights, and insights into action.</p>
-			</div>
-		</div>
-	</div>
-
-	<div class="layout-row vision2">
-		<img src="assets/img/Row6Background.avif">
-
-		<div class="pop-out">
-			<p class="pre-header">VISION & MISSION</p>
-			<h3>
-				<strong>Street</strong>Smart is for the Everyday Urbanist
-			</h3>
-			<p>For the parent pushing a pram. <br>The teenager cycling to school. <br>The older adult crossing the
-				street. <br>
-				The commuter seeking shade and clean air. <br>Even the driver stuck in traffic. <br>
-				<strong>Live StreetSmart.</strong>
-			</p>
-		</div>
-
-	</div>
-
-	<div class='layout-row vision3'>
-		<div class='card'>
-			<div class='card-full-line-wrapper'>
-				<p class='pre-header'>Vision & Mission</p>
-				<h2>Why <span class='bold-font'>Street</span>Smart?</h2>
-				<p class='bold-sentence'>StreetSmart exists to challenge a century of urban planning that prioritised
-					speed and flow over people and the planet. </p>
-				<p>This movement-first approach has led to deadly heat, flooding, pollution, road fatalities, isolation,
-					and a loss of freedom - particularly for children. Our streets have become climate-risk zones and
-					health hazards.</p>
-				<p class='bold-sentence'>StreetSmart flips the script by shifting mindsets. </p>
-				<p>We empower communities to see streets not just as routes for movement, but as places where children
-					can walk safely, nature can flourish, and communities can thrive in the face of climate change.</p>
-
-				<p>Through street-level data, community voices, and storytelling, we spark curiosity and drive
-					meaningful change.</p>
-
-				<p>StreetSmart is more than a platform. It is a movement for a culture that values people over cars,
-					nature over asphalt, and belonging over congestion.</p>
-			</div>
-		</div>
-	</div>
-
-	<div class="myth-busters" id="myth-busters" style="padding-top: 60px; padding-bottom: 60px;">
-		<h2>Myth-busters</h2>
-		<p class="myth-busters-explanation">StreetSmart debunks common myths about urban transit, mobility and cities.
-		</p>
-
-		<div class="js-carousel-wrapper">
-
-			<div class="js-carousel-container">
-				<div class="js-carousel-track">
-					<!-- Card 1 -->
-					<div class="js-card">
-						<div class="myth-img-wrapper">
-							<img src="assets/img/myth1.avif" alt="Myth 1">
-							<p>image credits:
-								https://exploring-and-observing-cities.org/2016/01/11/amsterdam-historic-images-depicting-the-transition-from-cars-to-bikes/
-							</p>
-						</div>
-						<h3>MYTH #1</h3>
-						<p class="myth-quote">“We are not Amsterdam. Our city doesn’t have a walking/ cycling culture.”
-						</p>
-						<h3>TRUTH</h3>
-						<p class="truth-quote">People always respond to the environments we create. Infrastructure
-							shapes behaviour.<br>When infrastructure prioritises people, behaviours shift.
-						</p>
-						<a href="myths/myth1.html" class="js-card-button">More ➔</a>
-					</div>
-
-					<!-- Card 2 -->
-					<div class="js-card">
-						<div class="myth-img-wrapper">
-							<img src="assets/img/myth2.avif" alt="Myth 2">
-							<p>image credits:
-								https://www.lanacion.com.py/estilodevida/2024/12/13/cumple-50-anos-la-ciclovia-de-bogota-una-revolucion-que-inspiro-al-mundo/
-							</p>
-						</div>
-						<h3>MYTH #2</h3>
-						<p class="myth-quote">"Adding more road lanes will ease congestion and improve traffic flow."
-
-						</p>
-						<h3>TRUTH</h3>
-						<p class="truth-quote">Building more road space doesn’t solve congestion – it actually creates
-							more. This is known as induced demand: adding more lanes attracts more drivers, quickly
-							filling up the new capacity.</p>
-						<a href="myths/myth2.html" class="js-card-button">More ➔</a>
-					</div>
-
-					<!-- Card 3 -->
-					<div class="js-card">
-						<div class="myth-img-wrapper">
-							<img src="assets/img/myth3.avif" alt="Myth 3">
-							<p>image credits:
-								https://www.centroidpm.com/pedestrian-bridges-make-cities-less-walkable-urban-projectization/
-							</p>
-						</div>
-						<h3>MYTH #3</h3>
-						<p class="myth-quote">"Pedestrian bridges are designed for pedestrians."</p>
-						<h3>TRUTH</h3>
-						<p class="truth-quote">Pedestrian bridges are often designed with cars in mind, prioritising
-							vehicle flow over pedestrian convenience. They force people to take detours or climb stairs,
-							making them inefficient and inaccessible.</p>
-						<a href="myths/myth3.html" class="js-card-button">More ➔</a>
-					</div>
-
-					<!-- Card 4 -->
-					<div class="js-card">
-						<div class="myth-img-wrapper">
-							<img src="assets/img/myth4.avif" alt="Myth 4">
-							<p>image credits:
-								https://www.consumerreports.org/cars/car-safety/the-hidden-danger-of-big-pickup-trucks-a9662450602/
-							</p>
-						</div>
-						<h3>MYTH #4</h3>
-						<p class="myth-quote">"Bigger cars are safer."</p>
-						<h3>TRUTH</h3>
-						<p class="truth-quote">Big cars make the streets more dangerous for everyone outside the
-							vehicle.
-							Larger vehicles, like SUVs and trucks, increase the risk of fatal collisions with
-							pedestrians and cyclists. They take much longer to stop and, due to their height, drivers
-							can’t see pedestrians.
-						</p>
-						<a href="myths/myth4.html" class="js-card-button">More ➔</a>
-					</div>
-				</div>
-			</div>
-
-			<button id="moreMythsBtn" class="more-myths-button">More Myths ➔</button>
-		</div>
-	</div>
-
-	<div class="people" id="team">
-		<h2>Meet the people behind StreetSmart</h2>
-
-		<div class="reena">
-			<img src="assets/img/headshots/Reena Mahajan.avif">
-			<div class="reena-text">
-				<h4>Reena Mahajan
-					<a href="https://www.linkedin.com/in/reena-mahajan" target="_blank" aria-label="LinkedIn"
-						style="margin-left: 4px; vertical-align: -2px;">
-						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#ffffff"
-							viewBox="0 0 16 16">
-							<path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 
-					1.146v13.708c0 .633-.526 1.146-1.175 
-					1.146H1.175C.526 16 0 15.487 0 
-					14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.213c.837 
-					0 1.358-.554 1.358-1.248-.015-.71-.521-1.248-1.341-1.248-.82 
-					0-1.358.538-1.358 1.248 0 .694.521 
-					1.248 1.327 1.248h.014zm4.908 8.213V9.359c0-.215.016-.43.08-.586.175-.43.573-.875 
-					1.242-.875.875 0 1.223.66 1.223 
-					1.63v3.866h2.401V9.3c0-2.221-1.18-3.253-2.754-3.253-1.274 
-					0-1.845.7-2.165 1.193h.03v-1.025H6.542c.03.66 
-					0 7.225 0 7.225h2.401z" />
-						</svg>
+	<!-- ===================== HERO ===================== -->
+	<section class="hero">
+		<div class="hero-glow" aria-hidden="true"></div>
+		<div class="container hero-grid">
+			<div class="hero-copy">
+				<h1>Does <span class="soft">your street</span> work for you?</h1>
+				<p class="lead">You deserve a street that feels like it belongs to you — safer, friendlier, more alive.
+					Yours could be that street. Let's make it happen together.</p>
+				<div class="hero-cta">
+					<a href="https://try.livestreetsmart.com/" class="btn btn-primary btn-md">
+						Try StreetSmart <svg aria-hidden="true"><use href="#i-arrow-right" /></svg>
 					</a>
-				</h4>
-				<p><span>Founder & Urban Innovation Lead</span></p>
-				<p>Reena Mahajan is an architect, urban planner, and the founder of <br>
-					<a href="https://www.studiodivercity.com" target="_blank"
-						style="text-decoration: underline; color: white;">
-						Studio DiverCity</a>.
-					She brings nearly
-					two decades of international experience designing people-centred, nature-positive cities —
-					blending
-					water-sensitive design, sustainable mobility, and gender-responsive planning into bold, holistic
-					solutions.
-				</p>
-				<p>StreetSmart was born from lived experience. While raising a child in Montevideo, Reena saw how
-					car-dominated streets restrict freedom, safety, and everyday life — especially for children. In
-					response, she led the #MontevideoPacificada campaign, using visual advocacy, public dialogue,
-					and
-					design to push for change. The result: safer crossings, new bike lanes, and a cultural shift
-					around
-					mobility.</p>
-				<p>Now based in Paris, she’s building StreetSmart to scale that impact — combining data, design, and
-					public engagement to help cities put people and the planet first.</p>
+					<a href="#story" class="text-link">or check out how it works</a>
+				</div>
+			</div>
+			<div class="hero-media">
+				<div class="media-glow" aria-hidden="true"></div>
+				<img src="assets/img/titlephones.avif" alt="StreetSmart app shown on two phones">
+			</div>
+		</div>
+	</section>
+
+	<!-- ===================== HOW IT WORKS ===================== -->
+	<section id="story" class="story-head">
+		<div class="container narrow">
+			<h2>How it Works</h2>
+		</div>
+	</section>
+
+	<section class="steps">
+		<div class="step container">
+			<div class="step-copy">
+				<p class="eyebrow">Step one</p>
+				<h3>Snap a photo, get instant insights</h3>
+				<p>Upload a street photo and StreetSmart gives you friendly feedback in seconds — from safer crossings to
+					more shade and calmer traffic.</p>
+				<a href="https://try.livestreetsmart.com/" class="btn btn-primary btn-sm">
+					Try it with your street <svg aria-hidden="true"><use href="#i-arrow-right" /></svg>
+				</a>
+			</div>
+			<div class="step-media">
+				<div class="media-glow" aria-hidden="true"></div>
+				<img src="assets/img/imageDiv2.avif" alt="Snap a photo, get instant insights" loading="lazy">
 			</div>
 		</div>
 
-		<hr class="divider" />
-
-		<div class="team">
-			<h3>Launch Team</h3>
-			<p>StreetSmart’s launch team came together through the Climatebase Fellowship and beyond — a
-				multidisciplinary group united by the belief that streets should support freedom, health, and
-				climate
-				resilience.</p>
-
-			<p>With experience spanning urban planning, technology, design, and advocacy, the team collaborates
-				across
-				disciplines to build a tool that empowers people, informs decision-makers, and reimagines what
-				streets
-				can be.</p>
-
-			<h4>Core Contributors</h4>
-			<div class="grid-container core">
-				<div class="grid-item">
-					<img src="assets/img/headshots/Anu Jayasinghe.avif">
-					<h5>
-						<a href="https://www.linkedin.com/in/anujayasinghe/" target="_blank" style="color: white;">
-							Anu Jayasinghe
-						</a>
-					</h5>
-					<p>Design Lead</p>
-				</div>
-				<div class="grid-item">
-					<img src="assets/img/headshots/Daniel Vincent.avif">
-					<h5>
-						<a href="https://www.linkedin.com/in/daniel-vincent-74b51729b/" target="_blank"
-							style="color: white; ">
-							Daniel Vincent
-						</a>
-					</h5>
-					<p>Backend Developer</p>
-				</div>
-				<div class="grid-item">
-					<img src="assets/img/headshots/Jaiveer SIngh.avif">
-					<h5>
-						<a href="https://www.linkedin.com/in/jaiveer-singh-17492469/" target="_blank"
-							style="color: white; ">
-							Jaiveer Singh
-						</a>
-					</h5>
-					<p>Urban Systems Strategist</p>
-				</div>
-				<div class="grid-item">
-					<img src="assets/img/headshots/Kyle Reed-Yassin.avif">
-					<h5>
-						<a href="https://www.linkedin.com/in/kyleeriksonreed/" target="_blank" style="color: white; ">
-							Kyle Reed-Yassin
-						</a>
-					</h5>
-					<p>Brand Identity Designer</p>
-				</div>
-				<div class="grid-item">
-					<img src="assets/img/headshots/Mavrianos Velentzas.avif">
-					<h5>
-						<a href="https://www.linkedin.com/in/mavrianos-urbanfutures/" target="_blank"
-							style="color: white; ">
-							Mavrianos Velentzas
-						</a>
-					</h5>
-					<p>Urban Researcher</p>
-				</div>
-				<div class="grid-item">
-					<img src="assets/img/headshots/Pallavi Salecha.avif">
-					<h5>
-						<a href="https://www.linkedin.com/in/pallavi-salecha" target="_blank" style="color: white; ">
-							Pallavi Salecha
-						</a>
-					</h5>
-					<p>Urban Researcher</p>
-				</div>
-				<div class="grid-item">
-					<img src="assets/img/headshots/Steven Cramer.avif">
-					<h5>
-						<a href="https://www.linkedin.com/in/steven-cramer-02296078/" target="_blank"
-							style="color: white; ">
-							Steven Cramer
-						</a>
-					</h5>
-					<p>Tech & Operations Lead</p>
-				</div>
-				<div class="grid-item">
-					<img src="assets/img/headshots/Timilehin Dahunsi.avif">
-					<h5>
-						<a href="https://www.linkedin.com/in/timilehindahunsi/?originalSubdomain=ng" target="_blank"
-							style="color: white; ">
-							Timilehin Dahunsi
-						</a>
-					</h5>
-					<p>Frontend Engineer</p>
-				</div>
-
+		<div class="step reverse container">
+			<div class="step-copy">
+				<p class="eyebrow">Step two</p>
+				<h3>Tell us how this place makes you feel</h3>
+				<p>Safe? Rushed? Welcome? Your honest answers reveal what no map can: the real, lived experience of being
+					there.</p>
+				<a href="https://try.livestreetsmart.com/" class="btn btn-primary btn-sm">
+					Share your feelings <svg aria-hidden="true"><use href="#i-arrow-right" /></svg>
+				</a>
 			</div>
-
-
-			<h4>Contributors & supporters</h4>
-
-			<div class="grid-container supporters">
-				<div class="grid-item">
-					<h6>
-						<a href="https://www.linkedin.com/in/alindjain11/" target="_blank" style="color: white; ">
-							Alind Jain
-						</a>
-					</h6>
-					<p>AI & Geospatial Engineer</p>
-				</div>
-				<div class="grid-item">
-					<h6>
-						<a href="https://www.linkedin.com/in/chetan-aggarwal/" target="_blank" style="color: white; ">
-							Chetan Aggarwal
-						</a>
-					</h6>
-					<p>Urban Designer</p>
-				</div>
-				<div class="grid-item">
-					<h6>
-						<a href="https://www.linkedin.com/in/galacamacho/" target="_blank" style="color: white; ">
-							Gala Camacho
-						</a>
-					</h6>
-					<p>Advisor</p>
-				</div>
-				<div class="grid-item">
-					<h6>
-						<a href="https://www.linkedin.com/in/kunwar-sarthesht-86a872b3/" target="_blank"
-							style="color: white; ">
-							Kunwar Sarthesht
-						</a>
-					</h6>
-					<p>GIS Researcher</p>
-				</div>
-				<div class="grid-item">
-					<h6>
-						<a href="https://www.linkedin.com/in/lesley-merz-49082162/" target="_blank"
-							style="color: white; ">
-							Lesley Merz
-						</a>
-					</h6>
-					<p>Product Manager</p>
-				</div>
-				<div class="grid-item">
-					<h6>
-						<a href="https://www.linkedin.com/in/makosorensen/" target="_blank" style="color: white; ">
-							Mako Sorensen
-						</a>
-					</h6>
-					<p>Fullstack AI Engineer</p>
-				</div>
-				<div class="grid-item">
-					<h6>
-						<a href="https://www.linkedin.com/in/sheldonsteed/" target="_blank" style="color: white; ">
-							Sheldon Steed
-						</a>
-					</h6>
-					<p>Advisor</p>
-				</div>
-				<div class="grid-item">
-					<h6>
-						<a href="https://www.linkedin.com/in/steven-giallourakis/" target="_blank"
-							style="color: white; ">
-							Steven Giallourakis
-						</a>
-					</h6>
-					<p>Software Developer</p>
-				</div>
-				<div class="grid-item">
-					<h6>
-						<a href="https://www.linkedin.com/in/tanchan/" target="_blank" style="color: white; ">
-							Tan Chan
-						</a>
-					</h6>
-					<p>Community Researcher</p>
-				</div>
-				<div class="grid-item">
-					<h6>
-						<!-- <a href="https://www.linkedin.com/in/nilam-bhojwani-91105628b/" target="_blank" style="color: white; "> -->
-						Nilam Bhojwani
-						<!-- </a> -->
-					</h6>
-					<p>AI/ML Developer</p>
-				</div>
+			<div class="step-media">
+				<div class="media-glow" aria-hidden="true"></div>
+				<img src="assets/img/imageDiv3.avif" alt="Tell us how this place makes you feel" loading="lazy">
 			</div>
-
-			<h4>Early contributors</h4>
-
-			<div class="grid-container early">
-				<p>Anders&nbsp;Ward &nbsp;&nbsp;&nbsp;&nbsp; Danbi&nbsp;Kim &nbsp;&nbsp;&nbsp;&nbsp; Divya&nbsp;Bisht
-					&nbsp;&nbsp;&nbsp;&nbsp; Elzaphan&nbsp;Murage &nbsp;&nbsp;&nbsp;&nbsp;
-					Icare&nbsp;Duplessey &nbsp;&nbsp;&nbsp;&nbsp;Jayabalambika&nbsp;R &nbsp;&nbsp;&nbsp;&nbsp;
-					Sirid&nbsp;Kellermann
-					&nbsp;&nbsp;&nbsp;&nbsp; Scott&nbsp;Baker</p>
-			</div>
-
 		</div>
 
-	</div>
+		<div class="step container">
+			<div class="step-copy">
+				<p class="eyebrow">Step three</p>
+				<h3>Add your street, join the movement</h3>
+				<p>Turn everyday observations into public momentum. Share a photo, share a feeling, and help your
+					community imagine what could be.</p>
+				<a href="https://try.livestreetsmart.com/" class="btn btn-primary btn-sm">
+					Add your street <svg aria-hidden="true"><use href="#i-arrow-right" /></svg>
+				</a>
+			</div>
+			<div class="step-media">
+				<div class="media-glow" aria-hidden="true"></div>
+				<img src="assets/img/imageDiv4.avif" alt="Add your street, join the movement" loading="lazy">
+			</div>
+		</div>
+	</section>
 
-	<div class="layout-row try-streetsmart">
-		<img src="assets/img/StreetSmartFooterLogo.avif">
-		<h2>Try StreetSmart Now</h2>
-		<p>StreetSmart is free-to-use and fully in-browser, no download necessary!</p>
-		<div class='cta'><a href="https://try.livestreetsmart.com/" class="button">Try it now ➔</a></div>
-	</div>
+	<!-- ===================== VISION (dark) ===================== -->
+	<section id="vision" class="vision">
+		<div class="container vision-grid">
+			<div class="vision-block">
+				<p class="eyebrow">Our vision</p>
+				<h2>We believe every street should be more than a road to somewhere else. It should be a place that feels
+					like it belongs to you — and everyone in it.</h2>
+			</div>
+			<div class="vision-block">
+				<p class="eyebrow">Our mission</p>
+				<p class="mission">StreetSmart helps everyday people notice what's happening on their streets — and do
+					something about it. Snap a photo, understand what you're seeing, and start making change.</p>
+			</div>
+		</div>
+	</section>
 
+	<!-- ===================== EVERYDAY URBANISTS (dark) ===================== -->
+	<section class="urbanists">
+		<div class="container">
+			<div class="urbanists-head">
+				<p class="eyebrow">StreetSmart is for</p>
+				<h2 class="display">Every everyday urbanist.</h2>
+			</div>
 
+			<div class="urbanist-grid">
+				<div class="blob blob-1">
+					<span class="blob-pill" aria-hidden="true"></span>
+					<span class="blob-chip" aria-hidden="true">🌼</span>
+					<div class="blob-inner">
+						<span class="blob-emoji" aria-hidden="true">🧑‍🍼</span>
+						<div>
+							<p class="blob-label">The parent</p>
+							<p class="blob-sub">walking slowly, watching closely</p>
+						</div>
+					</div>
+				</div>
+				<div class="blob blob-2">
+					<span class="blob-pill" aria-hidden="true"></span>
+					<span class="blob-chip" aria-hidden="true">🎒</span>
+					<div class="blob-inner">
+						<span class="blob-emoji" aria-hidden="true">🚲</span>
+						<div>
+							<p class="blob-label">The teenager</p>
+							<p class="blob-sub">finding their way to school</p>
+						</div>
+					</div>
+				</div>
+				<div class="blob blob-3">
+					<span class="blob-pill" aria-hidden="true"></span>
+					<span class="blob-chip" aria-hidden="true">☀️</span>
+					<div class="blob-inner">
+						<span class="blob-emoji" aria-hidden="true">🧑‍🦽</span>
+						<div>
+							<p class="blob-label">The neighbour</p>
+							<p class="blob-sub">noticing every kerb and crossing</p>
+						</div>
+					</div>
+				</div>
+				<div class="blob blob-4">
+					<span class="blob-pill" aria-hidden="true"></span>
+					<span class="blob-chip" aria-hidden="true">🛍️</span>
+					<div class="blob-inner">
+						<span class="blob-emoji" aria-hidden="true">🧓</span>
+						<div>
+							<p class="blob-label">The regular</p>
+							<p class="blob-sub">making the daily trip feel easier</p>
+						</div>
+					</div>
+				</div>
+				<div class="blob blob-5">
+					<span class="blob-pill" aria-hidden="true"></span>
+					<span class="blob-chip" aria-hidden="true">☕</span>
+					<div class="blob-inner">
+						<span class="blob-emoji" aria-hidden="true">🐕</span>
+						<div>
+							<p class="blob-label">The wanderer</p>
+							<p class="blob-sub">turning errands into little moments</p>
+						</div>
+					</div>
+				</div>
+			</div>
 
+			<p class="live-streetsmart">Live StreetSmart.</p>
+		</div>
+	</section>
 
-	<footer>
-		<div class="layout-row footer-row">
-			<div class="footer-image"><img class="footer-logo" src="assets/img/StreetSmartFooterLogo.avif"></div>
+	<!-- ===================== MID CTA (dark) ===================== -->
+	<section class="cta-band">
+		<div class="container">
+			<div class="cta-card">
+				<h3>Your street is waiting.</h3>
+				<p>One photo. A whole new way of seeing your street.</p>
+				<a href="https://try.livestreetsmart.com/" class="btn btn-accent btn-md">
+					Try StreetSmart <svg aria-hidden="true"><use href="#i-arrow-right" /></svg>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- ===================== WHY STREETSMART ===================== -->
+	<section id="why" class="why">
+		<div class="container narrow">
+			<p class="eyebrow">Why StreetSmart?</p>
+			<h2>Streets were designed for cars. We think they should be designed for you.</h2>
+			<div class="why-body">
+				<p>Streets used to be where life happened — where kids ran out the front door, neighbours leaned over
+					fences, and weeds found their way through the cracks. Somewhere along the way, we handed all of that
+					over to cars.</p>
+				<p>StreetSmart is here to take it back. We help communities see their streets clearly, and reshape them
+					into places where children roam freely, nature finds room to breathe, and neighbours actually stop to
+					talk.</p>
+				<p class="accent-line">We built a platform. But what we're really building is a movement — for people,
+					for nature, for the kind of belonging that starts right outside your door.</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- ===================== MYTH-BUSTERS ===================== -->
+	<section id="myths" class="myths">
+		<div class="container">
+			<div class="myths-head">
+				<p class="eyebrow">Myth-busters</p>
+				<h2>What we got wrong about streets — and why it matters.</h2>
+			</div>
+
+			<div class="carousel" data-carousel="myths">
+				<div class="carousel-viewport">
+					<div class="carousel-track myth-track">
+						<div class="myth-slide">
+							<article class="myth-card">
+								<img src="assets/img/myth1.avif" alt="" loading="lazy">
+								<div class="myth-body">
+									<div class="myth-num-row">
+										<span class="myth-num">01</span>
+										<span class="eyebrow">The myth</span>
+									</div>
+									<p class="myth-quote">“We're not Amsterdam — we just don't have a walking culture.”</p>
+									<div class="myth-truth">
+										<p class="eyebrow">The truth</p>
+										<p>People always respond to the world we build for them. When streets welcome
+											humans, humans show up. Infrastructure shapes behaviour, not the other way
+											round.</p>
+									</div>
+								</div>
+							</article>
+						</div>
+						<div class="myth-slide">
+							<article class="myth-card">
+								<img src="assets/img/myth2.avif" alt="" loading="lazy">
+								<div class="myth-body">
+									<div class="myth-num-row">
+										<span class="myth-num">02</span>
+										<span class="eyebrow">The myth</span>
+									</div>
+									<p class="myth-quote">“More road lanes will fix our traffic.”</p>
+									<div class="myth-truth">
+										<p class="eyebrow">The truth</p>
+										<p>They actually make it worse. It's called induced demand: build more lanes,
+											attract more cars, refill the jam. Every. Single. Time.</p>
+									</div>
+								</div>
+							</article>
+						</div>
+						<div class="myth-slide">
+							<article class="myth-card">
+								<img src="assets/img/myth3.avif" alt="" loading="lazy">
+								<div class="myth-body">
+									<div class="myth-num-row">
+										<span class="myth-num">03</span>
+										<span class="eyebrow">The myth</span>
+									</div>
+									<p class="myth-quote">“Pedestrian bridges are for pedestrians.”</p>
+									<div class="myth-truth">
+										<p class="eyebrow">The truth</p>
+										<p>They're really for cars. They send people up stairs and around detours so
+											traffic never has to slow. Convenient for drivers, exhausting for everyone
+											else.</p>
+									</div>
+								</div>
+							</article>
+						</div>
+						<div class="myth-slide">
+							<article class="myth-card">
+								<img src="assets/img/myth4.avif" alt="" loading="lazy">
+								<div class="myth-body">
+									<div class="myth-num-row">
+										<span class="myth-num">04</span>
+										<span class="eyebrow">The myth</span>
+									</div>
+									<p class="myth-quote">“Bigger cars are safer.”</p>
+									<div class="myth-truth">
+										<p class="eyebrow">The truth</p>
+										<p>Safer for the people inside, riskier for everyone outside. Big SUVs and trucks
+											take longer to stop and have huge blind spots — especially around kids.</p>
+									</div>
+								</div>
+							</article>
+						</div>
+					</div>
+				</div>
+				<div class="carousel-controls">
+					<button class="carousel-btn" data-dir="prev" aria-label="Previous myth">
+						<svg aria-hidden="true"><use href="#i-arrow-left" /></svg>
+					</button>
+					<button class="carousel-btn" data-dir="next" aria-label="Next myth">
+						<svg aria-hidden="true"><use href="#i-arrow-right" /></svg>
+					</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ===================== TEAM ===================== -->
+	<section id="team" class="team">
+		<div class="container">
+			<div class="team-head">
+				<p class="eyebrow">Meet the team</p>
+				<h2>A small, multidisciplinary crew that really, really cares about streets.</h2>
+				<p class="intro">StreetSmart's team came together through the Climatebase Fellowship and beyond — a
+					multidisciplinary group united by the belief that streets should support freedom, health, and climate
+					resilience.</p>
+			</div>
+
+			<!-- Founder -->
+			<div>
+				<p class="eyebrow team-group-label">Founder</p>
+				<div class="founder">
+					<div class="founder-photo">
+						<img src="assets/img/headshots/Reena Mahajan.avif" alt="Reena Mahajan">
+						<span class="founder-badge"><svg aria-hidden="true" width="20" height="20"><use
+									href="#i-star" /></svg></span>
+					</div>
+					<div class="founder-info">
+						<p class="name">Reena Mahajan</p>
+						<p class="role">Founder &amp; Urban Innovation Lead</p>
+						<p class="bio">Reena started StreetSmart after watching her own child navigate car-dominated
+							streets in Montevideo. An architect and urban planner, she leads the vision and the movement.
+							<a href="https://www.linkedin.com/in/reena-mahajan" target="_blank" rel="noopener"
+								aria-label="Reena Mahajan on LinkedIn" class="text-link">LinkedIn</a>
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Core contributors carousel -->
+			<div>
+				<p class="eyebrow team-group-label">Core contributors</p>
+				<div class="carousel" data-carousel="faces">
+					<div class="carousel-viewport">
+						<div class="carousel-track face-track">
+							<div class="face-slide">
+								<div class="face-card">
+									<img src="assets/img/headshots/Anu Jayasinghe.avif" alt="Anu Jayasinghe">
+									<a class="name" href="https://www.linkedin.com/in/anujayasinghe/" target="_blank"
+										rel="noopener">Anu Jayasinghe</a>
+									<span class="role">Design Lead</span>
+								</div>
+							</div>
+							<div class="face-slide">
+								<div class="face-card">
+									<img src="assets/img/headshots/Daniel Vincent.avif" alt="Daniel Vincent">
+									<a class="name" href="https://www.linkedin.com/in/daniel-vincent-74b51729b/"
+										target="_blank" rel="noopener">Daniel Vincent</a>
+									<span class="role">Backend Developer</span>
+								</div>
+							</div>
+							<div class="face-slide">
+								<div class="face-card">
+									<img src="assets/img/headshots/Jaiveer SIngh.avif" alt="Jaiveer Singh">
+									<a class="name" href="https://www.linkedin.com/in/jaiveer-singh-17492469/"
+										target="_blank" rel="noopener">Jaiveer Singh</a>
+									<span class="role">Urban Systems Strategist</span>
+								</div>
+							</div>
+							<div class="face-slide">
+								<div class="face-card">
+									<img src="assets/img/headshots/Kyle Reed-Yassin.avif" alt="Kyle Reed-Yassin">
+									<a class="name" href="https://www.linkedin.com/in/kyleeriksonreed/" target="_blank"
+										rel="noopener">Kyle Reed-Yassin</a>
+									<span class="role">Brand Identity Designer</span>
+								</div>
+							</div>
+							<div class="face-slide">
+								<div class="face-card">
+									<img src="assets/img/headshots/Mavrianos Velentzas.avif" alt="Mavrianos Velentzas">
+									<a class="name" href="https://www.linkedin.com/in/mavrianos-urbanfutures/"
+										target="_blank" rel="noopener">Mavrianos Velentzas</a>
+									<span class="role">Urban Researcher</span>
+								</div>
+							</div>
+							<div class="face-slide">
+								<div class="face-card">
+									<img src="assets/img/headshots/Pallavi Salecha.avif" alt="Pallavi Salecha">
+									<a class="name" href="https://www.linkedin.com/in/pallavi-salecha" target="_blank"
+										rel="noopener">Pallavi Salecha</a>
+									<span class="role">Urban Researcher</span>
+								</div>
+							</div>
+							<div class="face-slide">
+								<div class="face-card">
+									<img src="assets/img/headshots/Steven Cramer.avif" alt="Steven Cramer">
+									<a class="name" href="https://www.linkedin.com/in/steven-cramer-02296078/"
+										target="_blank" rel="noopener">Steven Cramer</a>
+									<span class="role">Tech &amp; Operations Lead</span>
+								</div>
+							</div>
+							<div class="face-slide">
+								<div class="face-card">
+									<img src="assets/img/headshots/Timilehin Dahunsi.avif" alt="Timilehin Dahunsi">
+									<a class="name" href="https://www.linkedin.com/in/timilehindahunsi/" target="_blank"
+										rel="noopener">Timilehin Dahunsi</a>
+									<span class="role">Frontend Engineer</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-controls">
+						<button class="carousel-btn" data-dir="prev" aria-label="Previous team members">
+							<svg aria-hidden="true"><use href="#i-arrow-left" /></svg>
+						</button>
+						<button class="carousel-btn" data-dir="next" aria-label="More team members">
+							<svg aria-hidden="true"><use href="#i-arrow-right" /></svg>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- Supporters + early contributors -->
+			<div class="team-lists">
+				<div>
+					<p class="eyebrow team-group-label">Contributors &amp; supporters</p>
+					<div class="supporter-grid">
+						<div>
+							<a class="name" href="https://www.linkedin.com/in/alindjain11/" target="_blank"
+								rel="noopener">Alind Jain</a>
+							<p class="role">AI &amp; Geospatial Engineer</p>
+						</div>
+						<div>
+							<a class="name" href="https://www.linkedin.com/in/chetan-aggarwal/" target="_blank"
+								rel="noopener">Chetan Aggarwal</a>
+							<p class="role">Urban Designer</p>
+						</div>
+						<div>
+							<a class="name" href="https://www.linkedin.com/in/galacamacho/" target="_blank"
+								rel="noopener">Gala Camacho</a>
+							<p class="role">Advisor</p>
+						</div>
+						<div>
+							<a class="name" href="https://www.linkedin.com/in/kunwar-sarthesht-86a872b3/" target="_blank"
+								rel="noopener">Kunwar Sarthesht</a>
+							<p class="role">GIS Researcher</p>
+						</div>
+						<div>
+							<a class="name" href="https://www.linkedin.com/in/lesley-merz-49082162/" target="_blank"
+								rel="noopener">Lesley Merz</a>
+							<p class="role">Product Manager</p>
+						</div>
+						<div>
+							<a class="name" href="https://www.linkedin.com/in/makosorensen/" target="_blank"
+								rel="noopener">Mako Sorensen</a>
+							<p class="role">Fullstack AI Engineer</p>
+						</div>
+						<div>
+							<a class="name" href="https://www.linkedin.com/in/sheldonsteed/" target="_blank"
+								rel="noopener">Sheldon Steed</a>
+							<p class="role">Advisor</p>
+						</div>
+						<div>
+							<a class="name" href="https://www.linkedin.com/in/steven-giallourakis/" target="_blank"
+								rel="noopener">Steven Giallourakis</a>
+							<p class="role">Software Developer</p>
+						</div>
+						<div>
+							<a class="name" href="https://www.linkedin.com/in/tanchan/" target="_blank"
+								rel="noopener">Tan Chan</a>
+							<p class="role">Community Researcher</p>
+						</div>
+						<div>
+							<span class="name">Nilam Bhojwani</span>
+							<p class="role">AI/ML Developer</p>
+						</div>
+					</div>
+				</div>
+
+				<div>
+					<p class="eyebrow team-group-label">Early contributors</p>
+					<p class="early-names">Anders Ward &nbsp;·&nbsp; Danbi Kim &nbsp;·&nbsp; Divya Bisht &nbsp;·&nbsp;
+						Elzaphan Murage &nbsp;·&nbsp; Icare Duplessey &nbsp;·&nbsp; Jayabalambika R &nbsp;·&nbsp; Sirid
+						Kellermann &nbsp;·&nbsp; Scott Baker</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ===================== FINAL CTA ===================== -->
+	<section class="final-cta">
+		<div class="container">
+			<span class="final-badge"><svg aria-hidden="true"><use href="#i-heart" /></svg> Free to use, right in your
+				browser</span>
+			<h2>Your street. Your say. Let's change it.</h2>
+			<p>No download. No sign-up gymnastics. Just open it up, snap a photo, and start a conversation about the
+				place you call home.</p>
+			<a href="https://try.livestreetsmart.com/" class="btn btn-primary btn-lg">
+				Try StreetSmart now <svg aria-hidden="true"><use href="#i-arrow-right" /></svg>
+			</a>
+		</div>
+	</section>
+
+	<!-- ===================== FOOTER ===================== -->
+	<footer class="site-footer">
+		<div class="container footer-row">
+			<p>© 2026 StreetSmart — a movement for friendlier streets.</p>
 			<div class="footer-links">
-				<ul>
-					<li><a href="#how-it-works">How It Works</a></li>
-					<li><a href="#mission">Mission</a></li>
-					<li><a href="#myth-busters">Myth-Busters</a></li>
-					<li><a href="#team">Team</a></li>
-					<li><a>Contact Us</a>
-						<p>beta@livestreetsmart.com</p>
-					</li>
-					<li class="linkedin"><a href="https://www.linkedin.com/company/livestreetsmart/"
-							target="_blank"><img src="assets/img/mdi_linkedin.png"></a></li>
-				</ul>
+				<a href="pilot.html">Pilots</a>
+				<a href="mailto:beta@livestreetsmart.com">Contact</a>
+				<a href="https://www.linkedin.com/company/livestreetsmart/" target="_blank" rel="noopener"
+					aria-label="StreetSmart on LinkedIn"><svg aria-hidden="true"><use href="#i-linkedin" /></svg></a>
 			</div>
 		</div>
-		<p>
-			<strong>Disclaimer:</strong> StreetSmart is currently under development. Please <a>contact us</a> if you
-			experience
-			any
-			issues or anything you need to report.
-		</p>
 	</footer>
 
-	<script src="js/script.js"></script>
+	<script src="js/home.js"></script>
 </body>
-
 
 </html>
