@@ -111,6 +111,7 @@ strong {
     background-repeat: no-repeat;
     background-position: top center;
     background-size: 100% auto;
+    padding-top:0;
   }
 
   .row1 .img-card {
@@ -640,7 +641,7 @@ strong {
   }
 
   h1 {
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: 400;
     line-height: 0.9;
   }
