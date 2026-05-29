@@ -115,6 +115,10 @@ footer {
   background-repeat: no-repeat;
 }
 
+.pop-out p {
+  margin-bottom: 0;
+}
+
 @media screen and (max-width: 46.89999em) {
   /* THE MOBILE VERSION */ 
   .layout-row {
@@ -313,10 +317,7 @@ footer {
     margin-top: 0;
   }
 
-  .pop-out p {
-    font-size: 1.125rem;
-    margin-bottom: 0;
-  }
+
 
   .pop-out strong {
     font-weight: 800;
@@ -815,10 +816,7 @@ footer {
     margin-top: 0;
   }
 
-  .pop-out p {
-    font-size: 1rem;
-    margin-bottom: 0;
-  }
+
 
   .pop-out h3 {
     font-size: 1.25rem;
@@ -1203,10 +1201,7 @@ footer {
     margin-top: 0;
   }
 
-  .pop-out p {
-    margin-bottom: 0;
-    font-size: 1.25rem;
-  }
+
 
   .pop-out h3 {
     font-size: 2rem;
