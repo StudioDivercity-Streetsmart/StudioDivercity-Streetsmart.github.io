@@ -52,8 +52,62 @@ strong {
     z-index: 11;
   }
 
+  .button {
+    display: inline-block;
+    text-align: center;
+    letter-spacing: inherit;
+    margin: 0;
+    padding: 0.75rem 2.25rem;
+    vertical-align: middle;
+    background-color: #d0ede4;
+    color: #016143;
+    border: 0;
+    border-radius: 3.125rem;
+    width: auto;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .row1 {
+    background-image: url("../assets/img/Background\ Squigglies.avif");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: auto 100%;
+  }
+
+  .row3 .img-card {
+    background-image: url("../assets/img/squigglegreen2.avif");
+    background-color: #eaf8f4;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 100% 100%;
+  }
+
+  .row4 .img-card {
+    background-image: url("../assets/img/Squiggles\ 3.avif");
+    background-color: #ffe6dd;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 100% 100%;
+  }
+
+  .row5 .img-card {
+    background-image: url("../assets/img/squigglesHIW5.avif");
+    background-color: #eaf8f4;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 100% 100%;
+  }
 
 @media screen and (max-width: 46.89999em) {
+  /* THE MOBILE VERSION */ 
   .layout-row {
     padding: 3.125rem 1.25rem;
     margin: 0;
@@ -127,10 +181,6 @@ strong {
   }
 
   .row1 {
-    background-image: url("../assets/img/Background\ SquiggliesSmall.avif");
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: 100% auto;
     padding-top:0;
   }
 
@@ -201,29 +251,7 @@ strong {
     position: relative;
   }
 
-  .row3 .img-card {
-    background-image: url("../assets/img/squigglegreen2.avif");
-    background-color: #eaf8f4;
-    background-repeat: no-repeat;
-    background-position: right center;
-    background-size: 100% 100%;
-  }
 
-  .row4 .img-card {
-    background-image: url("../assets/img/Squiggles\ 3.avif");
-    background-color: #ffe6dd;
-    background-repeat: no-repeat;
-    background-position: right center;
-    background-size: 100% 100%;
-  }
-
-  .row5 .img-card {
-    background-image: url("../assets/img/squigglesHIW5.avif");
-    background-color: #eaf8f4;
-    background-repeat: no-repeat;
-    background-position: right center;
-    background-size: 100% 100%;
-  }
 
   .vision1 {
     background-color: #00291b;
@@ -563,26 +591,8 @@ strong {
   }
 
   .button {
-    display: inline-block;
-    text-align: center;
-    letter-spacing: inherit;
     margin: 0.625rem 0;
-    padding: 0.75rem 2.25rem;
-    vertical-align: middle;
-    background-color: #d0ede4;
-    color: #016143;
-    border: 0;
     border-radius: 0.75rem;
-    width: auto;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    font-size: 1.125rem;
-    font-weight: 600;
-    text-decoration: none;
   }
 
   .background-image-city1 {
@@ -594,6 +604,7 @@ strong {
 }
 
 @media screen and (min-width: 46.9em) and (max-width: 59.49999em) {
+  /* TABLET VERSION */ 
   .layout-row {
     padding: 0 3.125rem;
     margin: 0;
@@ -698,13 +709,6 @@ strong {
 
   .how-it-works-text {
     padding: 3.125rem;
-  }
-
-  .row1 {
-    background-image: url("../assets/img/Background\ Squigglies.avif");
-    background-repeat: no-repeat;
-    background-position: right center;
-    background-size: auto 100%;
   }
 
   .row2 {
@@ -1080,28 +1084,6 @@ strong {
     font-weight: 500;
   }
 
-  .button {
-    display: inline-block;
-    text-align: center;
-    letter-spacing: inherit;
-    margin: 0;
-    padding: 0.75rem 2.25rem;
-    vertical-align: middle;
-    background-color: #d0ede4;
-    color: #016143;
-    border: 0;
-    border-radius: 3.125rem;
-    width: auto;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    font-size: 1.125rem;
-    font-weight: 600;
-    text-decoration: none;
-  }
 
   .background-image-city1 {
     background-size: cover;
@@ -1112,6 +1094,7 @@ strong {
 }
 
 @media screen and (min-width: 59.5em) {
+  /* BIG DESKTOP */ 
   .layout-row {
     padding: 0 3.125rem;
     margin: 0;
@@ -1185,12 +1168,7 @@ strong {
     padding: 3.125rem;
   }
 
-  .row1 {
-    background-image: url("../assets/img/Background\ Squigglies.avif");
-    background-repeat: no-repeat;
-    background-position: right center;
-    background-size: auto 100%;
-  }
+
 
   .row2 {
     background-color: #00291b;
@@ -1214,29 +1192,7 @@ strong {
     width: 100%;
   }
 
-  .row3 .img-card {
-    background-image: url("../assets/img/squigglegreen2.avif");
-    background-color: #eaf8f4;
-    background-repeat: no-repeat;
-    background-position: right center;
-    background-size: 100% 100%;
-  }
 
-  .row4 .img-card {
-    background-image: url("../assets/img/Squiggles\ 3.avif");
-    background-color: #ffe6dd;
-    background-repeat: no-repeat;
-    background-position: right center;
-    background-size: 100% 100%;
-  }
-
-  .row5 .img-card {
-    background-image: url("../assets/img/squigglesHIW5.avif");
-    background-color: #eaf8f4;
-    background-repeat: no-repeat;
-    background-position: right center;
-    background-size: 100% 100%;
-  }
 
   .vision1 {
     background-color: #00291b;
@@ -1535,28 +1491,6 @@ strong {
     font-weight: 500;
   }
 
-  .button {
-    display: inline-block;
-    text-align: center;
-    letter-spacing: inherit;
-    margin: 0;
-    padding: 0.75rem 2.25rem;
-    vertical-align: middle;
-    background-color: #d0ede4;
-    color: #016143;
-    border: 0;
-    border-radius: 3.125rem;
-    width: auto;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    font-size: 1.125rem;
-    font-weight: 600;
-    text-decoration: none;
-  }
 
   .background-image-city1 {
     background-size: cover;
