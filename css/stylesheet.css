@@ -106,6 +106,15 @@ strong {
     background-size: 100% 100%;
   }
 
+  footer {
+    flex-direction: row;
+    padding-top: 3.125rem;
+    padding-bottom: 1.25rem;
+    background-image: url("../assets/img/squiggles5.avif");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
 @media screen and (max-width: 46.89999em) {
   /* THE MOBILE VERSION */ 
   .layout-row {
@@ -477,9 +486,6 @@ strong {
   footer {
     padding-top: 3.125rem;
     padding-bottom: 1.25rem;
-    background-image: url("../assets/img/squiggles5.avif");
-    background-size: cover;
-    background-repeat: no-repeat;
   }
 
   footer .layout-row {
@@ -738,25 +744,12 @@ strong {
   }
 
   .row3 .img-card {
-    background-image: url("../assets/img/squigglegreen2.avif");
-    background-color: #eaf8f4;
-    background-repeat: no-repeat;
-    background-position: right center;
-    background-size: 100% 100%;
     justify-content: flex-end;
   }
 
   .row3 .img-card img {
     height: 90% !important;
     object-fit: cover;
-  }
-
-  .row4 .img-card {
-    background-image: url("../assets/img/Squiggles\ 3.avif");
-    background-color: #ffe6dd;
-    background-repeat: no-repeat;
-    background-position: right center;
-    background-size: 100% 100%;
   }
 
   .row4 .img-card img {
@@ -768,11 +761,6 @@ strong {
   }
 
   .row5 .img-card {
-    background-image: url("../assets/img/squigglesHIW5.avif");
-    background-color: #eaf8f4;
-    background-repeat: no-repeat;
-    background-position: right center;
-    background-size: 100% 100%;
     justify-content: flex-end;
   }
 
@@ -992,15 +980,6 @@ strong {
     margin-bottom: 3.75rem;
   }
 
-  footer {
-    flex-direction: row;
-    padding-top: 3.125rem;
-    padding-bottom: 1.25rem;
-    background-image: url("../assets/img/squiggles5.avif");
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-
   footer .layout-row {
     margin: 0.625rem auto;
   }
@@ -1050,8 +1029,6 @@ strong {
     max-width: 50rem;
     align-self: center;
   }
-
-
 
   .bold-font {
     font-weight: 700 !important;
@@ -1168,8 +1145,6 @@ strong {
     padding: 3.125rem;
   }
 
-
-
   .row2 {
     background-color: #00291b;
     color: white;
@@ -1191,8 +1166,6 @@ strong {
   .vision2 img {
     width: 100%;
   }
-
-
 
   .vision1 {
     background-color: #00291b;
@@ -1399,15 +1372,6 @@ strong {
     margin-bottom: 3.75rem;
   }
 
-  footer {
-    flex-direction: row;
-    padding-top: 3.125rem;
-    padding-bottom: 1.25rem;
-    background-image: url("../assets/img/squiggles5.avif");
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-
   footer .layout-row {
     margin: 0.625rem auto;
   }
@@ -1457,8 +1421,6 @@ strong {
     max-width: 50rem;
     align-self: center;
   }
-
-
 
   .bold-font {
     font-weight: 700 !important;
