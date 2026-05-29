@@ -124,6 +124,13 @@ footer {
     flex-direction: column;
   }
 
+  .vision2 img {
+    display:none; 
+  }
+
+  .row1 .img-card {
+    display:none;
+  }
 
   .header .logo {
     height: 3rem;
@@ -294,7 +301,7 @@ footer {
   .vision2 .pop-out {
     position: static;
     width: 90%;
-    margin: -5rem auto 3rem auto;
+    margin: 3rem auto 3rem auto;
     background-color: #d0ede4;
     color: #00452d;
     border-radius: 1rem;
@@ -795,7 +802,7 @@ footer {
   .vision2 .pop-out {
     position: absolute;
     left: 5%;
-    bottom: -8%;
+    bottom: 8%;
     width: 45%;
     max-width: 43.75rem;
     background-color: #d0ede4;
@@ -1183,8 +1190,7 @@ footer {
   .vision2 .pop-out {
     position: absolute;
     left: 5%;
-    bottom: -8%;
-    width: 33%;
+    bottom: 8%;
     max-width: 43.75rem;
     background-color: #d0ede4;
     color: #00452d;
