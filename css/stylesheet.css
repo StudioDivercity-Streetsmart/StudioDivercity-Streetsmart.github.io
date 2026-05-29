@@ -17,103 +17,103 @@ strong {
   font-weight: 600;
 }
 
-  body {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    background-color: #f2f6f5;
-    color: #00291b;
-    font-family: "Funnel Display", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-size: 1.5rem;
-    font-style: normal;
-  }
+body {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: #f2f6f5;
+  color: #00291b;
+  font-family: "Funnel Display", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-size: 1.5rem;
+  font-style: normal;
+}
 
-    .logo {
-    margin-top: 1.625rem;
-    margin-bottom: 1.625rem;
-  }
+  .logo {
+  margin-top: 1.625rem;
+  margin-bottom: 1.625rem;
+}
 
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-  }
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
 
-  .hamburger {
-    font-size: 2.875rem;
-    margin-right: 2.5rem;
-    cursor: pointer;
-    user-select: none;
-    transition: transform 0.3s ease;
-    position: relative;
-    z-index: 11;
-  }
+.hamburger {
+  font-size: 2.875rem;
+  margin-right: 2.5rem;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.3s ease;
+  position: relative;
+  z-index: 11;
+}
 
-  .button {
-    display: inline-block;
-    text-align: center;
-    letter-spacing: inherit;
-    margin: 0;
-    padding: 0.75rem 2.25rem;
-    vertical-align: middle;
-    background-color: #d0ede4;
-    color: #016143;
-    border: 0;
-    border-radius: 3.125rem;
-    width: auto;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    font-size: 1.125rem;
-    font-weight: 600;
-    text-decoration: none;
-  }
+.button {
+  display: inline-block;
+  text-align: center;
+  letter-spacing: inherit;
+  margin: 0;
+  padding: 0.75rem 2.25rem;
+  vertical-align: middle;
+  background-color: #d0ede4;
+  color: #016143;
+  border: 0;
+  border-radius: 3.125rem;
+  width: auto;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-decoration: none;
+}
 
-  .row1 {
-    background-image: url("../assets/img/Background\ Squigglies.avif");
-    background-repeat: no-repeat;
-    background-position: right center;
-    background-size: auto 100%;
-  }
+.row1 {
+  background-image: url("../assets/img/Background\ Squigglies.avif");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: auto 100%;
+}
 
-  .row3 .img-card {
-    background-image: url("../assets/img/squigglegreen2.avif");
-    background-color: #eaf8f4;
-    background-repeat: no-repeat;
-    background-position: right center;
-    background-size: 100% 100%;
-  }
+.row3 .img-card {
+  background-image: url("../assets/img/squigglegreen2.avif");
+  background-color: #eaf8f4;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 100% 100%;
+}
 
-  .row4 .img-card {
-    background-image: url("../assets/img/Squiggles\ 3.avif");
-    background-color: #ffe6dd;
-    background-repeat: no-repeat;
-    background-position: right center;
-    background-size: 100% 100%;
-  }
+.row4 .img-card {
+  background-image: url("../assets/img/Squiggles\ 3.avif");
+  background-color: #ffe6dd;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 100% 100%;
+}
 
-  .row5 .img-card {
-    background-image: url("../assets/img/squigglesHIW5.avif");
-    background-color: #eaf8f4;
-    background-repeat: no-repeat;
-    background-position: right center;
-    background-size: 100% 100%;
-  }
+.row5 .img-card {
+  background-image: url("../assets/img/squigglesHIW5.avif");
+  background-color: #eaf8f4;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 100% 100%;
+}
 
-  footer {
-    flex-direction: row;
-    padding-top: 3.125rem;
-    padding-bottom: 1.25rem;
-    background-image: url("../assets/img/squiggles5.avif");
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
+footer {
+  flex-direction: row;
+  padding-top: 3.125rem;
+  padding-bottom: 1.25rem;
+  background-image: url("../assets/img/squiggles5.avif");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 @media screen and (max-width: 46.89999em) {
   /* THE MOBILE VERSION */ 
@@ -259,8 +259,6 @@ strong {
     padding: 0;
     position: relative;
   }
-
-
 
   .vision1 {
     background-color: #00291b;
@@ -460,7 +458,7 @@ strong {
   }
 
   .img-card img {
-    height: 60vh;
+    height: 30vh;
     width: auto;
     object-fit: contain;
   }
