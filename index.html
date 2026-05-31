@@ -387,10 +387,10 @@
 			</div>
 
 
-			<h4>Contributors & supporters</h4>
+			<h4 class="supporters-toggle">Contributors & supporters <span class="supporters-arrow">▸</span></h4>
 
-			<div class="grid-container supporters">
-				<!-- filled in by JS --> 
+			<div class="grid-container supporters collapsed">
+				<!-- filled in by JS -->
 			</div>
 
 		</div>
@@ -485,6 +485,13 @@
 			\t\t\t\t</div>`;
 			})
 			.join("\n");
+
+			// Toggle to expand the collapsed supporters grid
+			const supportersToggle = document.querySelector("h4.supporters-toggle");
+			supportersToggle.addEventListener("click", () => {
+				container.classList.remove("collapsed");
+				supportersToggle.classList.add("expanded");
+			});
 	</script>
 </body>
 

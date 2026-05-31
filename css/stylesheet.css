@@ -1448,3 +1448,22 @@ footer {
     min-height: 36.25rem;
   }
 }
+
+/* Collapsible contributors & supporters grid */
+.supporters.collapsed {
+  display: none;
+}
+
+.supporters-toggle {
+  cursor: pointer;
+  user-select: none;
+}
+
+.supporters-arrow {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.supporters-toggle.expanded .supporters-arrow {
+  transform: rotate(90deg);
+}
