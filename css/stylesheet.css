@@ -1756,3 +1756,19 @@ p, .lead {
 .how-it-works-head h2 {
   margin: 0;
 }
+
+/* Full-bleed street photo beneath the "Why StreetSmart" section.
+   Responsive height keeps it well-proportioned (never stretched) on
+   every screen: shorter cap on phones, taller on desktop. */
+.why-photo {
+  margin: 0;
+  width: 100%;
+  line-height: 0;
+}
+.why-photo img {
+  display: block;
+  width: 100%;
+  height: clamp(13rem, 34vw, 30rem);
+  object-fit: cover;
+  object-position: center;
+}
