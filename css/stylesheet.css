@@ -124,6 +124,11 @@ footer {
   color: #4e3434;
 }
 
+  .try-streetsmart p {
+    width: 50%;
+    margin: auto;
+  }
+
 @media screen and (max-width: 46.89999em) {
   /* THE MOBILE VERSION */ 
   .layout-row {
@@ -908,12 +913,6 @@ footer {
     margin: auto auto 2em auto;
   }
 
-  .try-streetsmart p {
-    width: 50%;
-    font-size: 1.5rem;
-    margin: auto;
-    margin-bottom: 3.75rem;
-  }
 
   footer .layout-row {
     margin: 0.625rem auto;
@@ -1269,11 +1268,6 @@ footer {
     display: none;
   }
 
-  .try-streetsmart p {
-    width: 50%;
-    margin: auto;
-    margin-bottom: 3.75rem;
-  }
 
   footer .layout-row {
     margin: 0.625rem auto;
@@ -1700,7 +1694,7 @@ p {
   width: 100%;
   height: clamp(13rem, 34vw, 30rem);
   object-fit: cover;
-  object-position: center;
+  object-position: bottom;
 }
 
 /* =====================================================================
@@ -1724,4 +1718,10 @@ h2 {
 
 @media (min-width: 1024px) {
   h1 { font-size: 4.5rem; }
+}
+
+
+/* super annoying override */ 
+.supporters p {
+  margin: 0; 
 }
