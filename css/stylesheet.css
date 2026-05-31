@@ -1764,3 +1764,23 @@ h2 {
 .supporters p {
   margin: 0; 
 }
+/* =====================================================================
+   Side-by-side step/hero images fill their card's height — which is
+   driven by the sibling CONTENT card — but never make the row taller.
+   Taking the <img> out of flow (absolute) removes its intrinsic height
+   from the flex sizing, so the card stretches to the content side and
+   the image just fills it. Applies to the side-by-side layouts only
+   (≥46.9em); the stacked mobile layout keeps its own image rules. ====*/
+@media screen and (min-width: 46.9em) {
+  .img-card {
+    position: relative;
+    overflow: hidden;
+  }
+  .img-card img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
