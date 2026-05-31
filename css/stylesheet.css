@@ -1521,9 +1521,15 @@ footer {
 }
 
 .urbanist-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.5rem;
+}
+.urbanist-grid .blob {
+  flex: 0 0 175px;
+  width: 175px;
+  max-width: 175px;
 }
 
 .blob {
@@ -1635,8 +1641,15 @@ footer {
     font-size: 3rem;
   }
   .urbanist-grid {
-    grid-template-columns: repeat(5, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1rem;
+  }
+  .urbanist-grid .blob {
+    flex: 0 0 175px;
+    width: 175px;
+    max-width: 175px;
   }
   .blob-1 { transform: rotate(-3deg) translateY(1rem); }
   .blob-2 { transform: rotate(2deg) translateY(-0.5rem); }
