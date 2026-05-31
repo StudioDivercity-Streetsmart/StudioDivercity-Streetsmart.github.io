@@ -1749,8 +1749,7 @@ p, .lead {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: var(--ss-ink);
-  color: #ffdfd3;
+  background-color: var(--ss-mint-soft);
   padding: 4rem 1.5rem !important;
 }
 
