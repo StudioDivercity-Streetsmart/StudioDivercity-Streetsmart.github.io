@@ -48,6 +48,11 @@ svg {
   text-decoration: underline;
 }
 
+.dark-background .button {
+  color: #016143;
+  background-color: #d0ede4;
+}
+
   .logo {
   margin-top: 1.625rem;
   margin-bottom: 1.625rem;
