@@ -1700,6 +1700,17 @@ p, .lead {
   text-wrap: pretty;
 }
 
+/* Consistent body-copy size across sections + breakpoints.
+   (Reena's bio was 1.25rem/inherited-1.5rem while peers were 1.125rem.) */
+.layout-row p,
+.how-it-works-text p,
+.vision3 p,
+.reena-text p,
+.pop-out p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
 /* Softer, on-brand secondary text in LIGHT sections only
    (dark sections keep their own light text colours). */
 .row1 .card:not(.img-card) p,
