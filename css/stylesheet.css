@@ -197,6 +197,19 @@ footer {
     object-fit: contain;
   }
 
+.core h5 {
+  text-align: center;
+  font-size: 1.25rem;
+  margin: 0;
+  font-weight: 100;
+}
+
+.core p {
+  text-align: center;
+  margin: 0;
+  font-size: 1.125rem;
+}
+
 @media screen and (max-width: 46.89999em) {
   /* THE MOBILE VERSION */ 
   .layout-row {
@@ -484,12 +497,6 @@ footer {
     font-weight: 200;
   }
 
-  .core h5 {
-    text-align: center;
-    font-size: 1.375rem;
-    margin: 0.3125rem;
-  }
-
   .supporters h6 {
     text-align: center;
     font-size: 1.25rem;
@@ -501,10 +508,7 @@ footer {
     margin: 0.3125rem auto;
   }
 
-  .core p {
-    text-align: center;
-    margin: 0;
-  }
+
 
   .grid-container img {
     /* it needs to be flex but oh well */ 
@@ -882,10 +886,6 @@ footer {
 
 
   /* People */
-  .people {
-    background-color: #003a29;
-    color: white;
-  }
 
   .people img {
     height: 11.5625rem;
@@ -923,12 +923,6 @@ footer {
     font-weight: 200;
   }
 
-  .core h5 {
-    text-align: center;
-    font-size: 1.125rem;
-    margin: 0.3125rem;
-  }
-
   .supporters h6 {
     text-align: center;
     font-size: 1rem;
@@ -937,11 +931,6 @@ footer {
 
   .supporters p {
     text-align: center;
-  }
-
-  .core p {
-    text-align: center;
-    margin: 0;
   }
 
   .grid-container img {
@@ -1252,12 +1241,6 @@ footer {
     margin: 3.5rem;
   }
 
-  .core h5 {
-    text-align: center;
-    font-size: 1.5rem;
-    margin: 0.3125rem;
-  }
-
   .supporters h6 {
     text-align: center;
     font-size: 1.25rem;
@@ -1266,11 +1249,6 @@ footer {
 
   .supporters p {
     text-align: center;
-  }
-
-  .core p {
-    text-align: center;
-    margin: 0;
   }
 
   .grid-container img {
