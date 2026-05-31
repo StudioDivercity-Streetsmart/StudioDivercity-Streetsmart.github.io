@@ -489,8 +489,8 @@
 			// Toggle to expand the collapsed supporters grid
 			const supportersToggle = document.querySelector("h4.supporters-toggle");
 			supportersToggle.addEventListener("click", () => {
-				container.classList.remove("collapsed");
-				supportersToggle.classList.add("expanded");
+				const collapsed = container.classList.toggle("collapsed");
+				supportersToggle.classList.toggle("expanded", !collapsed);
 			});
 	</script>
 </body>
