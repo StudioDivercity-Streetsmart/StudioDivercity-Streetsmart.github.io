@@ -30,6 +30,24 @@ body {
   font-style: normal;
 }
 
+svg {
+  fill: #00291b;
+}
+
+.dark-background {
+  color: #f2f6f5;
+  background-color: #00291b;
+}
+
+.dark-background svg {
+  fill: #f2f6f5;
+}
+
+.dark-background a {
+  color: #f2f6f5;
+  text-decoration: underline;
+}
+
   .logo {
   margin-top: 1.625rem;
   margin-bottom: 1.625rem;
@@ -347,12 +365,9 @@ footer {
   }
 
   .vision1 {
-    background-color: #00291b;
-    background-image: url("../assets/img/squiggles4small.avif");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
-    color: #ffdfd3;
     text-align: center;
     width: 100%;
   }
@@ -806,11 +821,6 @@ footer {
   }
 
   .vision1 {
-    background-color: #00291b;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 100%;
-    color: #ffdfd3;
     display: flex;
     flex-direction: column;
     gap: 2em;
@@ -1142,11 +1152,6 @@ footer {
   }
 
   .vision1 {
-    background-color: #00291b;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 100%;
-    color: #ffdfd3;
     display: flex;
     flex-direction: column;
     gap: 2em;
@@ -1192,10 +1197,6 @@ footer {
 
   /* People */
 
-  .people {
-    background-color: #003a29;
-    color: white;
-  }
 
   .people img {
     height: 11.5625rem;
