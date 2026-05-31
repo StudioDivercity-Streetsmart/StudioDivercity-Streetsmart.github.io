@@ -188,7 +188,9 @@ footer {
   }
 
   .row3, .row4, .row5 {
-    min-height:50vh;
+    min-height:70vh;
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
   }
 
   .img-card img {
