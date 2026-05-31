@@ -76,14 +76,12 @@ body {
 }
 
 .row1 {
-  background-image: url("../assets/img/Background\ Squigglies.avif");
   background-repeat: no-repeat;
   background-position: right center;
   background-size: auto 100%;
 }
 
 .row3 .img-card {
-  background-image: url("../assets/img/squigglegreen2.avif");
   background-color: #eaf8f4;
   background-repeat: no-repeat;
   background-position: right center;
@@ -91,7 +89,6 @@ body {
 }
 
 .row4 .img-card {
-  background-image: url("../assets/img/Squiggles\ 3.avif");
   background-color: #ffe6dd;
   background-repeat: no-repeat;
   background-position: right center;
@@ -99,7 +96,6 @@ body {
 }
 
 .row5 .img-card {
-  background-image: url("../assets/img/squigglesHIW5.avif");
   background-color: #eaf8f4;
   background-repeat: no-repeat;
   background-position: right center;
@@ -110,7 +106,6 @@ footer {
   flex-direction: row;
   padding-top: 3.125rem;
   padding-bottom: 1.25rem;
-  background-image: url("../assets/img/squiggles5.avif");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -122,6 +117,11 @@ footer {
 .people img {
   object-fit: cover;
   background-color: #d7ece5;
+}
+
+.pink-button {
+  background-color: #ffcebc;
+  color: #4e3434;
 }
 
 @media screen and (max-width: 46.89999em) {
@@ -256,11 +256,6 @@ footer {
 
   .row4 .card:not(.img-card) {
     order: 2;
-  }
-
-  .row4 .button {
-    background-color: #ffcebc;
-    color: #4e3434;
   }
 
   .row5 {
@@ -712,16 +707,11 @@ footer {
   }
 
   .demo-row {
-    height: 60vh;
+    min-height: 80vh;
   }
 
   .row4 {
     padding: 0;
-  }
-
-  .row4 .button {
-    background-color: #ffcebc;
-    color: #4e3434;
   }
 
   .how-it-works-text {
@@ -792,7 +782,6 @@ footer {
 
   .vision1 {
     background-color: #00291b;
-    background-image: url("../assets/img/Squiggles4.avif");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
@@ -1129,7 +1118,7 @@ footer {
   }
 
   .demo-row {
-    height: 60vh;
+    min-height: 80vh;
   }
 
   .row3 {
@@ -1138,11 +1127,6 @@ footer {
 
   .row4 {
     padding: 0;
-  }
-
-  .row4 .button {
-    background-color: #ffcebc;
-    color: #4e3434;
   }
 
   .row5 {
@@ -1177,7 +1161,6 @@ footer {
 
   .vision1 {
     background-color: #00291b;
-    background-image: url("../assets/img/Squiggles4.avif");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
