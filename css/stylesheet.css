@@ -1772,3 +1772,26 @@ p, .lead {
   object-fit: cover;
   object-position: center;
 }
+
+/* =====================================================================
+   Header sizing ported from the lovable app — font-size + line-height
+   ONLY. Font family, weight, colour and letter-spacing are unchanged.
+   Applied to h1 (hero) and h2 (section + step titles); team sub-labels
+   (h3–h6) and .urbanists-head keep their own scale. ====================*/
+h1 {
+  font-size: 3rem;
+  line-height: 0.95;
+}
+h2 {
+  font-size: 2.25rem;
+  line-height: 1.1;
+}
+
+@media (min-width: 768px) {
+  h1 { font-size: 3.75rem; }
+  h2 { font-size: 3rem; }
+}
+
+@media (min-width: 1024px) {
+  h1 { font-size: 4.5rem; }
+}
