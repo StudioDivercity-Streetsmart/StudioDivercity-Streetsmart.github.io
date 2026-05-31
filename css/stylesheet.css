@@ -142,10 +142,6 @@ footer {
     display:none; 
   }
 
-  .row1 .img-card {
-    display:none;
-  }
-
   .header .logo {
     height: 3rem;
     margin-left: 2.5rem;
@@ -210,18 +206,49 @@ footer {
     right: 0;
   }
 
+  /* Hero as a fixed-fold panel (priority-based vertical layout):
+     content + CTA always render full-size and stay above the fold; the
+     image is the only flexible item — it shrinks to fill leftover space,
+     then hides cleanly once the panel is too short to show it worthwhile. */
   .row1 {
-    padding-top:0;
+    padding-top: 0;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    container-type: size;
   }
 
-  .row1 .img-card {
-    order: 2;
-    width: 100%;
-    height: auto;
-  }
-
+  /* content + CTA — never shrink, never get pushed off */
   .row1 .card:not(.img-card) {
     order: 1;
+    flex: 0 0 auto;
+    min-height: 0;
+  }
+
+  /* image — flexible filler */
+  .row1 .img-card {
+    order: 2;
+    display: block;
+    flex: 1 1 auto;
+    min-height: 0;
+    width: 100%;
+    overflow: hidden;
+  }
+  .row1 .img-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  /* clean-hide phase: drop the image once the panel can't fit
+     content + CTA + a worthwhile image. Threshold ≈ content+CTA height +
+     min image height + panel's bottom padding — tune to taste. */
+  @container (max-height: 32rem) {
+    .row1 .img-card {
+      display: none;
+    }
   }
 
   .row2 {
@@ -405,8 +432,9 @@ footer {
   }
 
   .grid-container img {
-    height: 10rem;
-    width: 10rem;
+    /* it needs to be flex but oh well */ 
+    height: 8rem;
+    width: 8rem;
     border-radius: 50%;
   }
 
