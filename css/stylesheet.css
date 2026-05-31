@@ -1613,9 +1613,9 @@ p, .lead {
 /* Consistent body-copy size across sections + breakpoints.
    (Reena's bio was 1.25rem/inherited-1.5rem while peers were 1.125rem.) */
 p {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   line-height: 1.6;
-  font-weight: 100;
+  font-weight: 200;
 }
 
 /* Softer, on-brand secondary text in LIGHT sections only
