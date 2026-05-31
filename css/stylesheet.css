@@ -1503,7 +1503,7 @@ footer {
 }
 
 .urbanists .display {
-  font-family: "Fraunces", Georgia, serif;
+  font-family: "Funnel Display", sans-serif;
 }
 
 .urbanists-head {
@@ -1558,12 +1558,9 @@ footer {
   filter: drop-shadow(0 1px 1px rgb(0 0 0 / 0.1));
   transition: transform 0.5s ease;
 }
-.blob:hover .blob-emoji {
-  transform: scale(1.1) rotate(-3deg);
-}
 
 .blob-label {
-  font-family: "Fraunces", Georgia, serif;
+  font-family: "Funnel Display", sans-serif;
   font-size: 1.125rem;
   line-height: 1.2;
 }
@@ -1623,7 +1620,7 @@ footer {
 
 .live-streetsmart {
   text-align: center;
-  font-family: "Fraunces", Georgia, serif;
+  font-family: "Funnel Display", sans-serif;
   font-style: italic;
   font-size: 1.5rem;
   color: hsl(var(--primary-foreground) / 0.9);
