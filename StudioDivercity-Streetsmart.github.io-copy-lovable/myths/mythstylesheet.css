@@ -1,0 +1,645 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #00291b;
+  cursor: pointer;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+strong {
+  font-weight: 600;
+}
+
+body {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: #f2f6f5;
+  color: #00291b;
+  font-family: "Funnel Display", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-size: 1.25rem;
+  font-style: normal;
+  display: block;
+}
+
+.button {
+  display: inline-block;
+  text-align: center;
+  letter-spacing: inherit;
+  margin: 0.625rem 0;
+  padding: 0.75rem 2.25rem;
+  vertical-align: middle;
+  background-color: #d0ede4;
+  color: #016143;
+  border: 0;
+  border-radius: 2rem;
+  width: auto;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.pop-out {
+  position: relative;
+  background-color: #d0ede4;
+  border-radius: 2rem;
+  padding: 2.5%;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 2.7em;
+  margin: 0.2em 0 0.5em 0;
+}
+
+.pre-header {
+  font-weight: 700;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  margin: 0;
+  opacity: 0.7;
+}
+@media screen and (max-width: 54.99999em) {
+  .layout-row {
+    padding: 3.125rem 1.25rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .header .logo {
+    height: 3rem;
+    margin-left: 2.5rem;
+    object-fit: contain;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    background: white;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+  }
+
+  .nav-links.show {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .nav-links a {
+    margin: 1.875rem auto;
+  }
+
+  .hamburger {
+    font-size: 2.875rem;
+    margin-right: 2.5rem;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 11;
+  }
+
+  .hamburger.active {
+    color: transparent;
+  }
+
+  .hamburger.active::before {
+    content: "✕";
+    color: black;
+    position: fixed;
+    font-size: 2.875rem;
+    user-select: none;
+    line-height: 1;
+  }
+
+  /* IMAGE HEADER */
+
+  .image-header img {
+    width: 100%;
+
+    object-fit: cover;
+    z-index: 0;
+  }
+
+  .pop-out {
+    width: 90%;
+    padding: 1em;
+    margin: -20% auto 3em auto;
+    z-index: 5;
+  }
+
+  .pop-out h2 {
+    font-weight: 500;
+    font-size: 1.8em;
+    margin: 0.2em 0 0.5em 0;
+  }
+
+  .pop-out .pre-header {
+    font-weight: 700;
+    letter-spacing: 0.38em;
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin: 0;
+    opacity: 0.7;
+  }
+
+  /* CONTENT */
+
+  .content {
+    padding: 2% 10%;
+    margin-bottom: 8em;
+  }
+
+  .content h3 {
+    font-size: 2.5em;
+    font-weight: 500;
+    margin: 1.5em 0 0em 0;
+  }
+
+  .content p {
+    line-height: 1.5;
+  }
+
+  .quote {
+    font-size: 1.5em;
+  }
+
+  .sources p {
+    font-size: 0.8em;
+  }
+  .sources h4 {
+    margin-top: 4em;
+    font-weight: 500;
+    font-size: 1.5em;
+  }
+
+  /* FOOTER */
+
+  .try-streetsmart {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5rem 0;
+  }
+
+  .try-streetsmart h2 {
+    display: none;
+  }
+
+  .try-streetsmart img {
+    width: 70%;
+    max-width: 20em;
+    margin: auto auto 2em auto;
+  }
+
+  footer {
+    padding-top: 3.125rem;
+    padding-bottom: 1.25rem;
+    background-image: url("../assets/img/squiggles5.avif");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  footer .layout-row {
+    margin: 0.625rem auto;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .footer-image {
+    order: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-links {
+    order: 1;
+    text-align: center;
+    width: 100%;
+  }
+
+  .footer-logo {
+    width: 70%;
+    max-width: 18.75rem;
+    height: auto;
+    object-fit: contain;
+    margin: 1.25rem auto;
+  }
+
+  .footer-links img {
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+
+  .footer-links ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    align-items: center;
+  }
+
+  .footer-links li {
+    margin: 1.125rem 0;
+    color: #00291b;
+    font-size: 1.5rem;
+  }
+
+  .footer-links .linkedin {
+    order: -1;
+    margin-bottom: 5rem;
+  }
+
+  footer p {
+    width: 90%;
+    text-align: center;
+    margin: 1.25rem auto 0 auto;
+    font-size: 1.125rem;
+  }
+}
+
+@media screen and (min-width: 55em) and (max-width: 60.99999em) {
+  .layout-row {
+    padding: 3.125rem 1.25rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .header .logo {
+    height: 3rem;
+    margin-left: 2.5rem;
+    object-fit: contain;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    background: white;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+  }
+
+  .nav-links.show {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .nav-links a {
+    margin: 1.875rem auto;
+  }
+
+  .hamburger {
+    font-size: 2.875rem;
+    margin-right: 2.5rem;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 11;
+  }
+
+  .hamburger.active {
+    color: transparent;
+  }
+
+  .hamburger.active::before {
+    content: "✕";
+    color: black;
+    position: fixed;
+    font-size: 2.875rem;
+    user-select: none;
+    line-height: 1;
+  }
+
+  /* IMAGE HEADER */
+
+  .image-header img {
+    width: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+
+  .pop-out {
+    width: 90%;
+    margin: -20% auto 3em auto;
+    z-index: 5;
+  }
+
+  /* CONTENT */
+
+  .content {
+    padding: 2% 10%;
+    margin-bottom: 8em;
+  }
+
+  .content h3 {
+    font-size: 2.5em;
+    font-weight: 500;
+    margin: 1.5em 0 0em 0;
+  }
+
+  .content p {
+    line-height: 1.5;
+  }
+
+  .quote {
+    font-size: 1.5em;
+  }
+
+  .sources p {
+    font-size: 0.8em;
+  }
+  .sources h4 {
+    margin-top: 4em;
+    font-weight: 500;
+    font-size: 1.5em;
+  }
+
+  /* FOOTER */
+
+  .try-streetsmart {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5rem 0;
+  }
+
+  .try-streetsmart h2 {
+    display: none;
+  }
+
+  .try-streetsmart img {
+    width: 70%;
+    max-width: 20em;
+    margin: auto auto 2em auto;
+  }
+
+  footer {
+    padding-top: 3.125rem;
+    padding-bottom: 1.25rem;
+    background-image: url("../assets/img/squiggles5.avif");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  footer .layout-row {
+    margin: 0.625rem auto;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .footer-image {
+    order: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-links {
+    order: 1;
+    text-align: center;
+    width: 100%;
+  }
+
+  .footer-logo {
+    width: 70%;
+    max-width: 18.75rem;
+    height: auto;
+    object-fit: contain;
+    margin: 1.25rem auto;
+  }
+
+  .footer-links img {
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+
+  .footer-links ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    align-items: center;
+  }
+
+  .footer-links li {
+    margin: 1.125rem 0;
+    color: #00291b;
+    font-size: 1.5rem;
+  }
+
+  .footer-links .linkedin {
+    order: -1;
+    margin-bottom: 5rem;
+  }
+
+  footer p {
+    width: 90%;
+    text-align: center;
+    margin: 1.25rem auto 0 auto;
+    font-size: 1.125rem;
+  }
+}
+
+@media screen and (min-width: 61em) {
+  .layout-row {
+    padding: 0 3.125rem;
+    margin: 0;
+    display: flex;
+  }
+
+  /* HEADER */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .header .logo {
+    height: 3rem;
+    margin-left: 3.75rem;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2.8125rem;
+    font-size: 1rem;
+    margin-right: 3.75rem;
+  }
+
+  .hamburger {
+    display: none;
+    font-size: 1.75rem;
+    cursor: pointer;
+  }
+
+  /* IMAGE HEADER */
+
+  .image-header img {
+    width: 100%;
+    height: 75vh;
+    object-fit: cover;
+    z-index: 0;
+  }
+
+  .pop-out {
+    width: 75%;
+    margin: -10em 0 3em 2em;
+    z-index: 5;
+  }
+
+  /* CONTENT */
+
+  .content {
+    padding: 2% 20%;
+    margin-bottom: 8em;
+  }
+
+  .content h3 {
+    font-size: 2.5em;
+    font-weight: 500;
+    margin: 1.5em 0 0em 0;
+  }
+
+  .content p {
+    line-height: 1.5;
+  }
+
+  .quote {
+    font-size: 1.5em;
+  }
+
+  .sources p {
+    font-size: 0.8em;
+  }
+  .sources h4 {
+    margin-top: 4em;
+    font-weight: 500;
+    font-size: 1.5em;
+  }
+
+  /* FOOTER */
+
+  .try-streetsmart {
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    padding: 5rem;
+  }
+
+  .try-streetsmart h2 {
+    font-weight: 500;
+  }
+
+  .try-streetsmart img {
+    display: none;
+  }
+
+  .try-streetsmart p {
+    width: 50%;
+    margin: auto;
+    margin-bottom: 3.75rem;
+  }
+
+  footer {
+    flex-direction: row;
+    padding-top: 3.125rem;
+    padding-bottom: 1.25rem;
+    background-image: url("../assets/img/squiggles5.avif");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  footer .layout-row {
+    margin: 0.625rem auto;
+  }
+
+  .footer-image {
+    flex: 6;
+  }
+
+  .footer-links {
+    flex: 1;
+  }
+  .footer-logo {
+    height: 9.625rem;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .footer-links img {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .footer-links ul {
+    list-style: none;
+  }
+
+  .footer-links li {
+    margin: 1rem 0;
+    color: #00291b;
+  }
+
+  footer p {
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    font-size: 1.125rem;
+  }
+}

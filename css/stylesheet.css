@@ -1660,3 +1660,74 @@ footer {
     font-size: 1.875rem;
   }
 }
+
+/* =====================================================================
+   "Lovable vibe" light-touch pass (ported conservatively).
+   Constraints: keep brand colours + Funnel Display font.
+   Palette anchored to HeaderLogo.avif:
+     deep green #025539, mid green #356557, mint #b0f8e2, peach #ffbca5,
+     plus existing site tokens (#00291b ink, #f2f6f5 bg, #d0ede4, #ffcebc).
+   Use ONLY these tokens going forward. ===================================*/
+:root {
+  --ss-bg: #f2f6f5;
+  --ss-ink: #00291b;          /* primary text */
+  --ss-green: #025539;        /* logo deep green — accents */
+  --ss-green-mid: #3a6658;    /* logo mid green — muted secondary text */
+  --ss-mint: #b0f8e2;         /* logo mint */
+  --ss-mint-soft: #d0ede4;    /* existing button mint */
+  --ss-peach: #ffbca5;        /* logo peach */
+  --ss-peach-soft: #ffcebc;   /* existing pink button */
+  --ss-sand: #f6ecd9;         /* derived warm cream, harmonises the two */
+
+  --ss-gradient-warm: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--ss-peach) 60%, transparent),
+    color-mix(in srgb, var(--ss-mint) 55%, transparent),
+    color-mix(in srgb, var(--ss-sand) 70%, transparent)
+  );
+  --ss-shadow-soft: 0 30px 80px -30px rgba(0, 41, 27, 0.18);
+}
+
+/* --- typography polish (progressive, safe everywhere) --- */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+h1, h2, h3, .display, .urbanists-head h2 {
+  text-wrap: balance;
+}
+p, .lead {
+  text-wrap: pretty;
+}
+
+/* Softer, on-brand secondary text in LIGHT sections only
+   (dark sections keep their own light text colours). */
+.row1 .card:not(.img-card) p,
+.how-it-works-text p,
+.vision3 p {
+  color: var(--ss-green-mid);
+}
+
+/* --- warm gradient glow behind the hero (decorative, light touch) --- */
+.row1 {
+  position: relative;
+  isolation: isolate;
+}
+.row1::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -4rem;
+  right: -2rem;
+  width: 55%;
+  height: 28rem;
+  max-width: 40rem;
+  background: var(--ss-gradient-warm);
+  filter: blur(80px);
+  opacity: 0.55;
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+/* --- a touch more breathing room / rhythm --- */
+.urbanists-head { gap: 1.75rem; }
