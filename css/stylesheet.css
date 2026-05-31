@@ -1729,7 +1729,7 @@ p, .lead {
   position: absolute;
   z-index: -1;
   top: -4rem;
-  right: -2rem;
+  right: 0;
   width: 55%;
   height: 28rem;
   max-width: 40rem;
