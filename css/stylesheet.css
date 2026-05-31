@@ -107,6 +107,17 @@ body {
   background-size: 100% 100%;
 }
 
+/* Steps alternate (zigzag): step 1 copy-left, step 2 copy-right, step 3
+   copy-left. row3/row5 are image-first and row4 is copy-first in the DOM,
+   so reversing all three yields that pattern on tablet & desktop. (Mobile
+   stacks via the later .layout-row column rule, so this only affects the
+   side-by-side rows.) */
+.row3,
+.row4,
+.row5 {
+  flex-direction: row-reverse;
+}
+
 footer {
   flex-direction: row;
   padding-top: 3.125rem;
