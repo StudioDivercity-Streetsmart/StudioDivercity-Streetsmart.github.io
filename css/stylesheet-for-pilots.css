@@ -1,0 +1,1775 @@
+/* layout */
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #00291b;
+  cursor: pointer;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+strong {
+  font-weight: 600;
+}
+
+body {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: #f2f6f5;
+  color: #00291b;
+  font-family: "Funnel Display", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-size: 1.5rem;
+  font-style: normal;
+}
+
+  .logo {
+  margin-top: 1.625rem;
+  margin-bottom: 1.625rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.hamburger {
+  font-size: 2.875rem;
+  margin-right: 2.5rem;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.3s ease;
+  position: relative;
+  z-index: 11;
+}
+
+.button {
+  display: inline-block;
+  text-align: center;
+  letter-spacing: inherit;
+  margin: 0;
+  padding: 0.75rem 2.25rem;
+  vertical-align: middle;
+  background-color: #016143;
+  color: #d0ede4;
+  border: 0;
+  border-radius: 3.125rem;
+  width: auto;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.row1 {
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: auto 100%;
+}
+
+/* mobile-only inline hero image; the side .img-card is used on desktop */
+.hero-inline-img {
+  display: none;
+}
+
+.row3 .img-card {
+  background-color: #eaf8f4;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 100% 100%;
+}
+
+.row4 .img-card {
+  background-color: #ffe6dd;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 100% 100%;
+}
+
+.row5 .img-card {
+  background-color: #eaf8f4;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 100% 100%;
+}
+
+footer {
+  flex-direction: row;
+  padding-top: 3.125rem;
+  padding-bottom: 1.25rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.pop-out p {
+  margin-bottom: 0;
+}
+
+.people img {
+  object-fit: cover;
+  background-color: #d7ece5;
+}
+
+.pink-button {
+  background-color: #ffcebc;
+  color: #4e3434;
+}
+
+  .try-streetsmart p {
+    width: 50%;
+    margin: auto;
+  }
+
+@media screen and (max-width: 46.89999em) {
+  /* THE MOBILE VERSION */ 
+  .layout-row {
+    padding: 3.125rem 1.25rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .vision2 img {
+    display:none; 
+  }
+
+  .header .logo {
+    height: 3rem;
+    margin-left: 2.5rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    background: white;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+  }
+
+  .nav-links.show {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .nav-links a {
+    margin: 1.875rem auto;
+  }
+
+  .hamburger.active {
+    color: transparent;
+  }
+
+  .hamburger.active::before {
+    content: "✕";
+    color: black;
+    position: fixed;
+    font-size: 2.875rem;
+    user-select: none;
+    line-height: 1;
+  }
+
+  .card {
+    flex-basis: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 5;
+    width: 100%;
+  }
+
+  .background-image {
+    position: absolute;
+    z-index: 0;
+    width: 100% !important;
+    object-fit: contain;
+  }
+
+  #background-image-1 {
+    right: 0;
+  }
+
+  /* Hero as a fixed-fold panel (priority-based vertical layout).
+     Order: h1 → p → image → CTA. The content card IS the panel; heading,
+     paragraph and CTA always render full-size and stay above the fold.
+     The inline image is the only flexible item — it shrinks to fill
+     leftover space, then hides cleanly once the panel is too short. */
+  .row1 {
+    padding-top: 0;
+  }
+
+  /* the desktop side image is not used on mobile */
+  .row1 .img-card {
+    display: none;
+  }
+
+  /* content card = the fixed-fold panel + query container */
+  .row1 .card:not(.img-card) {
+    order: 1;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+    container-type: size;
+  }
+
+  /* heading, copy and CTA never shrink or get pushed off */
+  .row1 .card h1,
+  .row1 .card p,
+  .row1 .card .cta {
+    flex: 0 0 auto;
+  }
+
+  /* inline image — flexible filler between the copy and the CTA.
+     min-height is the floor: it grows to fill leftover space but never
+     shrinks below a worthwhile size (no slivers). */
+  .row1 .hero-inline-img {
+    display: block;
+    flex: 1 1 auto;
+    min-height: 12rem;
+    width: 100%;
+    overflow: hidden;
+    margin: 1rem 0;
+  }
+  .row1 .hero-inline-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  /* clean-hide phase: drop the image once the panel can't fit
+     h1 + p + CTA + the image floor (≈ content+CTA height + min-height
+     above + its margins). Keep this ≥ that sum so the CTA is never
+     clipped — tune together with min-height. */
+  @container (max-height: 36rem) {
+    .row1 .hero-inline-img {
+      display: none;
+    }
+  }
+
+  .row2 {
+    background-color: #00291b;
+    color: white;
+  }
+
+  .row2 .img-card {
+    width: 100%;
+    order: 1;
+  }
+
+  .row2 .card:not(.img-card) {
+    order: 2;
+  }
+
+  .row2 .button {
+    background-color: #d0ede4;
+    color: #027753;
+  }
+
+  .row2 p {
+    color: #fafcfc;
+  }
+
+  .row3 {
+    padding: 0;
+  }
+
+  .row4 {
+    padding: 0;
+  }
+
+  .row4 .img-card {
+    order: 1;
+  }
+
+  .row4 .card:not(.img-card) {
+    order: 2;
+  }
+
+  .row5 {
+    padding: 0;
+  }
+
+  .how-it-works-text {
+    padding: 3.125rem;
+  }
+
+  .vision2 {
+    padding: 0;
+    position: relative;
+  }
+
+  .vision1 {
+    background-color: #00291b;
+    background-image: url("../assets/img/squiggles4small.avif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    color: #ffdfd3;
+    text-align: center;
+    width: 100%;
+  }
+
+  .vision1 .card-row {
+    width: 100%;
+    text-align: left;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .vision1 h2 {
+    text-align: center;
+    margin-top: 0.625rem;
+  }
+
+  .vision2 img {
+    height: 90vh;
+    object-fit: none;
+    margin-top: -1.25rem;
+    width: 100%;
+  }
+
+  .vision2 .pop-out {
+    position: static;
+    width: 90%;
+    margin: 3rem auto 3rem auto;
+    background-color: #d0ede4;
+    color: #00452d;
+    border-radius: 1rem;
+    padding: 1.25rem;
+    line-height: 1.5;
+  }
+
+  .pop-out .pre-header {
+    margin-top: 0;
+  }
+
+
+
+  .pop-out strong {
+    font-weight: 800;
+  }
+
+  .pop-out h3 {
+    font-size: 1.25rem;
+    font-weight: 200;
+  }
+
+  /* People */
+  .people {
+    background-color: #003a29;
+    color: white;
+  }
+
+  .people img {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+  }
+
+  .reena {
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem;
+    align-items: center;
+  }
+
+  .reena img {
+    height: 14.375rem;
+    width: 14.375rem;
+    border-radius: 50%;
+  }
+
+  .reena-text {
+    flex: none;
+    width: 100%;
+    text-align: left;
+  }
+
+  .divider {
+    border: none;
+    border-top: 0.0625rem solid #ccc;
+    margin: 1rem auto;
+    width: 100%;
+  }
+
+  .team h3 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 200;
+  }
+
+  .team h4 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 200;
+  }
+
+  .core h5 {
+    text-align: center;
+    font-size: 1.375rem;
+    margin: 0.3125rem;
+  }
+
+  .supporters h6 {
+    text-align: center;
+    font-size: 1.25rem;
+    margin: 0.3125rem;
+  }
+
+  .supporters p {
+    text-align: center;
+    margin: 0.3125rem auto;
+  }
+
+  .core p {
+    text-align: center;
+    margin: 0;
+  }
+
+  .grid-container img {
+    /* it needs to be flex but oh well */ 
+    height: 8rem;
+    width: 8rem;
+    border-radius: 50%;
+  }
+
+  .grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 62.5rem;
+    margin: 0 auto;
+  }
+
+  .grid-item {
+    flex: 1 0 calc(50% - 1rem);
+    max-width: calc(50% - 1rem);
+    min-width: auto;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .card h1,
+  .card h2,
+  .card p {
+    margin: 1.25rem 0;
+  }
+
+  .img-card {
+    text-align: center;
+    position: relative;
+    padding: 0;
+  }
+
+  .img-card img {
+    height: 30vh;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .try-streetsmart {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5rem 0;
+  }
+
+  .try-streetsmart h2 {
+    display: none;
+  }
+
+  .try-streetsmart img {
+    width: 70%;
+    max-width: 20em;
+    margin: auto auto 2em auto;
+  }
+
+  footer {
+    padding-top: 3.125rem;
+    padding-bottom: 1.25rem;
+  }
+
+  footer .layout-row {
+    margin: 0.625rem auto;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .footer-image {
+    order: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-links {
+    order: 1;
+    text-align: center;
+    width: 100%;
+  }
+
+  .footer-logo {
+    width: 70%;
+    max-width: 18.75rem;
+    height: auto;
+    object-fit: contain;
+    margin: 1.25rem auto;
+  }
+
+  .footer-links img {
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+
+  .footer-links ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    align-items: center;
+  }
+
+  .footer-links li {
+    margin: 1.125rem 0;
+    color: #00291b;
+    font-size: 1.5rem;
+  }
+
+  .footer-links .linkedin {
+    order: -1;
+    margin-bottom: 5rem;
+  }
+
+  footer li p {
+    font-size: 0.8em !important;
+    margin: 0;
+  }
+
+  footer p {
+    width: 90%;
+    text-align: center;
+    margin: 1.25rem auto 0 auto;
+    font-size: 1.125rem;
+  }
+
+  .card-full-line-wrapper {
+    max-width: 50rem;
+    align-self: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+
+  body {
+    font-size: 1.25rem;
+  }
+
+  .bold-font {
+    font-weight: 700 !important;
+  }
+
+  .pre-header {
+    font-weight: 200;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-bottom: 0 !important;
+    opacity: 0.7;
+  }
+
+  h1 {
+    font-size: 4rem;
+    font-weight: 400;
+    line-height: 0.9;
+  }
+
+  h2 {
+    font-size: 3rem;
+    line-height: 3.25rem;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+  }
+
+  .bold-sentence {
+    font-size: 1.875rem;
+    font-weight: 500;
+  }
+
+  .button {
+    margin: 0.625rem 0;
+    border-radius: 0.75rem;
+  }
+
+  .background-image-city1 {
+    background-size: cover;
+    background-position: center;
+    color: #f2f6f5;
+    min-height: 36.25rem;
+  }
+}
+
+@media screen and (min-width: 46.9em) and (max-width: 59.49999em) {
+  /* TABLET VERSION */ 
+  .layout-row {
+    padding: 0 3.125rem;
+    margin: 0;
+    display: flex;
+  }
+
+
+  .header .logo {
+    height: 3rem;
+    margin-left: 2.5rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    background: white;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+  }
+
+  .nav-links.show {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .nav-links a {
+    margin: 1.875rem auto;
+  }
+
+  .hamburger {
+    font-size: 2.875rem;
+    margin-right: 2.5rem;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 11;
+  }
+
+  .hamburger.active {
+    color: transparent;
+  }
+
+  .hamburger.active::before {
+    content: "✕";
+    color: black;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 2.875rem;
+    user-select: none;
+    line-height: 1;
+  }
+
+  .card {
+    flex-basis: auto;
+    flex-grow: 1;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 5;
+  }
+
+  .background-image {
+    position: absolute;
+    z-index: 0;
+    width: 100% !important;
+    height: 60vh;
+    object-fit: contain;
+  }
+
+  .layout-row p {
+    font-size: 1.125rem;
+  }
+
+  #background-image-1 {
+    right: 0;
+  }
+
+  .demo-row {
+    min-height: 80vh;
+  }
+
+  .row4 {
+    padding: 0;
+  }
+
+  .how-it-works-text {
+    padding: 3.125rem;
+  }
+
+  .row2 {
+    background-color: #00291b;
+    color: white;
+  }
+
+  .row2 .img-card img {
+    height: 60%;
+  }
+
+  .row2 p {
+    color: #fafcfc;
+  }
+
+  .vision2 {
+    padding: 0;
+    position: relative;
+  }
+
+  .vision2 img {
+    width: 100%;
+  }
+
+  .row3 {
+    padding: 0;
+  }
+
+  .row3 .img-card {
+    justify-content: flex-end;
+  }
+
+  .row3 .img-card img {
+    height: 90% !important;
+    object-fit: cover;
+  }
+
+  .row4 .img-card img {
+    height: 60vh;
+  }
+
+  .row5 {
+    padding: 0;
+  }
+
+  .row5 .img-card {
+    justify-content: flex-end;
+  }
+
+  .row5 .img-card img {
+    height: 60vh !important;
+    /* object-fit: cover; */
+  }
+
+  .img-card {
+    text-align: center;
+    position: relative;
+    padding: 0;
+  }
+
+  .img-card img {
+    object-fit: contain;
+  }
+
+  .vision1 {
+    background-color: #00291b;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    color: #ffdfd3;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    text-align: center;
+    width: 100%;
+  }
+
+  .vision2 .pop-out {
+    position: absolute;
+    left: 5%;
+    bottom: 8%;
+    width: 45%;
+    max-width: 43.75rem;
+    background-color: #d0ede4;
+    color: #00452d;
+    border-radius: 1rem;
+    padding: 1.25rem;
+  }
+
+  .pop-out .pre-header {
+    margin-top: 0;
+  }
+
+
+
+  .pop-out h3 {
+    font-size: 1.25rem;
+    font-weight: 200;
+  }
+
+  .pop-out strong {
+    font-weight: 800;
+  }
+
+  .card-row {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    width: 100%;
+    align-items: baseline;
+  }
+
+
+  /* People */
+  .people {
+    background-color: #003a29;
+    color: white;
+  }
+
+  .people img {
+    height: 11.5625rem;
+    width: 11.5625rem;
+    border-radius: 50%;
+    flex: 1;
+  }
+
+  .reena {
+    display: flex;
+    flex-direction: row;
+    gap: 1.875rem;
+  }
+
+  .reena-text {
+    flex: 6;
+  }
+
+  .divider {
+    border: none;
+    border-top: 0.0625rem solid #ccc;
+    margin: 1rem auto;
+    width: 100%;
+  }
+
+  .team h3 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 200;
+  }
+
+  .team h4 {
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: 200;
+  }
+
+  .core h5 {
+    text-align: center;
+    font-size: 1.125rem;
+    margin: 0.3125rem;
+  }
+
+  .supporters h6 {
+    text-align: center;
+    font-size: 1rem;
+    margin: 0.3125rem;
+  }
+
+  .supporters p {
+    text-align: center;
+  }
+
+  .core p {
+    text-align: center;
+    margin: 0;
+  }
+
+  .grid-container img {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+  }
+
+  .grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 62.5rem;
+    margin: 0 auto;
+  }
+
+  .grid-item {
+    flex: 1 0 calc(25% - 1rem);
+    max-width: calc(25% - 1rem);
+    min-width: 12.5rem;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .card h1,
+  .card h2,
+  .card p {
+    margin: 0;
+    margin-bottom: 1.5625rem;
+  }
+
+  .try-streetsmart {
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    padding: 5rem;
+  }
+
+  .try-streetsmart h2 {
+    display: none;
+  }
+
+  .try-streetsmart img {
+    width: 70%;
+    max-width: 20em;
+    margin: auto auto 2em auto;
+  }
+
+
+  footer .layout-row {
+    margin: 0.625rem auto;
+  }
+
+  .footer-image {
+    flex: 6;
+  }
+
+  .footer-links {
+    flex: 2;
+  }
+
+  .footer-logo {
+    height: 5rem;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .footer-links img {
+    height: 2.25rem;
+    width: 2.25rem;
+  }
+
+  .footer-links ul {
+    list-style: none;
+  }
+
+  .footer-links li {
+    margin: 0.625rem 0;
+    color: #00291b;
+    font-size: 1rem;
+  }
+
+  footer li p {
+    font-size: 0.8em !important;
+    margin: 0;
+  }
+
+  footer p {
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    font-size: 0.875rem;
+  }
+
+  .card-full-line-wrapper {
+    max-width: 50rem;
+    align-self: center;
+  }
+
+  .bold-font {
+    font-weight: 700 !important;
+  }
+
+  .pre-header {
+    font-weight: 700;
+    letter-spacing: 0.38em;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    margin-bottom: 0 !important;
+    opacity: 0.7;
+  }
+
+  h1 {
+    font-size: 4rem;
+    font-weight: 400;
+    line-height: 0.8;
+  }
+
+  h2 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+  }
+
+  .bold-sentence {
+    font-size: 1.875rem;
+    font-weight: 500;
+  }
+
+
+  .background-image-city1 {
+    background-size: cover;
+    background-position: center;
+    color: #f2f6f5;
+    min-height: 36.25rem;
+  }
+}
+
+@media screen and (min-width: 59.5em) {
+  /* BIG DESKTOP */ 
+  .layout-row {
+    padding: 0 3.125rem;
+    margin: 0;
+    display: flex;
+  }
+
+
+  .header .logo {
+    height: 3rem;
+    margin-left: 3.75rem;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.875rem;
+    font-size: 1rem;
+    margin-right: 3.75rem;
+  }
+
+  .hamburger {
+    display: none;
+    font-size: 1.75rem;
+    cursor: pointer;
+  }
+
+  .card {
+    flex-basis: auto;
+    flex-grow: 1;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 5;
+  }
+
+  .background-image {
+    position: absolute;
+    z-index: 0;
+    width: 100% !important;
+    height: 60vh;
+    object-fit: contain;
+  }
+
+  #background-image-1 {
+    right: 0;
+  }
+
+  .demo-row {
+    min-height: 80vh;
+  }
+
+  .row3 {
+    padding: 0;
+  }
+
+  .row4 {
+    padding: 0;
+  }
+
+  .row5 {
+    padding: 0;
+  }
+
+  .how-it-works-text {
+    padding: 3.125rem;
+  }
+
+  .row2 {
+    background-color: #00291b;
+    color: white;
+  }
+
+  .row2 .img-card img {
+    height: 60%;
+  }
+
+  .row2 p {
+    color: #fafcfc;
+  }
+
+  .vision2 {
+    padding: 0;
+    position: relative;
+  }
+
+  .vision2 img {
+    width: 100%;
+  }
+
+  .vision1 {
+    background-color: #00291b;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    color: #ffdfd3;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    text-align: center;
+    width: 100%;
+  }
+
+  .vision2 .pop-out {
+    position: absolute;
+    left: 5%;
+    bottom: 8%;
+    max-width: 43.75rem;
+    background-color: #d0ede4;
+    color: #00452d;
+    border-radius: 1rem;
+    padding: 1.25rem;
+  }
+
+  .pop-out .pre-header {
+    font-size: 1.25rem;
+    margin-top: 0;
+  }
+
+
+
+  .pop-out h3 {
+    font-size: 2rem;
+    font-weight: 200;
+  }
+
+  .pop-out strong {
+    font-weight: 800;
+  }
+
+  .card-row {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    width: 100%;
+    align-items: baseline;
+  }
+
+
+  /* People */
+
+  .people {
+    background-color: #003a29;
+    color: white;
+  }
+
+  .people img {
+    height: 11.5625rem;
+    width: 11.5625rem;
+    border-radius: 50%;
+    flex: 1;
+  }
+
+  .reena {
+    display: flex;
+    flex-direction: row;
+    gap: 1.875rem;
+  }
+
+  .reena-text {
+    flex: 6;
+  }
+
+  .divider {
+    border: none;
+    border-top: 0.0625rem solid #ccc;
+    margin: 1rem auto;
+    width: 100%;
+  }
+
+  .team h3 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 200;
+  }
+
+  .team h4 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 200;
+    margin: 3.5rem;
+  }
+
+  .core h5 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 0.3125rem;
+  }
+
+  .supporters h6 {
+    text-align: center;
+    font-size: 1.25rem;
+    margin: 0.3125rem;
+  }
+
+  .supporters p {
+    text-align: center;
+  }
+
+  .core p {
+    text-align: center;
+    margin: 0;
+  }
+
+  .grid-container img {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+  }
+
+  .grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 62.5rem;
+    margin: 0 auto;
+  }
+
+  .grid-item {
+    flex: 1 0 calc(25% - 1rem);
+    max-width: calc(25% - 1rem);
+    min-width: 12.5rem;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .card h1,
+  .card h2,
+  .card p {
+    margin: 0;
+    margin-bottom: 1.5625rem;
+  }
+
+  .img-card {
+    text-align: center;
+    position: relative;
+    padding: 0;
+  }
+
+  .img-card img {
+    height: 60vh;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .try-streetsmart {
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    padding: 5rem;
+  }
+
+  .try-streetsmart h2 {
+    font-weight: 500;
+  }
+
+  .try-streetsmart img {
+    display: none;
+  }
+
+
+  footer .layout-row {
+    margin: 0.625rem auto;
+  }
+
+  .footer-image {
+    flex: 6;
+  }
+
+  .footer-links {
+    flex: 2;
+  }
+
+  .footer-logo {
+    height: 6.25rem;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .footer-links img {
+    height: 2.25rem;
+    width: 2.25rem;
+  }
+
+  .footer-links ul {
+    list-style: none;
+  }
+
+  .footer-links li {
+    margin: 1rem 0;
+    color: #00291b;
+    font-size: 1.125rem;
+  }
+
+  footer li p {
+    font-size: 0.8em;
+    margin: 0;
+  }
+
+  footer p {
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    font-size: 0.875rem;
+  }
+
+  .card-full-line-wrapper {
+    max-width: 50rem;
+    align-self: center;
+  }
+
+  .bold-font {
+    font-weight: 700 !important;
+  }
+
+  .pre-header {
+    font-weight: 700;
+    letter-spacing: 0.38em;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    margin-bottom: 0 !important;
+    opacity: 0.7;
+  }
+
+  h1 {
+    font-size: 5rem;
+    font-weight: 400;
+    line-height: 0.9;
+  }
+
+  h2 {
+    font-size: 3rem;
+    line-height: 3.25rem;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+  }
+
+  .bold-sentence {
+    font-size: 1.875rem;
+    font-weight: 500;
+  }
+
+
+  .background-image-city1 {
+    background-size: cover;
+    background-position: center;
+    color: #f2f6f5;
+    min-height: 36.25rem;
+  }
+}
+
+/* Collapsible contributors & supporters grid */
+.supporters.collapsed {
+  display: none;
+}
+
+.supporters-toggle {
+  cursor: pointer;
+  user-select: none;
+}
+
+.supporters-arrow {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.supporters-toggle.expanded .supporters-arrow {
+  transform: rotate(90deg);
+}
+
+/* ---------------- "StreetSmart is for" / everyday urbanists ----------------
+   Ported from the Lovable build. Design tokens are scoped to .urbanists so
+   they don't affect the rest of the site. */
+.urbanists {
+  --primary: 152 55% 18%;
+  --primary-foreground: 80 30% 96%;
+  --muted-foreground: 150 15% 35%;
+  --accent: 28 95% 70%;
+  --blush: 350 85% 88%;
+  --mint: 150 45% 80%;
+  --sand: 38 60% 90%;
+  --shadow-soft: 0 30px 80px -30px hsl(152 55% 18% / 0.18);
+  --shadow-tilt: 0 40px 60px -20px hsl(152 55% 18% / 0.25);
+
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  padding-block: var(--section-pad-y);   /* x-padding handled by .urbanists .container */
+}
+
+.urbanists .container {
+  width: 100%;
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+.urbanists .eyebrow {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-weight: 400;
+  color: hsl(var(--primary-foreground) / 0.6);
+}
+
+.urbanists .display {
+  font-family: "Funnel Display", sans-serif;
+}
+
+.urbanists-head {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.urbanists-head h2 {
+  font-size: 2.25rem;
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+.urbanist-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.urbanist-grid .blob {
+  flex: 0 0 175px;
+  width: 175px;
+  max-width: 175px;
+}
+
+.blob {
+  position: relative;
+  overflow: hidden;
+  color: hsl(var(--primary));
+  border-radius: 42% 58% 48% 52% / 54% 44% 56% 46%;
+  padding: 2rem 1.5rem 1.75rem;
+  min-height: 260px;
+  box-shadow: var(--shadow-tilt);
+  transition: transform 0.5s ease;
+}
+
+.blob:hover {
+  transform: rotate(0) translateY(-0.25rem) !important;
+}
+
+.blob-inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+  height: 100%;
+}
+
+.blob-emoji {
+  font-size: 4.5rem;
+  line-height: 1;
+  filter: drop-shadow(0 1px 1px rgb(0 0 0 / 0.1));
+  transition: transform 0.5s ease;
+}
+
+.blob-label {
+  font-family: "Funnel Display", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.2;
+}
+
+.blob-sub {
+  font-size: 0.875rem;
+  font-style: italic;
+  line-height: 1.3;
+  color: hsl(var(--primary) / 0.7);
+}
+
+.blob-pill {
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  top: 5rem;
+  height: 1.25rem;
+  border-radius: 999px;
+  transform: rotate(-8deg);
+  opacity: 0.7;
+}
+
+.blob-chip {
+  position: absolute;
+  right: 1.5rem;
+  top: 1.75rem;
+  display: grid;
+  place-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 999px;
+  font-size: 1.5rem;
+  box-shadow: var(--shadow-soft);
+  transform: rotate(12deg);
+}
+
+/* per-card colours + tilt */
+.blob-1 { background-color: hsl(var(--blush)); transform: rotate(-3deg); }
+.blob-1 .blob-pill { background-color: hsl(var(--mint)); }
+.blob-1 .blob-chip { background-color: hsl(var(--sand)); }
+
+.blob-2 { background-color: hsl(var(--sand)); transform: rotate(2deg); }
+.blob-2 .blob-pill { background-color: hsl(var(--blush)); }
+.blob-2 .blob-chip { background-color: hsl(var(--mint)); }
+
+.blob-3 { background-color: hsl(var(--mint)); transform: rotate(-1deg); }
+.blob-3 .blob-pill { background-color: hsl(var(--sand)); }
+.blob-3 .blob-chip { background-color: hsl(var(--blush)); }
+
+.blob-4 { background-color: hsl(var(--accent) / 0.8); transform: rotate(3deg); }
+.blob-4 .blob-pill { background-color: hsl(var(--blush)); }
+.blob-4 .blob-chip { background-color: hsl(var(--sand)); }
+
+.blob-5 { background-color: hsl(var(--blush) / 0.8); transform: rotate(-2deg); }
+.blob-5 .blob-pill { background-color: hsl(var(--mint)); }
+.blob-5 .blob-chip { background-color: hsl(var(--accent) / 0.8); }
+
+.live-streetsmart {
+  text-align: center;
+  font-family: "Funnel Display", sans-serif;
+  font-style: italic;
+  font-size: 1.5rem;
+  color: hsl(var(--primary-foreground) / 0.9);
+  margin-top: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .urbanists-head h2 {
+    font-size: 3rem;
+  }
+  .urbanist-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .urbanist-grid .blob {
+    flex: 0 0 175px;
+    width: 175px;
+    max-width: 175px;
+  }
+  .blob-1 { transform: rotate(-3deg) translateY(1rem); }
+  .blob-2 { transform: rotate(2deg) translateY(-0.5rem); }
+  .blob-3 { transform: rotate(-1deg) translateY(1.5rem); }
+  .blob-4 { transform: rotate(3deg) translateY(-0.75rem); }
+  .blob-5 { transform: rotate(-2deg) translateY(0.5rem); }
+  .live-streetsmart {
+    font-size: 1.875rem;
+  }
+}
+
+/* =====================================================================
+   "Lovable vibe" light-touch pass (ported conservatively).
+   Constraints: keep brand colours + Funnel Display font.
+   Palette anchored to HeaderLogo.avif:
+     deep green #025539, mid green #356557, mint #b0f8e2, peach #ffbca5,
+     plus existing site tokens (#00291b ink, #f2f6f5 bg, #d0ede4, #ffcebc).
+   Use ONLY these tokens going forward. ===================================*/
+:root {
+  --ss-bg: #f2f6f5;
+  --ss-ink: #00291b;          /* primary text */
+  --ss-green: #025539;        /* logo deep green — accents */
+  --ss-green-mid: #3a6658;    /* logo mid green — muted secondary text */
+  --ss-mint: #b0f8e2;         /* logo mint */
+  --ss-mint-soft: #d0ede4;    /* existing button mint */
+  --ss-peach: #ffbca5;        /* logo peach */
+  --ss-peach-soft: #ffcebc;   /* existing pink button */
+  --ss-sand: #f6ecd9;         /* derived warm cream, harmonises the two */
+
+  /* shared, fluid VERTICAL section spacing — replaces per-breakpoint % padding */
+  --section-pad-y: clamp(2.5rem, 5vw, 4.5rem);
+
+  --ss-gradient-warm: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--ss-peach) 60%, transparent),
+    color-mix(in srgb, var(--ss-mint) 55%, transparent),
+    color-mix(in srgb, var(--ss-sand) 70%, transparent)
+  );
+  --ss-shadow-soft: 0 30px 80px -30px rgba(0, 41, 27, 0.18);
+}
+
+/* --- typography polish (progressive, safe everywhere) --- */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+h1, h2, h3, .display, .urbanists-head h2 {
+  text-wrap: balance;
+}
+p, .lead {
+  text-wrap: pretty;
+}
+
+/* Consistent body-copy size across sections + breakpoints.
+   (Reena's bio was 1.25rem/inherited-1.5rem while peers were 1.125rem.) */
+p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  font-weight: 200;
+}
+
+/* Softer, on-brand secondary text in LIGHT sections only
+   (dark sections keep their own light text colours). */
+.row1 .card:not(.img-card) p,
+.how-it-works-text p,
+.vision3 p {
+  color: var(--ss-green-mid);
+}
+
+/* --- warm gradient glow behind the hero (decorative, light touch) --- */
+.row1 {
+  position: relative;
+  isolation: isolate;
+}
+.row1::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -4rem;
+  right: 0;
+  width: 55%;
+  height: 28rem;
+  max-width: 40rem;
+  background: var(--ss-gradient-warm);
+  filter: blur(80px);
+  opacity: 0.55;
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+/* --- a touch more breathing room / rhythm --- */
+.urbanists-head { gap: 1.75rem; }
+
+/* "How it works" — simple centered section heading on dark green. */
+/* Consistent VERTICAL section spacing (reduced & uniform). Horizontal
+   padding stays at each section's original value. */
+.vision1,
+.vision3,
+.people,
+.how-it-works-head {
+  padding-block: var(--section-pad-y);
+}
+
+.vision1,
+.vision3 { padding-inline: 15%; }
+.how-it-works-head { padding-inline: 1.5rem; }
+.people { padding-inline: 5%; }
+
+@media screen and (min-width: 59.5em) {
+  .people { padding-inline: 12%; }
+}
+
+.how-it-works-head {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--ss-mint-soft);
+}
+
+.how-it-works-head h2 {
+  margin: 0;
+}
+
+/* Full-bleed street photo beneath the "Why StreetSmart" section.
+   Responsive height keeps it well-proportioned (never stretched) on
+   every screen: shorter cap on phones, taller on desktop. */
+.why-photo {
+  margin: 0;
+  width: 100%;
+  line-height: 0;
+}
+.why-photo img {
+  display: block;
+  width: 100%;
+  height: clamp(13rem, 34vw, 30rem);
+  object-fit: cover;
+  object-position: bottom;
+}
+
+/* =====================================================================
+   Header sizing ported from the lovable app — font-size + line-height
+   ONLY. Font family, weight, colour and letter-spacing are unchanged.
+   Applied to h1 (hero) and h2 (section + step titles); team sub-labels
+   (h3–h6) and .urbanists-head keep their own scale. ====================*/
+h1 {
+  font-size: 3rem;
+  line-height: 0.95;
+}
+h2 {
+  font-size: 2.25rem;
+  line-height: 1.1;
+}
+
+@media (min-width: 768px) {
+  h1 { font-size: 3.75rem; }
+  h2 { font-size: 3rem; }
+}
+
+@media (min-width: 1024px) {
+  h1 { font-size: 4.5rem; }
+}
+
+
+/* super annoying override */ 
+.supporters p {
+  margin: 0; 
+}
