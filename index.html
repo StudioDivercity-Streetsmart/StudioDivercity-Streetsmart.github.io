@@ -291,6 +291,8 @@
 			</div>
 
 
+			<p class="team-toggle">Expand team ▾</p>
+
 			<h4 class="supporters-toggle">Contributors & supporters <span class="supporters-arrow">▸</span></h4>
 
 			<div class="grid-container supporters collapsed">
@@ -459,6 +461,41 @@
 				const collapsed = container.classList.toggle("collapsed");
 				supportersToggle.classList.toggle("expanded", !collapsed);
 			});
+
+			// Core team: show only the first row as a preview; expand on click.
+			(function () {
+				const coreGrid = document.querySelector("div.grid-container.core");
+				const teamToggle = document.querySelector(".team-toggle");
+				if (!coreGrid || !teamToggle) return;
+				const items = Array.from(coreGrid.querySelectorAll(".grid-item"));
+				let expanded = false;
+
+				function render() {
+					// reveal all first so offsetTop reflects the natural layout
+					items.forEach((it) => (it.style.display = ""));
+					if (expanded || items.length === 0) return;
+					const firstRowTop = items[0].offsetTop;
+					items.forEach((it) => {
+						if (it.offsetTop > firstRowTop) it.style.display = "none";
+					});
+				}
+
+				teamToggle.addEventListener("click", () => {
+					expanded = !expanded;
+					teamToggle.textContent = expanded ? "Show less ▴" : "Expand team ▾";
+					render();
+				});
+
+				// Recompute the preview row when the layout reflows (only while collapsed)
+				let raf;
+				window.addEventListener("resize", () => {
+					if (expanded) return;
+					cancelAnimationFrame(raf);
+					raf = requestAnimationFrame(render);
+				});
+
+				render();
+			})();
 	</script>
 </body>
 

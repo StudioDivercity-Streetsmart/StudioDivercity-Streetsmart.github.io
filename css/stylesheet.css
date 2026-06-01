@@ -1756,3 +1756,10 @@ h2 {
     object-fit: contain;
   }
 }
+
+/* Core-team expand/collapse toggle — just a clickable paragraph. */
+.team-toggle {
+  text-align: center;
+  cursor: pointer;
+  margin-top: 2rem;
+}
