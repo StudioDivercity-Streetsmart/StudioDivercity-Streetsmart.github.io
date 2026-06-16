@@ -499,13 +499,31 @@
 		// initial layout. On mobile the viewport (and thus container) height
 		// changes as the address bar shows/hides, which re-triggers the
 		// @container (max-height: 36rem) rule and makes .hero-inline-img
-		// flicker. Pinning the computed display inline freezes that decision
-		// to whatever it was on first paint.
+		// flicker. Pinning the computed display inline freezes that decision.
+		//
+		// We only re-evaluate when the viewport changes by a large amount
+		// (rotation, real resize) — small jitters like the URL bar are ignored.
 		(function () {
-			requestAnimationFrame(function () {
-				document.querySelectorAll('.hero-inline-img').forEach(function (el) {
-					el.style.display = getComputedStyle(el).display;
+			var THRESHOLD = 250; // px — bigger than any mobile URL-bar change
+			var els = document.querySelectorAll('.hero-inline-img');
+			var baseW, baseH;
+
+			function lock() {
+				els.forEach(function (el) {
+					el.style.display = '';                       // unfreeze
+					el.style.display = getComputedStyle(el).display; // re-pin
 				});
+				baseW = window.innerWidth;
+				baseH = window.innerHeight;
+			}
+
+			requestAnimationFrame(lock);
+
+			window.addEventListener('resize', function () {
+				if (Math.abs(window.innerWidth - baseW) >= THRESHOLD ||
+				    Math.abs(window.innerHeight - baseH) >= THRESHOLD) {
+					requestAnimationFrame(lock);
+				}
 			});
 		})();
 	</script>
