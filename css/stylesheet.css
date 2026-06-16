@@ -332,10 +332,10 @@ footer {
   .row1 .hero-inline-img {
     display: block;
     flex: 1 1 auto;
-    min-height: 12rem;
+    /*min-height: 12rem;*/ /* it will hide when it gets small enough - hopefully before it's too small */ 
     width: 100%;
     overflow: hidden;
-    margin: 1rem 0;
+    margin: 0; /* the pic has enough margin on it already */ 
   }
   .row1 .hero-inline-img img {
     width: 100%;
